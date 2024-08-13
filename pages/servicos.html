@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify - Buscar Serviços</title>
+    <meta name="description" content="Página para buscar serviços de empreendedores">
+    <script defer src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Navegação do header">
+            <img src="../assets/img/logo.png" alt="Includify Logo" width="200"> <!-- Talvez seja necessário  -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><button><a href="login.html">Login <i class="fa-solid fa-circle-user"></i></a></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="Seção de busca">
+            <h1>Buscar Serviços</h1>
+            <form action="#">
+                <label>Buscar por um serviço</label>
+                <input type="search" placeholder="Busque por um serviço" aria-label="Buscar por um serviço">
+                <div>
+                    <label>Estado</label>
+                    <select aria-label="Seleção de estado">
+                        <option value="">Selecione</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                    </select>
+
+                    <label>Cidade</label>
+                    <select aria-label="Seleção de Cidade">
+                        <option value="">Selecione</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="São Gonçalo">São Gonçalo</option>
+                        <option value="Duque de Caxias">Duque de Caxias</option>
+                        <option value="Nova Iguaçu">Nova Iguaçu</option>
+                        <option value="Niterói">Niterói</option>
+                        <option value="Macaé">Macaé</option>
+                        <option value="Magé">Magé</option>
+                    </select>
+
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
