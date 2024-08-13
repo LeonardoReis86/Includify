@@ -12,26 +12,47 @@
 <body>
     <header>
         <nav aria-label="navegacao-header">
-            <img src="../assets/img/logo.png" alt="Includify Logo" width="200"> <!-- Talvez seja necessário uma div -->
+            <div>
+                <img src="../assets/img/logo-includify.png" alt="Includify Logo" width="200">
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><button><a href="login.html">Login <i class="fa-solid fa-circle-user"
-                                aria-hidden="true"></i></a></button></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="servicos.html">Serviços</a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        Login <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section aria-labelledby="secao-busca">
-            <h1>Buscar Serviços</h1>
+            <h1 id="secao-busca">Buscar Serviços</h1>
             <form action="#">
-                <label><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></label>
-                <input type="search" placeholder="Busque por um serviço" aria-label="Buscar por um serviço">
-                <button type="submit">Buscar</button>
-                <div>
-                    <label><i class="fa-solid fa-location-dot" aria-hidden="true"></i></label>
-                    <select aria-label="Seleção de estado">
+                <section aria-labelledby="barra-busca">
+                    <h2 id="barra-busca" class="sr-only">Barra de busca de serviço</h2>
+                    <label for="buscar-servico">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span class="sr-only">Buscar por um serviço</span>
+                    </label>
+                    <input id="buscar-servico" type="search" placeholder="Busque por um serviço"
+                        aria-label="Buscar por um serviço">
+                    <button type="submit">Buscar</button>
+                </section>
+
+                <section aria-labelledby="filtros-busca">
+                    <h2 id="filtros-busca" class="sr-only">Filtros de busca de serviço</h2>
+                    <label for="selecao-estado">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span class="sr-only">Seleção de estado</span>
+                    </label>
+                    <select id="selecao-estado" aria-label="Seleção de estado">
                         <option value="">Estado</option>
                         <option value="Rio de Janeiro">Rio de Janeiro</option>
                         <option value="São Paulo">São Paulo</option>
@@ -39,8 +60,11 @@
                         <option value="Minas Gerais">Minas Gerais</option>
                     </select>
 
-                    <label><i class="fa-solid fa-location-dot" aria-hidden="true"></i></label>
-                    <select aria-label="Seleção de Cidade">
+                    <label for="selecao-cidade">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span class="sr-only">Seleção de cidade</span>
+                    </label>
+                    <select id="selecao-cidade" aria-label="Seleção de Cidade">
                         <option value=""></i>Cidade</option>
                         <option value="Rio de Janeiro">Rio de Janeiro</option>
                         <option value="São Gonçalo">São Gonçalo</option>
@@ -50,14 +74,14 @@
                         <option value="Macaé">Macaé</option>
                         <option value="Magé">Magé</option>
                     </select>
-                </div>
+                </section>
             </form>
-        </section>
+        </section> 
     </main>
 
     <footer>
         <nav aria-label="navegacao-footer">
-            <h2 id="navegacao-footer" class="sr-only">Navegação Principal do Rodapé</h2>
+            <h3 id="navegacao-footer" class="sr-only">Navegação Principal do Rodapé</h3>
             <ul>
                 <li>
                     <a href="login.html">Login <i class="fa-solid fa-circle-user" aria-hidden="true"></i></a>
@@ -67,10 +91,11 @@
                 </li>
             </ul>
         </nav>
-        <div>
-            <img src="../assets/img/logo.png" alt="Includify Logo" width="200">
+        <section aria-labelledby="secao-social-media">
+            <h2 id="secao-social-media" class="sr-only">Seção de redes sociais includify</h2>
+            <img src="../assets/img/logo.png" alt="Includify Logo" width="80">
             <nav aria-labelledby="navegacao-social-media">
-                <h2 id="navegacao-social-media" class="sr-only">Navegação de Redes Sociais</h2>
+                <h3 id="navegacao-social-media" class="sr-only">Navegação de Redes Sociais</h3>
                 <ul>
                     <li>
                         <a href="#" aria-label="Includify no Facebook">
@@ -94,9 +119,9 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </section>
         <nav aria-labelledby="navegacao-contato">
-            <h2 id="navegacao-contato" class="sr-only">Navegação de Contato</h2>
+            <h3 id="navegacao-contato" class="sr-only">Navegação de Contato</h3>
             <ul>
                 <li>
                     <a href="#">
