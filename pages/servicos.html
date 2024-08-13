@@ -25,21 +25,22 @@
         <section aria-labelledby="Seção de busca">
             <h1>Buscar Serviços</h1>
             <form action="#">
-                <label>Buscar por um serviço</label>
+                <label><i class="fa-solid fa-magnifying-glass"></i></label>
                 <input type="search" placeholder="Busque por um serviço" aria-label="Buscar por um serviço">
+                <button type="submit">Buscar</button>
                 <div>
-                    <label>Estado</label>
+                    <label><i class="fa-solid fa-location-dot"></i></label>
                     <select aria-label="Seleção de estado">
-                        <option value="">Selecione</option>
+                        <option value="">Estado</option>
                         <option value="Rio de Janeiro">Rio de Janeiro</option>
                         <option value="São Paulo">São Paulo</option>
                         <option value="Espírito Santo">Espírito Santo</option>
                         <option value="Minas Gerais">Minas Gerais</option>
                     </select>
 
-                    <label>Cidade</label>
+                    <label><i class="fa-solid fa-location-dot"></i></label>
                     <select aria-label="Seleção de Cidade">
-                        <option value="">Selecione</option>
+                        <option value=""><i class="fa-solid fa-location-dot"></i>Cidade</option>
                         <option value="Rio de Janeiro">Rio de Janeiro</option>
                         <option value="São Gonçalo">São Gonçalo</option>
                         <option value="Duque de Caxias">Duque de Caxias</option>
@@ -48,8 +49,6 @@
                         <option value="Macaé">Macaé</option>
                         <option value="Magé">Magé</option>
                     </select>
-
-                    <button type="submit">Buscar</button>
                 </div>
             </form>
         </section>
