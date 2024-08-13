@@ -58,5 +58,3 @@ Clone o projeto na janela que abriu com o seguinte comando:
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 ---
-
-### [Voltar ao 🔝](#includify)
