@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Includify - Perfil</title>
     <script src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <style>
+    <!-- <style>
         body {
             margin: 0;
             border: 0;
@@ -20,7 +20,7 @@
             background-color: #2B468B;
             padding: 0.5rem;
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <header>
@@ -73,7 +73,6 @@
                 </figure>
             </div>
         </section>
-
         <section>
             <article>
                 <h2>Quem sou eu</h2>
@@ -82,31 +81,61 @@
                 <p>"Acredito que tanto o artesanato quanto a jardinagem têm o poder de transformar vidas. Minhas criações e meu trabalho com a terra são maneiras de promover um mundo mais inclusivo e sustentável."</p>
                 <a href="">Entrar em Contato</a>
             </article>
-            <article>
-                <h2>Serviços Prestados</h2>
-                <ul>
-                    <li>Artesanato</li>
-                    <li>Produtos Sustentáveis</li>
-                    <li>Horticultura</li>
-                </ul>
-            </article>     
-            <article>       
-                <h2>Principais Serviços</h2>
+            <article aria-labelledby="servicos-prestados">
+                <h2 id="servicos-prestados">Serviços Prestados</h2>
+            <div>
                 <figure>
-                    <img src="../assets/img/servico1.png" alt="Imagem do serviço 1">
+                    <img src="../assets/img/artesanato.png" alt="Bijuterias artesanais">
                     <figcaption>
-                        <img src="../assets/icons/rating.svg" alt="Avaliação do serviço 1">
+                        <p>Artesanato</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/img/sustentavel.png" alt="Produtos sustentáveis">
+                    <figcaption>
+                        <p>Produtos sustentáveis</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/img/jardinagem.png" alt="Jardinagem">
+                    <figcaption>
+                        <p>Jardinagem</p>
+                    </figcaption>
+                </figure>
+            </div>
+            </article>     
+            <article aria-labelledby="lista-servico">       
+                <h2 id="lista-servico">Nossos Serviços</h2>
+            <div>
+                <figure>
+                    <img src="../assets/img/sustentavel.png" alt="Nossos produtos sustentáveis">
+                    <figcaption>
+                        <img src="../assets/icons/rating.svg" alt="Contém 112 avaliações">
                         <p>&#40;112 avaliações&#41;</p>
                     </figcaption>
                 </figure> 
                 <figure>
-                    <img src="../assets/img/servico2.png" alt="Imagem do serviço 2">
+                    <img src="../assets/img/jardinagem.png" alt="Jardinagem">
                     <figcaption>
-                        <img src="../assets/icons/rating.svg" alt="Avaliação do serviço 2">
-                        <p>&#40;45 avaliações&#41;</p>
+                        <img src="../assets/icons/rating.svg" alt="Contém 45 avaliações">
+                        <p>45 avaliações</p>
                     </figcaption>
                 </figure> 
+            </div>
             </article>
+        </section>
+        <section>
+            <figure aria-label="Lista de Serviços">
+                <img src="../assets/img/servico1.png" alt="Serviço de Jardinagem">
+                <figcaption>
+                    <h2>Estátuas de madeira</h2>
+                    <img src="../assets/icons/rating.svg" alt="">
+                    <p>&#40;45 avaliações&#41;</p>
+                </figcaption>
+            </figure>
+            <figure>
+
+            </figure>
         </section>
     </main>
 
