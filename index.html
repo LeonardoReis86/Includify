@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/section1.css">
     <link rel="stylesheet" href="./css/section2.css">
+    <link rel="stylesheet" href="./css/section3.css">
 </head>
-
 <body>
     <header class="flex-center">
         <div class="header-content">
@@ -34,7 +33,6 @@
             </nav>
         </div>
     </header>
-
     <main>
         <!-- Banner com imagem e textos -->
         <section aria-label="Banner principal" class="banner-section">
@@ -47,7 +45,9 @@
                 </div>
             </div>
         </section>
-        <section aria-labelledby="section-title" class="competencias-section">
+        <!-- Section: Conhecemos as pessoas e valorizamos competências -->
+        <section aria-labelledby="competencias-title" class="competencias-section">
+            <!-- Elementos decorativos de elipses -->
             <div class="competencias-decoracao" aria-hidden="true">
               <div class="elipses-grid">
                 <!-- Elipses decorativas -->
@@ -72,13 +72,71 @@
               </div>
             </div>
             <div class="competencias-content">
-              <h2 id="section-title">Conhecemos as pessoas e valorizamos competências</h2>
-              <p>Ajudamos empreendedores e autônomos com deficiência a divulgar seus negócios, produtos e serviços de forma gratuita. Venha fazer parte da nossa rede de talentos e destaque seu empreendimento no mercado.</p>
-              <a href="cadastro-negocio.html" class="link-text" aria-label="Cadastre seu negócio e alcance mais clientes">Cadastre seu negócio agora e alcance mais clientes!</a>
+                <!-- Título da section -->
+                <h2 id="competencias-title">Conhecemos as pessoas e valorizamos competências</h2>
+                <!-- Descrição sobre competências -->
+                <p>Ajudamos empreendedores e autônomos com deficiência a divulgar seus negócios, produtos e serviços de forma gratuita. Venha fazer parte da nossa rede de talentos e destaque seu empreendimento no mercado.</p>
+                <!-- Link para cadastro de negócios -->
+                <a href="cadastro-negocio.html" class="link-text" aria-label="Cadastre seu negócio e alcance mais clientes">Cadastre seu negócio agora e alcance mais clientes!</a>
             </div>
-          </section>
+        </section>
+        <!-- Section: Artigos em Destaque -->
+        <section aria-labelledby="artigos-destaque-title" class="artigos-section">
+            <!-- Título invisível para leitores de tela -->
+            <h2 id="artigos-destaque-title" class="visually-hidden">Artigos em Destaque</h2>
+            <div class="cards-container">
+                <!-- Primeiro artigo em destaque -->
+                <article class="card">
+                    <img src="/Includify/assets/images/card1Image.svg" alt="Descrição da imagem do artigo 1">
+                    <h3>Pessoas PCD aderem ao empreendedorismo</h3>
+                    <p>Com o avanço do trabalho remoto e novas ferramentas de comunicação, pessoas com deficiência encontram mais oportunidades para montar o próprio negócio e ter independência financeira.</p>
+                    <a href="artigo1.html" class="btn btn-leia-artigo" aria-label="Leia o artigo completo sobre o tema 1">Leia o Artigo</a>
+                </article>
+                <!-- Segundo artigo em destaque -->
+                <article class="card">
+                    <img src="/Includify/assets/images/card2Image.svg" alt="Descrição da imagem do artigo 2">
+                    <h3>Pessoas com deficiência (PCD) no empreendedorismo</h3>
+                    <p>O Brasil possui cerca de 45 milhões de pessoas com alguma deficiência, segundo o último censo do Instituto Brasileiro de Geografia e Estatística (IBGE), realizado em 2010. O número corresponde a 23% da população do país.</p>
+                    <a href="artigo2.html" class="btn btn-leia-artigo" aria-label="Leia o artigo completo sobre o tema 2">Leia o Artigo</a>
+                </article>
+            </div>
+            <!-- Elementos decorativos de elipses à direita -->
+            <div class="artigos-decoracao" aria-hidden="true">
+              <div class="elipses-grid">
+                <!-- 10 linhas de 3 colunas de elipses -->
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+                <div class="elipse"></div>
+              </div>
+            </div>
+        </section>
     </main>
-
     <footer class="flex-center">
         <div class="footer-section">
             <ul>
@@ -89,7 +147,7 @@
                 </li>
                 <li>
                     <a href="/register.html" aria-label="Acessar a página de Cadastro">Cadastre-se
-                      <img src="./assets/icons/Cadastre-seIcon@3x.svg" alt="Ícone de cadastro">
+                      <img src="/Includify/assets/icons/Cadastre-se Icon@3x.svg" alt="Ícone de cadastro">
                     </a>
                 </li>
             </ul>
@@ -137,5 +195,4 @@
         </p>
     </footer>
 </body>
-
 </html>
