@@ -1,4 +1,4 @@
-<a id="includify"></a>
+<a id="topo"></a>
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=2B468B&style=for-the-badge)
 
@@ -17,7 +17,7 @@
 O projeto ainda está em desenvolvimento e as próximas entregas serão divididas em 5 sprints:
 
 - [x] Sprint I - Regra de Negócio e a Prototipação no mínimo 5 telas;
-- [ ] Sprint II - Html das páginas criadas;
+- [x] Sprint II - Html das páginas criadas;
 - [ ] Sprint III - Estilização das telas, flex-box, cores e fontes;
 - [ ] Sprint IV - Manipulação DOM via JS, validação de formulário e renderização dinâmica.
 - [ ] Sprint V -  Modelar o DER, normalizar as tabela de acordo com 3FN e realizar consultas simples, se possível juntando tabelas.
@@ -55,6 +55,8 @@ Clone o projeto na janela que abriu com o seguinte comando:
 
 ## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](./License) para mais detalhes.
 
 ---
+
+### [Voltar ao Topo](#topo)
