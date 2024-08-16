@@ -1,0 +1,52 @@
+*{
+    margin: 8;
+    padding: 0;
+}
+:root {
+    --color-backgroud: #fafafa; /* Cor de fundo */
+    --color-standard: #2B468B; /* Cor para textos */
+    --color-border: #203568; /* Cor para bordas */
+    --color-background-input: #DFE3EE; /* Cor para fundo */
+}
+body{
+    background-color: var(--color-backgroud);
+    font-family: Arial;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: var(--color-standard);
+}
+h3{
+    font-size: 28px;
+    color: var(--color-standard);
+}
+input{
+    width: 168px;
+    height: 24px;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background-input);
+}
+button{
+    width: 232px;
+    height: 32px;
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-standard);
+    color: var(--color-backgroud);
+    font-weight: bold;
+    cursor: pointer;
+}
