@@ -1,118 +1,138 @@
-*{
-    margin: 8;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-:root {
-    --color-backgroud: #fafafa; /* Cor de fundo */
-    --color-standard: #2B468B; /* Cor para textos */
-    --color-border: #203568; /* Cor para bordas */
-    --color-background-input: #DFE3EE; /* Cor para fundo */
+
+body {
+    background-color: #fafafa;
+    color: #333333;
 }
-body{
-    background-color: var(--color-backgroud);
-    font-family: Arial;
-}
-.container{
-    width: 100%;
+
+/* Header css */
+
+header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2B468B;
+    color: #fafafa;
+    padding: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container>h1 {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding-inline: 30px;
+}
+
+nav ul li a {
+    color: #fafafa;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.log-in {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    padding-inline: 12px;
+    padding-block: 4px;
+    border-radius: 40px;
+    width: fit-content;
+}
+
+.log-in span {
+    color: #333333;
+    padding-left: 10px;
+}
+
+/* Footer css */
+
+footer {
+    background-color: #2B468B;
+    color: #fafafa;
+    border-radius: 30px 30px 0px 0px;
+}
+
+footer a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul li a {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 5px;
+}
+
+.secao-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    padding-block: 1rem;
+}
+
+.secao-footer section {
+    display: flex;
     align-items: center;
     flex-direction: column;
-}
-h1{
-    text-align: center;
-    font-size: 40px;
-    margin-top: 20px;
-    color: var(--color-standard);
-}
-h3{
-    font-size: 28px;
-    color: var(--color-standard);
-}
-input{
-    width: 168px;
-    height: 24px;
-    margin-top: 8px;
-    padding: 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-background-input);
-}
-button{
-    width: 232px;
-    height: 32px;
-    margin-top: 16px;
-    padding: 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-standard);
-    color: var(--color-backgroud);
-    font-weight: bold;
-    cursor: pointer;
+    gap: 25px;
 }
 
-/* Estilo para a seção do banner */
-.banner-section {
-  position: relative;
-  background-image: url('/Includify/assets/img/bannerImage.png'); /* Substitua pelo caminho da sua imagem */
-  background-size: cover;
-  background-position: center;
-  height: 400px; 
-  display: flex;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Estilo para o conteúdo do banner */
-.banner-content {
-    max-width: 50%; /* Limita a largura do conteúdo para 50% da largura do banner */
-    color: #FFFFFF;
+.secao-diretos {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  /* Estilo para o título do banner */
-  .banner-header {
-    font-size: 36px;
-    color: #FAFAFA;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo específico para a palavra "Includify" */
-  .includify-highlight {
-    color: #2B468B; /* Cor do texto "Includify" */
-  }
-  
-  /* Estilo para o subtítulo */
-  .banner-subheader {
-    font-size: 24px;
-    color: #FAFAFA;
-    margin-bottom: 20px;
-    max-width: 80%; /* Ajuste a largura do subtítulo */
-    text-align: left; /* Alinha o texto à esquerda */
-  }
-  
-  /* Estilo para os botões do banner */
-  .banner-buttons {
+    align-items: center;
+    justify-content: center;
+    background-color: #233863;
+    border-radius: 30px 30px 0px 0px;
+    padding: 5px;
+}
+
+.secao-social-media {
+    margin-left: 5rem;
+}
+
+.logo-footer {
     display: flex;
-    gap: 10px;
-  }
-
-  /* Estilo para os botões individuais */
-.banner-buttons .btn {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #2B468B; /* Cor do texto dos botões */
-  border-radius: 5px;
-  font-weight: bold;
-  background-color: #FAFAFA; /* Cor de fundo dos botões */
+    align-items: center;
 }
 
-.btn-primary {
-  background-color: #FAFAFA; /* Cor de fundo do botão primário */
+.navegacao-footer ul li:nth-child(2),
+.navegacao-contato ul li:nth-child(2) {
+    margin-top: 15px;
 }
 
-.btn-secondary {
-  background-color: #FAFAFA; /* Cor de fundo do botão secundário */
+footer .navegacao-footer ul li {
+    align-items: start;
+}
+
+footer .navegacao-contato ul li {
+    align-items: end;
 }
