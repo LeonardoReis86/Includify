@@ -4,57 +4,36 @@
 }
 :root {
     --color-backgroud: #fafafa; /* Cor de fundo */
-    --color-standard: #2B468B; /* Cor para textos */
+    --color-font: #262626; /* Cor de fundo */
+    --color-standard: #2B468B; /* Cor para titulos e botões principais */
     --color-border: #203568; /* Cor para bordas */
     --color-background-input: #DFE3EE; /* Cor para fundo */
+    --color-button-secondary: #BF4F1B; /* Cor para destaque (botões, link e cards) */
+    --font-size-h1: 40px; /* Tamanho da fonte h1 */
+    --font-size-h2: 36px; /* Tamanho da fonte h2 */
+    --font-size-h3: 32px; /* Tamanho da fonte h3 */
+    --font-size-h4: 28px; /* Tamanho da fonte h4 */
+    --font-size-h5: 24px; /* Tamanho da fonte h5 */
+    --font-size-h6: 20px; /* Tamanho da fonte h6 */
+    --font-size-p: 16px; /* Tamanho da fonte p */
 }
+
 body{
     background-color: var(--color-backgroud);
-    font-family: Arial;
-}
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 h1{
-    text-align: center;
-    font-size: 40px;
-    margin-top: 20px;
+    font-size: var(--font-size-h1);
     color: var(--color-standard);
 }
-h3{
-    font-size: 28px;
+h4{
+    font-size: var(--font-size-h4);
     color: var(--color-standard);
-}
-input{
-    width: 168px;
-    height: 24px;
-    margin-top: 8px;
-    padding: 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-background-input);
-}
-button{
-    width: 232px;
-    height: 32px;
-    margin-top: 16px;
-    padding: 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-standard);
-    color: var(--color-backgroud);
-    font-weight: bold;
-    cursor: pointer;
 }
 
 /* Estilo para a seção do banner */
 .banner-section {
   position: relative;
-  background-image: url('/Includify/assets/img/bannerImage.png'); /* Substitua pelo caminho da sua imagem */
+  background-image: url('/assets/img/bannerImage.png'); /* Substitua pelo caminho da sua imagem */
   background-size: cover;
   background-position: center;
   height: 400px; 
