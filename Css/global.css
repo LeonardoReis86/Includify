@@ -7,7 +7,8 @@
     --color-font: #262626; /* Cor de fundo */
     --color-standard: #2B468B; /* Cor para titulos e botões principais */
     --color-border: #203568; /* Cor para bordas */
-    --color-background-input: #DFE3EE; /* Cor para fundo */
+    --color-background-card: #DFE3EE; /* Cor para fundo */
+    --color-background-input: #EAEDF3; /* Cor para fundo dos botões */
     --color-button-secondary: #BF4F1B; /* Cor para destaque (botões, link e cards) */
     --font-size-h1: 40px; /* Tamanho da fonte h1 */
     --font-size-h2: 36px; /* Tamanho da fonte h2 */
@@ -20,14 +21,6 @@
 
 body{
     background-color: var(--color-backgroud);
-}
-h1{
-    font-size: var(--font-size-h1);
-    color: var(--color-standard);
-}
-h4{
-    font-size: var(--font-size-h4);
-    color: var(--color-standard);
 }
 
 /* Estilo para a seção do banner */
