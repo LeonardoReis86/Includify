@@ -1,0 +1,118 @@
+*{
+    margin: 8;
+    padding: 0;
+}
+:root {
+    --color-backgroud: #fafafa; /* Cor de fundo */
+    --color-standard: #2B468B; /* Cor para textos */
+    --color-border: #203568; /* Cor para bordas */
+    --color-background-input: #DFE3EE; /* Cor para fundo */
+}
+body{
+    background-color: var(--color-backgroud);
+    font-family: Arial;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    color: var(--color-standard);
+}
+h3{
+    font-size: 28px;
+    color: var(--color-standard);
+}
+input{
+    width: 168px;
+    height: 24px;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-background-input);
+}
+button{
+    width: 232px;
+    height: 32px;
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-standard);
+    color: var(--color-backgroud);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilo para a seção do banner */
+.banner-section {
+  position: relative;
+  background-image: url('/Includify/assets/img/bannerImage.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  height: 400px; 
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilo para o conteúdo do banner */
+.banner-content {
+    max-width: 50%; /* Limita a largura do conteúdo para 50% da largura do banner */
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Estilo para o título do banner */
+  .banner-header {
+    font-size: 36px;
+    color: #FAFAFA;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo específico para a palavra "Includify" */
+  .includify-highlight {
+    color: #2B468B; /* Cor do texto "Includify" */
+  }
+  
+  /* Estilo para o subtítulo */
+  .banner-subheader {
+    font-size: 24px;
+    color: #FAFAFA;
+    margin-bottom: 20px;
+    max-width: 80%; /* Ajuste a largura do subtítulo */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  /* Estilo para os botões do banner */
+  .banner-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Estilo para os botões individuais */
+.banner-buttons .btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #2B468B; /* Cor do texto dos botões */
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #FAFAFA; /* Cor de fundo dos botões */
+}
+
+.btn-primary {
+  background-color: #FAFAFA; /* Cor de fundo do botão primário */
+}
+
+.btn-secondary {
+  background-color: #FAFAFA; /* Cor de fundo do botão secundário */
+}
