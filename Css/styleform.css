@@ -17,7 +17,22 @@ header{
 
 /*Conteiner do Formulario*/
 .container{
-    max-width: 620px;
+    max-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container-perfil{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    background-color: red;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.container-form{
+    display: inline-block;
+    max-width: 50%;
     margin: 10px auto;
     padding: 10px 20px;
     background: var(--color-background-card);
@@ -66,4 +81,5 @@ button {
   width: 100%;
   margin-bottom: 10px;
   background-color: var(--color-standard);
+    border: none;
 }
