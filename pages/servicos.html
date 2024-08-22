@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para buscar serviços de empreendedores">
     <script defer src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="../css/global.css"> -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/servicos.css">
 </head>
 
 <body>
@@ -38,258 +39,274 @@
     </header>
 
     <main>
-        <section aria-labelledby="secao-busca">
-            <h1 id="secao-busca">Buscar Serviços</h1>
-            <form action="#">
-                <section aria-labelledby="barra-busca">
-                    <label for="buscar-servico">
-                        <img src="../assets/icons/Buscar.svg" alt="">
-                    </label>
-                    <input id="buscar-servico" type="search" placeholder="Busque por um serviço"
-                        aria-label="Buscar por um serviço">
+        <section class="secao-busca" aria-labelledby="busca-servico">
+            <form action="#" class="form-busca">
+                <h1 id="busca-servico">Buscar Serviços</h1>
+                <slot>
+                    <section class="barra-busca-container" aria-labelledby="barra-busca">
+                        <div class="barra-busca">
+                            <label for="buscar-servico">
+                                <img src="../assets/icons/Buscar.svg" alt="" width="20">
+                            </label>
+                            <input id="buscar-servico" type="search" placeholder="Busque por um serviço"
+                                aria-label="Buscar por um serviço">
+                        </div>
+                    </section>
                     <button type="submit">Buscar</button>
-                </section>
+                </slot>
 
                 <section aria-labelledby="filtros-busca">
-                    <label for="selecao-estado">
-                        <img src="../assets/icons/Local.svg" alt="">
-                    </label>
-                    <select id="selecao-estado" aria-label="Seleção de estado">
-                        <option value="">Estado</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="Espírito Santo">Espírito Santo</option>
-                        <option value="Minas Gerais">Minas Gerais</option>
-                    </select>
-
-                    <label for="selecao-cidade">
-                        <img src="../assets/icons/Local.svg" alt="">
-                    </label>
-                    <select id="selecao-cidade" aria-label="Seleção de Cidade">
-                        <option value=""></i>Cidade</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="São Gonçalo">São Gonçalo</option>
-                        <option value="Duque de Caxias">Duque de Caxias</option>
-                        <option value="Nova Iguaçu">Nova Iguaçu</option>
-                        <option value="Niterói">Niterói</option>
-                        <option value="Macaé">Macaé</option>
-                        <option value="Magé">Magé</option>
-                    </select>
+                    <div class="filtros-busca">
+                        <label for="selecao-estado">
+                            <img src="../assets/icons/Local.svg" alt="" width="15">
+                        </label>
+                        <select id="selecao-estado" aria-label="Seleção de estado">
+                            <option value="">Estado</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                        </select>
+                        <img src="../assets/icons/Down.svg" alt="" width="12">
+                    </div>
+                    <div class="filtros-busca">
+                        <label for="selecao-cidade">
+                            <img src="../assets/icons/Local.svg" alt="" width="15">
+                        </label>
+                        <select id="selecao-cidade" aria-label="Seleção de Cidade">
+                            <option value=""></i>Cidade</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="São Gonçalo">São Gonçalo</option>
+                            <option value="Duque de Caxias">Duque de Caxias</option>
+                            <option value="Nova Iguaçu">Nova Iguaçu</option>
+                            <option value="Niterói">Niterói</option>
+                            <option value="Macaé">Macaé</option>
+                            <option value="Magé">Magé</option>
+                        </select>
+                        <img src="../assets/icons/Down.svg" alt="" width="12">
+                    </div>
                 </section>
             </form>
         </section>
 
-        <aside aria-labelledby="secao-filtros">
-            <h2 id="secao-filtros">Filtros</h2>
-            <form action="#">
-                <fieldset>
-                    <legend>Categorias</legend>
-                    <div>
-                        <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
-                        <label for="fotografia">Fotografia</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
-                        <label for="tecnologia">Tecnologia</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="educacao" name="categoria" value="educacao">
-                        <label for="educacao">Educação</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
-                        <label for="horticultura">Horticultura</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
-                        <label for="alimenticio">Alimentício</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
-                        <label for="paisagismo">Paisagismo</label>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Preço</legend>
-                    <div>
-                        <input type="radio" id="preco10" name="price">
-                        <label for="preco10">R$ 10 a 50</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco50" name="price">
-                        <label for="preco50">R$ 50 a 100</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco100" name="price">
-                        <label for="preco100">R$ 100 a 200</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco200" name="price">
-                        <label for="preco200">R$ 200 a 400</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco400" name="price">
-                        <label for="preco400">R$ 400 a 800</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco800" name="price">
-                        <label for="preco800">R$ 800 ou mais</label>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Avaliação</legend>
-                    <div>
-                        <input type="radio" id="avaliacao1" name="rating">
-                        <label for="avaliacao1">1 estrela</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao2" name="rating">
-                        <label for="avaliacao2">2 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao3" name="rating">
-                        <label for="avaliacao3">3 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao4" name="rating">
-                        <label for="avaliacao4">4 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao5" name="rating">
-                        <label for="avaliacao5">5 estrelas</label>
-                    </div>
-                </fieldset>
-            </form>
-        </aside>
-
-        <section aria-labelledby="secao-servicos">
-            <h2 id="secao-servicos">Mostrando 4 de 200 serviços</h2>
-            <ul>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#1</h2>
-                            <div>
-                                <h3>Serviço de Jardinagem Completo</h3>
-                                <p>R$ 250</p>
-                            </div>
-                        </div>
+        <div class="servicos-container">
+            <aside aria-labelledby="secao-filtros">
+                <h2 id="secao-filtros">Filtros</h2>
+                <form action="#">
+                    <fieldset>
+                        <legend>Categorias</legend>
                         <ul>
-                            <li>Rio de Janeiro / RJ</li>
-                            <li>Horticultura</li>
                             <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.8</p>
-                                </div>
+                                <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
+                                <label for="fotografia">Fotografia</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
+                                <label for="tecnologia">Tecnologia</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="educacao" name="categoria" value="educacao">
+                                <label for="educacao">Educação</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
+                                <label for="horticultura">Horticultura</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
+                                <label for="alimenticio">Alimentício</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
+                                <label for="paisagismo">Paisagismo</label>
                             </li>
                         </ul>
-                        <p>
-                            Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação e
-                            controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#2</h2>
-                            <div>
-                                <h3>Desenvolvimento de Sites</h3>
-                                <p>R$ 500/projeto</p>
-                            </div>
-                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Preço</legend>
                         <ul>
-                            <li>Remoto</li>
-                            <li>Tecnologia</li>
                             <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.8</p>
-                                </div>
+                                <input type="radio" id="preco10" name="price">
+                                <label for="preco10">R$ 10 a 50</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="preco50" name="price">
+                                <label for="preco50">R$ 50 a 100</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="preco100" name="price">
+                                <label for="preco100">R$ 100 a 200</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="preco200" name="price">
+                                <label for="preco200">R$ 200 a 400</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="preco400" name="price">
+                                <label for="preco400">R$ 400 a 800</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="preco800" name="price">
+                                <label for="preco800">R$ 800 ou mais</label>
                             </li>
                         </ul>
-                        <p>
-                            Desenvolvimento de sites modernos e responsivos, com foco em usabilidade e SEO.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#3</h2>
-                            <div>
-                                <h3>Aulas de Inglês</h3>
-                                <p>R$ 70,00/hora</p>
-                            </div>
-                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Avaliação</legend>
                         <ul>
-                            <li>Rio de Janeiro / RJ</li>
-                            <li>Educação</li>
                             <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.9</p>
-                                </div>
+                                <input type="radio" id="avaliacao1" name="rating">
+                                <label for="avaliacao1">1 estrela</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="avaliacao2" name="rating">
+                                <label for="avaliacao2">2 estrelas</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="avaliacao3" name="rating">
+                                <label for="avaliacao3">3 estrelas</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="avaliacao4" name="rating">
+                                <label for="avaliacao4">4 estrelas</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="avaliacao5" name="rating">
+                                <label for="avaliacao5">5 estrelas</label>
                             </li>
                         </ul>
-                        <p>
-                            Aulas de inglês personalizadas para todos os níveis, como foco em conversação e gramática.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#4</h2>
-                            <div>
-                                <h3>Confeitaria</h3>
-                                <p>A partir de R$ 80</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>Santa Catarina / SC</li>
-                            <li>Alimentícios</li>
-                            <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>5.0</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Qualidade expecional e utilizando os melhores produtos disponiveis no mercado. Nosso
-                            compromisso é transformar momentos especiais em memórias inesqueciveis com delicias que
-                            encatam tanto o paladar quantos os olhos.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-            </ul>
-
-            <nav aria-labelledby="navegacao-paginacao">
+                    </fieldset>
+                </form>
+            </aside>
+            
+            <section aria-labelledby="secao-servicos">
+                <h2>Resultado</h2>
+                <span id="secao-servicos">Mostrando 4 de 200 serviços</span>
                 <ul>
                     <li>
-                        <a href="#" aria-label="Ir para a página anterior na listagem de serviços">
-                            <p>Voltar</p>
-                            <img src="../assets/icons/LeftArrow.svg" alt="Seta para esquerda">
-                        </a>
+                        <article>
+                            <div>
+                                <h2>#1</h2>
+                                <div>
+                                    <h3>Serviço de Jardinagem Completo</h3>
+                                    <p>R$ 250</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Rio de Janeiro / RJ</li>
+                                <li>Horticultura</li>
+                                <li>
+                                    <div>
+                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                        <p>4.8</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>
+                                Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação e
+                                controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
+                            </p>
+                            <a href="./detalhes.html">Detalhes</a>
+                        </article>
                     </li>
-                    <li>Página 1 de 25</li>
                     <li>
-                        <a href="#" aria-label="Ir para a proxima página na listagem de serviços">
-                            <p>Avançar</p>
-                            <img src="../assets/icons/RightArrow.svg" alt="Seta para direita">
-                        </a>
+                        <article>
+                            <div>
+                                <h2>#2</h2>
+                                <div>
+                                    <h3>Desenvolvimento de Sites</h3>
+                                    <p>R$ 500/projeto</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Remoto</li>
+                                <li>Tecnologia</li>
+                                <li>
+                                    <div>
+                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                        <p>4.8</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>
+                                Desenvolvimento de sites modernos e responsivos, com foco em usabilidade e SEO.
+                            </p>
+                            <a href="./detalhes.html">Detalhes</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div>
+                                <h2>#3</h2>
+                                <div>
+                                    <h3>Aulas de Inglês</h3>
+                                    <p>R$ 70,00/hora</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Rio de Janeiro / RJ</li>
+                                <li>Educação</li>
+                                <li>
+                                    <div>
+                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                        <p>4.9</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>
+                                Aulas de inglês personalizadas para todos os níveis, como foco em conversação e
+                                gramática.
+                            </p>
+                            <a href="./detalhes.html">Detalhes</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <div>
+                                <h2>#4</h2>
+                                <div>
+                                    <h3>Confeitaria</h3>
+                                    <p>A partir de R$ 80</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Santa Catarina / SC</li>
+                                <li>Alimentícios</li>
+                                <li>
+                                    <div>
+                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                        <p>5.0</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>
+                                Qualidade expecional e utilizando os melhores produtos disponiveis no mercado. Nosso
+                                compromisso é transformar momentos especiais em memórias inesqueciveis com delicias que
+                                encatam tanto o paladar quantos os olhos.
+                            </p>
+                            <a href="./detalhes.html">Detalhes</a>
+                        </article>
                     </li>
                 </ul>
-            </nav>
-        </section>
+                <nav aria-labelledby="navegacao-paginacao">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Ir para a página anterior na listagem de serviços">
+                                <p>Voltar</p>
+                                <img src="../assets/icons/LeftArrow.svg" alt="Seta para esquerda">
+                            </a>
+                        </li>
+                        <li>Página 1 de 25</li>
+                        <li>
+                            <a href="#" aria-label="Ir para a proxima página na listagem de serviços">
+                                <p>Avançar</p>
+                                <img src="../assets/icons/RightArrow.svg" alt="Seta para direita">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </main>
 
     <footer>

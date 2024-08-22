@@ -1,12 +1,12 @@
-<svg width="80" height="84" viewBox="0 0 80 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="86" height="84" viewBox="0 0 86 84" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_195_6016)">
-<ellipse cx="39.7667" cy="38" rx="35.7667" ry="38" fill="#DFE3EE"/>
-<path d="M75.0335 38C75.0335 58.7396 59.2159 75.5 39.7667 75.5C20.3176 75.5 4.5 58.7396 4.5 38C4.5 17.2604 20.3176 0.5 39.7667 0.5C59.2159 0.5 75.0335 17.2604 75.0335 38Z" stroke="#203568"/>
+<ellipse cx="42.9302" cy="38" rx="38.9302" ry="38" fill="#DFE3EE"/>
+<path d="M81.3604 38C81.3604 58.6993 64.1661 75.5 42.9302 75.5C21.6943 75.5 4.5 58.6993 4.5 38C4.5 17.3007 21.6943 0.5 42.9302 0.5C64.1661 0.5 81.3604 17.3007 81.3604 38Z" stroke="#203568"/>
 </g>
-<path d="M58.6038 60.8V55.7333C58.6038 53.0458 57.5989 50.4683 55.8103 48.568C54.0216 46.6676 51.5956 45.6 49.066 45.6H29.9904C27.4609 45.6 25.0349 46.6676 23.2462 48.568C21.4575 50.4683 20.4526 53.0458 20.4526 55.7333V60.8" stroke="#2B468B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M39.528 35.4666C44.7956 35.4666 49.0658 30.9298 49.0658 25.3333C49.0658 19.7368 44.7956 15.2 39.528 15.2C34.2605 15.2 29.9902 19.7368 29.9902 25.3333C29.9902 30.9298 34.2605 35.4666 39.528 35.4666Z" stroke="#2B468B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63.4333 60.7999V55.7332C63.4333 53.0457 62.3395 50.4682 60.3926 48.5678C58.4457 46.6675 55.8052 45.5999 53.0519 45.5999H32.2891C29.5358 45.5999 26.8952 46.6675 24.9484 48.5678C23.0015 50.4682 21.9077 53.0457 21.9077 55.7332V60.7999" stroke="#2B468B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.6705 35.4666C48.4039 35.4666 53.0518 30.9298 53.0518 25.3333C53.0518 19.7368 48.4039 15.2 42.6705 15.2C36.937 15.2 32.2891 19.7368 32.2891 25.3333C32.2891 30.9298 36.937 35.4666 42.6705 35.4666Z" stroke="#2B468B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
-<filter id="filter0_d_195_6016" x="0" y="0" width="79.5334" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_195_6016" x="0" y="0" width="85.8604" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
