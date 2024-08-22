@@ -18,7 +18,7 @@ main li {
 }
 
 .secao-busca h1 {
-    font-size: 28px;
+    font-size: 2.6rem;
     font-weight: bold;
 }
 
@@ -71,13 +71,12 @@ button[type="submit"] {
     padding: 8px;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
     cursor: pointer;
     order: 2;
 }
 
 button[type="submit"]:hover {
-    background-color: #993d13;
+    background-color: #ce5219;
 }
 
 section[aria-labelledby="filtros-busca"] {
@@ -115,34 +114,70 @@ section[aria-labelledby="filtros-busca"] select {
 
 .servicos-container {
     display: flex;
-    margin: 20px auto;
     gap: 60px;
-    padding-block: 20px;
-    padding-inline-end: 30px;
+    padding-block: 1.2rem;
+    padding-inline: 2rem;
     border-radius: 8px;
 }
 
-aside {
-    width: 25%;
+/* Seção de filtro */
+aside[aria-labelledby="secao-filtros"] {
+    display: none;
     background-color: #fafafa;
     padding: 20px;
     border-radius: 0 70px 70px 0;
 }
 
-aside h2 {
-    font-size: 1.5rem;
+aside[aria-labelledby="secao-filtros"] h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: #333333;
 }
 
-fieldset {
+aside[aria-labelledby="secao-filtros"] form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filtro-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     border: none;
-    margin-bottom: 20px;
+    font-weight: bold;
+    gap: 8px;
+    background-color: #fafafa;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-block: 1rem;
+    color: #2B468B;
+}
+
+.filtro-header img {
+    transition: transform 0.3s ease;
+}
+
+.filtro-header[aria-expanded="false"] img {
+    transform: rotate(180deg);
+}
+
+.filtro-conteudo {
+    display: block;
+    border-top: none;
+}
+
+.filtro-categoria[aria-expanded="true"] .filtro-conteudo,
+.filtro-preco[aria-expanded="true"] .filtro-conteudo,
+.filtro-avaliacao[aria-expanded="true"] .filtro-conteudo {
+    display: block;
 }
 
 legend {
     font-weight: bold;
     color: #333333;
-    margin-bottom: 10px;
+    margin-bottom: 0.4rem;
 }
 
 input[type="checkbox"],
@@ -150,23 +185,18 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
+/* Seção listagem de serviços */
+
 section[aria-labelledby="secao-servicos"] {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 75%;
+    gap: 1.2rem;
 }
 
-section[aria-labelledby="secao-servicos"] h2 {
-    font-size: 1.5rem;
-    color: #333333;
-}
-
-#secao-servicos {
-    color: #666;
-}
-
-section[aria-labelledby="secao-servicos"] article {
+.servico-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     background-color: #fafafa;
     padding: 15px;
     border-radius: 8px;
@@ -174,87 +204,117 @@ section[aria-labelledby="secao-servicos"] article {
     transition: transform 0.2s;
 }
 
-section[aria-labelledby="secao-servicos"] article:hover {
-    transform: translateY(-5px);
+.servico-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 0.5rem;
 }
 
-section[aria-labelledby="secao-servicos"] article h2 {
-    font-size: 20px;
+.servico-card h3 {
+    font-size: 1.2rem;
     color: #2B468B;
 }
 
-section[aria-labelledby="secao-servicos"] article h3 {
-    font-size: 24px;
+.servico-card h4 {
+    font-size: 1.5rem;
     color: #333333;
 }
 
-section[aria-labelledby="secao-servicos"] article p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-section[aria-labelledby="secao-servicos"] article ul {
-    display: flex;
-    gap: 20px;
-}
-
-section[aria-labelledby="secao-servicos"] article ul li {
-    font-size: 0.9rem;
-    color: #666;
+.servico-card ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
 }
 
-section[aria-labelledby="secao-servicos"] article ul li img {
-    margin-right: 5px;
+.servico-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
+
+.servico-card .avaliação {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detalhes-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    text-decoration: none;
+    background-color: #BF4F1B;
+    color: #fafafa;
+    padding-inline: 1rem;
+    padding-block: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.detalhes-btn:hover {
+    background-color: #ce5219;
+}
+
+/* Paginação */
 
 nav[aria-labelledby="navegacao-paginacao"] a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
     text-decoration: none;
-    color: #2B468B;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-nav[aria-labelledby="navegacao-paginacao"] a:hover {
-    text-decoration: underline;
+    background-color: #2B468B;
+    color: #fafafa;
+    padding-inline: 1rem;
+    padding-block: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 nav[aria-labelledby="navegacao-paginacao"] ul {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
     padding: 0;
 }
 
 nav[aria-labelledby="navegacao-paginacao"] ul li {
+    text-align: center;
     list-style: none;
 }
 
-nav[aria-labelledby="navegacao-paginacao"] ul li a {
-    display: flex;
-    align-items: center;
-    color: #2B468B;
-    font-weight: bold;
-}
-
-nav[aria-labelledby="navegacao-paginacao"] ul li a img {
-    margin-left: 5px;
-}
-
-nav[aria-labelledby="navegacao-paginacao"] ul li a:hover {
-    text-decoration: underline;
-}
-
 /* Estilização para telas maiores */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     slot {
         display: flex;
         flex-grow: 1;
         gap: 10px;
         max-width: 1000px;
         min-width: 618px;
+    }
+
+    .servicos-container {
+        display: flex;
+        gap: 2.2rem;
+        padding-inline-start: 0;
+        padding-inline-end: 2.2rem;
+        border-radius: 8px;
+    }
+
+    .detalhes-btn {
+        align-self: flex-end;
+    }
+
+    aside[aria-labelledby="secao-filtros"] {
+        min-width: 12.75rem;
     }
 
     .barra-busca-container {
@@ -288,12 +348,12 @@ nav[aria-labelledby="navegacao-paginacao"] ul li a:hover {
         gap: 24px;
     }
 
-    .filtros-busca {
-        min-width: auto;
-    }
-
     button[type="submit"] {
         padding: 12px 24px;
-        font-size: 18px;
+        font-size: 1.1rem;
+    }
+
+    aside[aria-labelledby="secao-filtros"] {
+        display: block;
     }
 }

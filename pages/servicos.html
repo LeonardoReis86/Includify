@@ -67,7 +67,7 @@
                             <option value="Espírito Santo">Espírito Santo</option>
                             <option value="Minas Gerais">Minas Gerais</option>
                         </select>
-                        <img src="../assets/icons/Down.svg" alt="" width="12">
+                        <img src="../assets/icons/DownBlue.svg" alt="" width="12">
                     </div>
                     <div class="filtros-busca">
                         <label for="selecao-cidade">
@@ -93,198 +93,256 @@
             <aside aria-labelledby="secao-filtros">
                 <h2 id="secao-filtros">Filtros</h2>
                 <form action="#">
-                    <fieldset>
-                        <legend>Categorias</legend>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
-                                <label for="fotografia">Fotografia</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
-                                <label for="tecnologia">Tecnologia</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="educacao" name="categoria" value="educacao">
-                                <label for="educacao">Educação</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
-                                <label for="horticultura">Horticultura</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
-                                <label for="alimenticio">Alimentício</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
-                                <label for="paisagismo">Paisagismo</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Preço</legend>
-                        <ul>
-                            <li>
-                                <input type="radio" id="preco10" name="price">
-                                <label for="preco10">R$ 10 a 50</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="preco50" name="price">
-                                <label for="preco50">R$ 50 a 100</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="preco100" name="price">
-                                <label for="preco100">R$ 100 a 200</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="preco200" name="price">
-                                <label for="preco200">R$ 200 a 400</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="preco400" name="price">
-                                <label for="preco400">R$ 400 a 800</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="preco800" name="price">
-                                <label for="preco800">R$ 800 ou mais</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Avaliação</legend>
-                        <ul>
-                            <li>
-                                <input type="radio" id="avaliacao1" name="rating">
-                                <label for="avaliacao1">1 estrela</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="avaliacao2" name="rating">
-                                <label for="avaliacao2">2 estrelas</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="avaliacao3" name="rating">
-                                <label for="avaliacao3">3 estrelas</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="avaliacao4" name="rating">
-                                <label for="avaliacao4">4 estrelas</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="avaliacao5" name="rating">
-                                <label for="avaliacao5">5 estrelas</label>
-                            </li>
-                        </ul>
-                    </fieldset>
+                    <div class="filtro-categoria">
+                        <button type="button" class="filtro-header" aria-expanded="true"
+                            aria-controls="filtro-categorias">
+                            Categorias
+                            <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir categorias">
+                        </button>
+                        <div id="filtro-categorias" class="filtro-conteudo">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
+                                    <label for="fotografia">Fotografia</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
+                                    <label for="tecnologia">Tecnologia</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="educacao" name="categoria" value="educacao">
+                                    <label for="educacao">Educação</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
+                                    <label for="horticultura">Horticultura</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
+                                    <label for="alimenticio">Alimentício</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
+                                    <label for="paisagismo">Paisagismo</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filtro-preco">
+                        <button type="button" class="filtro-header" aria-expanded="true" aria-controls="filtro-preco">
+                            Preço
+                            <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir preço">
+                        </button>
+                        <div id="filtro-preco" class="filtro-conteudo">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="preco10" name="price">
+                                    <label for="preco10">R$ 10 a 50</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="preco50" name="price">
+                                    <label for="preco50">R$ 50 a 100</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="preco100" name="price">
+                                    <label for="preco100">R$ 100 a 200</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="preco200" name="price">
+                                    <label for="preco200">R$ 200 a 400</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="preco400" name="price">
+                                    <label for="preco400">R$ 400 a 800</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="preco800" name="price">
+                                    <label for="preco800">R$ 800 ou mais</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="filtro-avaliacao">
+                        <button type="button" class="filtro-header" aria-expanded="true"
+                            aria-controls="filtro-avaliacao">
+                            Avaliação
+                            <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir avaliação">
+                        </button>
+                        <div id="filtro-avaliacao" class="filtro-conteudo">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="avaliacao1" name="rating">
+                                    <label for="avaliacao1">1 estrela</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="avaliacao2" name="rating">
+                                    <label for="avaliacao2">2 estrelas</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="avaliacao3" name="rating">
+                                    <label for="avaliacao3">3 estrelas</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="avaliacao4" name="rating">
+                                    <label for="avaliacao4">4 estrelas</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="avaliacao5" name="rating">
+                                    <label for="avaliacao5">5 estrelas</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </form>
             </aside>
-            
+
             <section aria-labelledby="secao-servicos">
                 <h2>Resultado</h2>
                 <span id="secao-servicos">Mostrando 4 de 200 serviços</span>
                 <ul>
                     <li>
-                        <article>
+                        <article class="servico-card">
                             <div>
-                                <h2>#1</h2>
-                                <div>
-                                    <h3>Serviço de Jardinagem Completo</h3>
+                                <h3>#1</h3>
+                                <div class="servico-header">
+                                    <h4>Serviço de Jardinagem Completo</h4>
                                     <p>R$ 250</p>
                                 </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10">
+                                        Rio de Janeiro / RJ
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18">
+                                        Horticultura
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.8</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação
+                                    e controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
+                                </p>
                             </div>
-                            <ul>
-                                <li>Rio de Janeiro / RJ</li>
-                                <li>Horticultura</li>
-                                <li>
-                                    <div>
-                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                        <p>4.8</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p>
-                                Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação e
-                                controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
-                            </p>
-                            <a href="./detalhes.html">Detalhes</a>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg">
+                            </a>
                         </article>
                     </li>
+
                     <li>
-                        <article>
+                        <article class="servico-card">
                             <div>
-                                <h2>#2</h2>
-                                <div>
-                                    <h3>Desenvolvimento de Sites</h3>
-                                    <p>R$ 500/projeto</p>
+                                <h3>#2</h3>
+                                <div class="servico-header">
+                                    <h4>Pintura Residencial</h4>
+                                    <p>R$ 450</p>
                                 </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10">
+                                        São Paulo / SP
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18">
+                                        Pintura
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.5</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de pintura residencial completa, incluindo preparação das paredes, aplicação
+                                    de tinta de alta qualidade e acabamento perfeito.
+                                </p>
                             </div>
-                            <ul>
-                                <li>Remoto</li>
-                                <li>Tecnologia</li>
-                                <li>
-                                    <div>
-                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                        <p>4.8</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p>
-                                Desenvolvimento de sites modernos e responsivos, com foco em usabilidade e SEO.
-                            </p>
-                            <a href="./detalhes.html">Detalhes</a>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg">
+                            </a>
                         </article>
                     </li>
+
                     <li>
-                        <article>
+                        <article class="servico-card">
                             <div>
-                                <h2>#3</h2>
-                                <div>
-                                    <h3>Aulas de Inglês</h3>
-                                    <p>R$ 70,00/hora</p>
+                                <h3>#3</h3>
+                                <div class="servico-header">
+                                    <h4>Limpeza Pós-Obra</h4>
+                                    <p>R$ 350</p>
                                 </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10">
+                                        Belo Horizonte / MG
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18">
+                                        Limpeza
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.7</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de limpeza pós-obra, removendo todo o entulho e sujeira, deixando seu espaço
+                                    pronto para uso imediato.
+                                </p>
                             </div>
-                            <ul>
-                                <li>Rio de Janeiro / RJ</li>
-                                <li>Educação</li>
-                                <li>
-                                    <div>
-                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                        <p>4.9</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p>
-                                Aulas de inglês personalizadas para todos os níveis, como foco em conversação e
-                                gramática.
-                            </p>
-                            <a href="./detalhes.html">Detalhes</a>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg">
+                            </a>
                         </article>
                     </li>
+
                     <li>
-                        <article>
+                        <article class="servico-card">
                             <div>
-                                <h2>#4</h2>
-                                <div>
-                                    <h3>Confeitaria</h3>
-                                    <p>A partir de R$ 80</p>
+                                <h3>#4</h3>
+                                <div class="servico-header">
+                                    <h4>Reforma de Móveis</h4>
+                                    <p>R$ 300</p>
                                 </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10">
+                                        Porto Alegre / RS
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18">
+                                        Marcenaria
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.9</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de reforma de móveis, restaurando peças antigas e danificadas, deixando-as
+                                    como novas.
+                                </p>
                             </div>
-                            <ul>
-                                <li>Santa Catarina / SC</li>
-                                <li>Alimentícios</li>
-                                <li>
-                                    <div>
-                                        <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                        <p>5.0</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p>
-                                Qualidade expecional e utilizando os melhores produtos disponiveis no mercado. Nosso
-                                compromisso é transformar momentos especiais em memórias inesqueciveis com delicias que
-                                encatam tanto o paladar quantos os olhos.
-                            </p>
-                            <a href="./detalhes.html">Detalhes</a>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg">
+                            </a>
                         </article>
                     </li>
                 </ul>
@@ -292,8 +350,8 @@
                     <ul>
                         <li>
                             <a href="#" aria-label="Ir para a página anterior na listagem de serviços">
-                                <p>Voltar</p>
                                 <img src="../assets/icons/LeftArrow.svg" alt="Seta para esquerda">
+                                <p>Voltar</p>
                             </a>
                         </li>
                         <li>Página 1 de 25</li>
@@ -384,7 +442,7 @@
                 </small>
             </p>
         </section>
-    </footer>
+    </footer> 
 </body>
 
 </html>
