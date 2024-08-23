@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;  
 }
 
 body {
     background-color: #fafafa;
-    color: #333333;
+    color: #333333;  
     min-width: 280px;
 }
 
@@ -27,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .logo-container h1 {
