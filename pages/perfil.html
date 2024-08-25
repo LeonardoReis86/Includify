@@ -6,22 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Includify - Perfil</title>
     <script src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <!-- <style>
-        body {
-            margin: 0;
-            border: 0;
-        }
-
-        header {
-            background-color: #2B468B;
-            padding: 0.5rem;
-        }
-
-        footer {
-            background-color: #2B468B;
-            padding: 0.5rem;
-        }
-    </style> -->
+    <link rel="stylesheet" href="../Css/perfil.css">
+    <link rel="stylesheet" href="../Css/global.css">
 </head>
 
 <body>
@@ -51,7 +37,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="secao-perfil">
             <div>
                 <figure>
                     <img src="../assets/icons/User.svg" alt="Foto de perfil do empreendedor">
@@ -62,79 +48,82 @@
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/"
-                            aria-label="Acessar instagram do empreendedor">Instagram</a>
+                            aria-label="Acessar instagram do empreendedor"><img src="../assets/icons/Instagram.svg" alt=""></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/" aria-label="Acessar facebook do empreendedor">Facebook</a>
+                        <a href="https://www.facebook.com/" aria-label="Acessar facebook do empreendedor"><img src="../assets/icons/Facebook.svg" alt=""></a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/" aria-label="Acessar li do empreendedor">LinkedIn</a>
+                        <a href="https://www.linkedin.com/" aria-label="Acessar li do empreendedor"><img src="../assets/icons/LinkedIn.svg" alt=""></a>
                     </li>
                 </ul>
+                <div>
+                    <figure>
+                        <img src="../assets/icons/Rating.svg" alt="Avaliação do empreendedor">
+                        <p>&#40;4.8 de 5&#41;</p>
+                        <figcaption>&#40;600 avaliações&#41;</figcaption>
+                    </figure>
+                </div>
             </div>
-            <div>
-                <figure>
-                    <img src="../assets/icons/Rating.svg" alt="Avaliação do empreendedor">
-                    <p>&#40;4.8 de 5&#41;</p>
-                    <figcaption>&#40;600 avaliações&#41;</figcaption>
-                </figure>
-            </div>
+           
         </section>
-        <section>
-            <article>
-                <h2>Quem sou eu</h2>
-                <h3>São Paulo/SP</h3>
-                <p>Tenho 32 anos, e moro em São Paulo. Sou uma pessoa com deficiência auditiva, mas isso nunca me
-                    impediu de seguir minha paixão por criar produtos sustentáveis e trabalhar com jardinagem. Minha
-                    jornada no artesanato começou como uma forma de expressar minha criatividade, e hoje eu transformo
-                    materiais recicláveis em peças únicas que refletem o cuidado com o meio ambiente.</p>
-                <p>"Acredito que tanto o artesanato quanto a jardinagem têm o poder de transformar vidas. Minhas
-                    criações e meu trabalho com a terra são maneiras de promover um mundo mais inclusivo e sustentável."
-                </p>
-                <a href="">Entrar em Contato</a>
-            </article>
-            <article aria-labelledby="servicos-prestados">
-                <h2 id="servicos-prestados">Serviços Prestados</h2>
+        <section class="quem-sou">
                 <div>
-                    <figure>
-                        <img src="../assets/img/artesanato.png" alt="Bijuterias artesanais">
-                        <figcaption>
-                            <p>Artesanato</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/img/sustentavel.png" alt="Produtos sustentáveis">
-                        <figcaption>
-                            <p>Produtos sustentáveis</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/img/jardinagem.png" alt="Jardinagem">
-                        <figcaption>
-                            <p>Jardinagem</p>
-                        </figcaption>
-                    </figure>
+                    <h2>Quem sou eu</h2>
+                    <h3>São Paulo/SP</h3>
+                    <p>Tenho 32 anos, e moro em São Paulo. Sou uma pessoa com deficiência auditiva, mas isso nunca me
+                        impediu de seguir minha paixão por criar produtos sustentáveis e trabalhar com jardinagem. Minha
+                        jornada no artesanato começou como uma forma de expressar minha criatividade, e hoje eu transformo
+                        materiais recicláveis em peças únicas que refletem o cuidado com o meio ambiente.</p>
+                    <p>"Acredito que tanto o artesanato quanto a jardinagem têm o poder de transformar vidas. Minhas
+                        criações e meu trabalho com a terra são maneiras de promover um mundo mais inclusivo e sustentável."
+                    </p>
+                    <a href="">Entrar em Contato</a>
+                    <article aria-labelledby="servicos-prestados">
+                        <h2 id="servicos-prestados">Serviços Prestados</h2>
+                        <div>
+                            <figure>
+                                <img src="../assets/img/artesanato.png" alt="Bijuterias artesanais">
+                                <figcaption>
+                                    <p>Artesanato</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="../assets/img/sustentavel.png" alt="Produtos sustentáveis">
+                                <figcaption>
+                                    <p>Produtos sustentáveis</p>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="../assets/img/jardinagem.png" alt="Jardinagem">
+                                <figcaption>
+                                    <p>Jardinagem</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article aria-labelledby="lista-servico">
-                <h2 id="lista-servico">Nossos Serviços</h2>
-                <div>
-                    <figure>
-                        <img src="../assets/img/sustentavel.png" alt="Nossos produtos sustentáveis">
-                        <figcaption>
-                            <img src="../assets/icons/Rating.svg" alt="Contém 112 avaliações">
-                            <p>&#40;112 avaliações&#41;</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/img/jardinagem.png" alt="Jardinagem">
-                        <figcaption>
-                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações">
-                            <p>&#40;45 avaliações&#41;</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </article>
+        </section>
+        <section class="servicos">
+                <article aria-labelledby="lista-servico">
+                    <h2 id="lista-servico">Nossos Serviços</h2>
+                    <div>
+                        <figure>
+                            <img src="../assets/img/sustentavel.png" alt="Nossos produtos sustentáveis">
+                            <figcaption>
+                                <img src="../assets/icons/Rating.svg" alt="Contém 112 avaliações">
+                                <p>&#40;112 avaliações&#41;</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/img/jardinagem.png" alt="Jardinagem">
+                            <figcaption>
+                                <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações">
+                                <p>&#40;45 avaliações&#41;</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
         </section>
     </main>
 

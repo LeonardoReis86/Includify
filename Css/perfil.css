@@ -1,0 +1,185 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilização do conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main section > div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+main section figure {
+    margin: 0;
+    text-align: center;
+}
+
+main section figure img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+main section figure figcaption {
+    font-weight: bold;
+}
+
+main section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+main section ul li {
+    margin: 0 10px;
+}
+
+main section ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 1.2em;
+}
+
+main article {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+main article h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+main article h3 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+main article p {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+main article a {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+main article a:hover {
+    background-color: #002244;
+}
+
+main article div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+main article div figure {
+    width: 30%;
+}
+
+main article div figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main section div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+main section div:nth-child(2) figure {
+    margin: 0;
+    text-align: center;
+}
+
+main section div:nth-child(2) figure img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+main section div:nth-child(2) p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+main section div:nth-child(2) figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Estilização dos serviços */
+main article#lista-servico div,
+main article#servicos-prestados div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main article div figure {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+main article div figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main article div figure figcaption {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+main article div figure figcaption img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
