@@ -25,7 +25,6 @@ header{
     display: inline-block;
     vertical-align: top;
     width: 50%;
-    /* background-color: red; */
     margin: 10px auto;
     padding: 10px 20px;
     border-radius: 8px;
@@ -52,6 +51,23 @@ header{
     align-items: center;
 }
 
+.img-perfil{
+    width: 200px;
+    height: 200px;
+}
+
+.button-img-perfil{
+  font-size: var(--font-size-p);
+  color: var(--color-backgroud);
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 200px;
+  background-color: var(--color-standard);
+  border: none;
+  margin: 0 auto;
+  display: block;
+}
 /*Form */
 
 input[type="text"],
