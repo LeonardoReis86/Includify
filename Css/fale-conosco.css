@@ -1,105 +1,107 @@
-body {
-    min-width: 500px;
-}
-
 .main-fale-conosco {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;
-    margin-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 16px;
 }
 
 .secao-fale-conosco {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.253);
-    padding-block: 1.5rem;
-    padding-inline: 4rem;
-    border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .secao-fale-conosco>.logo-container>h1 {
-    font-size: 20px;
-    color: #2B468B;
+  font-size: 20px;
+  color: #2B468B;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    min-width: 16.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  min-width: 16.6rem;
 }
 
 .form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
 }
 
 .form-container>h1 {
-    color: #434343
+  color: #434343
 }
 
 .form-container label {
-    display: none;
+  display: none;
 }
 
 .form-container input,
 .form-container textarea {
-    background-color: #DFE3EE;
-    padding: 8px;
-    border: 1px solid #203568;
-    border-radius: 10px;
-    resize: none;
+  background-color: #DFE3EE;
+  padding: 8px;
+  border: 1px solid #203568;
+  border-radius: 10px;
+  resize: none;
 }
 
 .form-container input::placeholder,
 .form-container textarea::placeholder {
-    color: #2B468B;
-    opacity: 1;
+  color: #2B468B;
+  opacity: 1;
 }
 
 .form-container textarea {
-    min-height: 7.4rem;
+  min-height: 7.4rem;
 }
 
 .form-container button {
-    padding-block: 7px;
-    background-color: #BF4F1B;
-    border: none;
-    color: #fafafa;
-    border-radius: 10px;
-    cursor: pointer;
+  padding-block: 7px;
+  background-color: #BF4F1B;
+  border: none;
+  color: #fafafa;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .form-container button:hover {
-    background-color: #D35400;
+  background-color: #D35400;
 }
 
 .image-container {
-    display: none;
+  display: none;
 }
 
 .image-container img {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 48rem) {
-    .main-fale-conosco { 
-        flex-direction: row; 
-    }
+  .main-fale-conosco {
+    align-items: center;
+    gap: 10rem;
+  }
 
-    .image-container {
-        display: block;
-    }
+  .secao-fale-conosco {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.253);
+    padding-block: 1.5rem;
+    padding-inline: 4rem;
+    border-radius: 40px;
+  }
 
-    .image-container img {
-        display: block;
-    }
+  .main-fale-conosco {
+    flex-direction: row;
+  }
+
+  .image-container {
+    display: block;
+  }
+
+  .image-container img {
+    display: block;
+  }
 }
