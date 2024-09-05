@@ -23,13 +23,16 @@ header{
     border-radius: 8px;
 }
 .container-form{
-    display: inline-block;
-    max-width: auto;
-    margin: 10px auto;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem 4rem;
     background: var(--color-background-card);
     border-radius: 8px;
 }
+
 
 /*Form */
 
