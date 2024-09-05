@@ -1,11 +1,5 @@
 @import url(global.css);
 
-*{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 header{
     height: 90px;
@@ -17,8 +11,7 @@ header{
 
 /*Conteiner do Formulario*/
 .container{
-    max-width: 1200px;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 .container-perfil{
@@ -31,43 +24,13 @@ header{
 }
 .container-form{
     display: inline-block;
-    max-width: 50%;
+    max-width: auto;
     margin: 10px auto;
     padding: 10px 20px;
     background: var(--color-background-card);
     border-radius: 8px;
 }
 
-/* Perfil */
-
-.perfil{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: var(--color-standard);
-    margin: 8px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-perfil{
-    width: 200px;
-    height: 200px;
-}
-
-.button-img-perfil{
-  font-size: var(--font-size-p);
-  color: var(--color-backgroud);
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-  width: 200px;
-  background-color: var(--color-standard);
-  border: none;
-  margin: 0 auto;
-  display: block;
-}
 /*Form */
 
 input[type="text"],

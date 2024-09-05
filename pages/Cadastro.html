@@ -10,18 +10,37 @@
     <meta name="description" content="Página para se cadastrar na Includify">
 </head>
 <body>
-    <nav>
-        <li>Home</li>
-        <li>Serviço</li>
-        <li>Login</li>
-    </nav>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" aria-label="Ir para a página inicial">
+                <img src="/assets/img/logo.png" alt="Includify Logo" width="50">
+            </a>
+            <h1>Includify</h1>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul class="menu-principal">
+                <li>
+                    <a href="index.html" aria-label="Acessar a página Home">Home</a>
+                </li>
+                <li>
+                    <a href="pages/servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                </li>
+                <li>
+                    <a href="pages/login.html" aria-label="Acessar a página logIn" class="log-in">
+                        <img src="/assets/icons/LogInDark.svg" alt="Icone de logIn" width="30">
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <div class="container-perfil">
+        <!-- <div class="container-perfil">
             <div class="perfil">
                 <img class="img-perfil" src="/assets/icons/User.svg" alt="Foto de Perfil">
             </div>
             <button type="submit" class="button-img-perfil">Carregar Foto</button>
-        </div>
+        </div> -->
         <div class="container-form">
             <form>
                 <h1>Cadastro</h1>
@@ -47,7 +66,90 @@
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
+  
     </div>
     
+    <footer>
+        <section class="secao-footer">
+            <div class="navegacao-footer" aria-labelledby="navegacao-footer">
+                <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
+                <ul>
+                    <li>
+                        <a href="./login.html" aria-label="Acessar a página logIn">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./cadastro.html" aria-label="Acessar a página de Cadastro">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
+                            Cadastre-se
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <section aria-labelledby="secao-social-media" class="secao-social-media">
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes socias da Includify</h2>
+                <div class="logo-footer">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
+                    </a>
+                    <h3>Includify</h3>
+                </div>
+                <nav aria-labelledby="navegacao-social-media">
+                    <h3 id="navegacao-social-media" class="sr-only">Navegacao das redes socias da Includify</h3>
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook" width="25">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram" width="25">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube" width="25">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="navegacao-contato" aria-labelledby="navegacao-contato">
+                <h4 id="navegacao-contato" class="sr-only">Navegação de contato do footer</h4>
+                <ul>
+                    <li>
+                        <a href="./fale-conosco.html" aria-label="Acessar página Fale Conosco">
+                            Fale Conosco
+                            <img src="../assets/icons/Phone.svg" alt="Ícone Fale Conosco">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Acessar página Dúvidas Frequentes">
+                            Dúvidas Frequentes
+                            <img src="../assets/icons/DuvidasFrequentes.svg" alt="Ícone Dúvidas Frequentes">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="secao-diretos" aria-labelledby="secao-diretos">
+            <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
+            <p>
+                <small>
+                    ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados • Design by
+                    grupo3
+                </small>
+            </p>
+        </section>
+    </footer>
+
 </body>
 </html>
