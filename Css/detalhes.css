@@ -1,0 +1,200 @@
+section[aria-labelledby="servico-detalhe"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilo do artigo */
+.detalhes-servico {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detalhes-servico img[alt="Imagem do serviço de jardinagem"] {
+    max-width: 100%;
+    padding-top: 48px;
+    padding-inline: 48px;
+}
+
+.info-anunciante {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.img-anunciante {
+    display: flex;
+    align-items: center;
+    background-color: #DFE3EE;
+    padding-block: 0.7rem;
+    padding-inline: 0.8rem;
+    border: 1px solid #203568;
+    border-radius: 100%;
+}
+
+.info-anunciante h3 {
+    font-size: 0.8rem;
+}
+
+.info-anunciante p {
+    font-size: 0.8rem;
+}
+
+.info-anunciante a {
+    font-size: 0.8rem;
+    color: #2B468B;
+    font-weight: 600;
+    text-align: start;
+    text-decoration: underline;
+}
+
+.descricao-servico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    width: 90%;
+}
+
+.descricao-servico h1 {
+    font-size: 1.4rem;
+}
+
+.descricao-servico .categorias-servico {
+    padding-top: 6px;
+    padding-bottom: 10px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.descricao-servico .categorias-servico li {
+    color: #252525;
+    font-size: 0.7rem;
+    background-color: #96e878a2;
+    border-radius: 8px;
+    padding-block: 0.3rem;
+    padding-inline: 0.5rem;
+}
+
+.tag-preco {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.descricao-servico .avaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-block: 10px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.avaliacao-servico {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.avaliação-texto {
+    font-weight: 600;
+}
+
+.beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-block: 20px;
+    gap: 20px;
+    list-style: none;
+}
+
+.beneficios li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-contratar {
+    text-align: center;
+    padding-block: 12px;
+    padding-inline: 20px;
+    background-color: #BF4F1B;
+    color: #fafafa;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 48rem) {
+    .info-anunciante {
+        justify-content: flex-start;
+    }
+
+    section[aria-labelledby="servico-detalhe"] {
+        margin: 0 auto;
+        max-width: 80%;
+        padding-top: 40px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    section[aria-labelledby="servico-detalhe"] h1 {
+        text-align: start;
+    }
+
+    .detalhes-servico img[alt="Imagem do serviço de jardinagem"] {
+        padding: 0;
+    }
+
+    .descricao-servico .categorias-servico {
+        margin-bottom: 0px;
+    }
+
+    .descricao-servico {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .descricao-servico .avaliacoes {
+        align-items: flex-start;
+    }
+
+    .beneficios {
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+
+    .beneficios li {
+        justify-content: flex-start;
+        flex-basis: calc(50% - 10px);
+    }
+
+    .btn-contratar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        font-weight: 600;
+        background-color: #BF4F1B;
+        color: #fafafa;
+        border: none;
+        cursor: pointer;
+    }
+}
