@@ -10,26 +10,39 @@ body {
     color: #333333;
 }
 
-/* Estilo geral do Header */
-header {
+main,
+header,
+footer {
+    min-width: 17.5rem;
+}
+
+header>div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #2B468B;
-    color: #fafafa;
+    max-width: 80rem;
     padding: 10px;
     text-align: center;
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* Estilo geral do Header */
+header {
+    background-color: #2B468B;
+    color: #fafafa;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
 }
 
-.logo-container h1 { 
-    font-size: 20px;
+.logo-container h1 {
+    font-size: 1.25rem;
 }
 
 nav ul {
@@ -46,7 +59,7 @@ nav ul li {
 
 nav ul li a {
     color: #fafafa;
-    font-size: 18px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
@@ -66,12 +79,13 @@ nav ul li a {
 }
 
 /* Estilo geral do Footer */
+
 footer {
-    background-color: #2B468B;
-    color: #fafafa;
     border-radius: 30px 30px 0px 0px;
     padding-block-start: 10px;
     text-align: center;
+    background-color: #2B468B;
+    color: #fafafa;
 }
 
 footer a {
@@ -124,7 +138,7 @@ footer ul li a {
 
 .logo-footer {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .navegacao-footer ul li,
@@ -152,10 +166,11 @@ footer ul li a {
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 
     /* Header */
-    header {
+    header>div {
+        margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
     }
