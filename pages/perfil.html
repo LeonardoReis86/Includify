@@ -6,124 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Includify - Perfil</title>
     <script src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../Css/perfil.css">
     <link rel="stylesheet" href="../Css/global.css">
+    <link rel="stylesheet" href="../Css/perfil.css">
 </head>
 
 <body>
     <header>
-        <div class="logo-container">
-            <a href="../index.html" aria-label="Ir para a página inicial">
-                <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
-            </a>
-            <h1>Includify</h1>
+        <div>
+            <div class="logo-container">
+                <a href="../index.html" aria-label="Ir para a página inicial">
+                    <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                </a>
+                <h1>Includify</h1>
+            </div>
+            <nav aria-label="Navegação principal">
+                <ul class="menu-principal">
+                    <li>
+                        <a href="../index.html" aria-label="Acessar a página Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                    </li>
+                    <li>
+                        <a href="./login.html" aria-label="Acessar a página logIn" class="log-in">
+                            <img src="../assets/icons/logInDark.svg" alt="Icone de logIn" width="30">
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav aria-label="Navegação principal">
-            <ul class="menu-principal">
-                <li>
-                    <a href="../index.html" aria-label="Acessar a página Home">Home</a>
-                </li>
-                <li>
-                    <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
-                </li>
-                <li>
-                    <a href="./login.html" aria-label="Acessar a página logIn" class="log-in">
-                        <img src="../assets/icons/logInDark.svg" alt="Icone de logIn" width="30">
-                        <span>Login</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section class="secao-perfil">
-            <div>
-                <figure>
-                    <img src="../assets/icons/User.svg" alt="Foto de perfil do empreendedor">
-                    <figcaption>
-                        <h1>Nome do empreendedor</h1>
-                    </figcaption>
-                </figure>
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/"
-                            aria-label="Acessar instagram do empreendedor"><img src="../assets/icons/Instagram.svg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/" aria-label="Acessar facebook do empreendedor"><img src="../assets/icons/Facebook.svg" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/" aria-label="Acessar li do empreendedor"><img src="../assets/icons/LinkedIn.svg" alt=""></a>
-                    </li>
-                </ul>
+        <div>
+            <section class="secao-perfil">
                 <div>
-                    <figure>
-                        <img src="../assets/icons/Rating.svg" alt="Avaliação do empreendedor">
-                        <p>&#40;4.8 de 5&#41;</p>
-                        <figcaption>&#40;600 avaliações&#41;</figcaption>
+                    <figure class="perfil-ususario">
+                        <img src="../assets/icons/User-profile.svg" alt="Foto de perfil do empreendedor">
+                        <figcaption>
+                            Maria Oliveira
+                        </figcaption>
                     </figure>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/" aria-label="Acessar instagram do empreendedor">
+                                <img src="../assets/icons/Instagram-cheio.svg" alt="" width="30">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" aria-label="Acessar facebook do empreendedor">
+                                <img src="../assets/icons/Facebook-cheio.svg" alt="" width="30">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" aria-label="Acessar li do empreendedor">
+                                <img src="../assets/icons/LinkedIn-cheio.svg" alt="" width="30">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-           
-        </section>
-        <section class="quem-sou">
                 <div>
+                    <img src="../assets/icons/Rating.svg" alt="Avaliação do empreendedor">
+                    <span>&#40;4.8 de 5&#41;</span>
+                    <p>&#40;600 avaliações&#41;</p>
+                </div>
+            </section>
+            <section class="apresentacao">
+                <article class="quem-sou">
                     <h2>Quem sou eu</h2>
-                    <h3>São Paulo/SP</h3>
-                    <p>Tenho 32 anos, e moro em São Paulo. Sou uma pessoa com deficiência auditiva, mas isso nunca me
+                    <div>
+                        <img src="../assets/icons/Local-color.svg" alt="" width="15">
+                        <p>São Paulo/SP</p>
+                    </div>
+                    <p>
+                        Tenho 32 anos, e moro em São Paulo. Sou uma pessoa com deficiência auditiva, mas isso nunca me
                         impediu de seguir minha paixão por criar produtos sustentáveis e trabalhar com jardinagem. Minha
-                        jornada no artesanato começou como uma forma de expressar minha criatividade, e hoje eu transformo
-                        materiais recicláveis em peças únicas que refletem o cuidado com o meio ambiente.</p>
-                    <p>"Acredito que tanto o artesanato quanto a jardinagem têm o poder de transformar vidas. Minhas
-                        criações e meu trabalho com a terra são maneiras de promover um mundo mais inclusivo e sustentável."
+                        jornada no artesanato começou como uma forma de expressar minha criatividade, e hoje eu
+                        transformo
+                        materiais recicláveis em peças únicas que refletem o cuidado com o meio ambiente.
+                    </p>
+                    <p>
+                        "Acredito que tanto o artesanato quanto a jardinagem têm o poder de transformar vidas. Minhas
+                        criações e meu trabalho com a terra são maneiras de promover um mundo mais inclusivo e
+                        sustentável."
                     </p>
                     <a href="">Entrar em Contato</a>
-                    <article aria-labelledby="servicos-prestados">
-                        <h2 id="servicos-prestados">Serviços Prestados</h2>
-                        <div>
-                            <figure>
-                                <img src="../assets/img/artesanato.png" alt="Bijuterias artesanais">
-                                <figcaption>
-                                    <p>Artesanato</p>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img src="../assets/img/sustentavel.png" alt="Produtos sustentáveis">
-                                <figcaption>
-                                    <p>Produtos sustentáveis</p>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img src="../assets/img/jardinagem.png" alt="Jardinagem">
-                                <figcaption>
-                                    <p>Jardinagem</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </div>
-        </section>
-        <section class="servicos">
-                <article aria-labelledby="lista-servico">
-                    <h2 id="lista-servico">Nossos Serviços</h2>
+                </article>
+                <article aria-labelledby="servicos-prestados">
+                    <h3 id="servicos-prestados">Serviços Prestados</h3>
                     <div>
-                        <figure>
-                            <img src="../assets/img/sustentavel.png" alt="Nossos produtos sustentáveis">
-                            <figcaption>
-                                <img src="../assets/icons/Rating.svg" alt="Contém 112 avaliações">
-                                <p>&#40;112 avaliações&#41;</p>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="../assets/img/jardinagem.png" alt="Jardinagem">
-                            <figcaption>
-                                <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações">
-                                <p>&#40;45 avaliações&#41;</p>
-                            </figcaption>
+                        <ul>
+                            <li>
+                                Artesanato
+                            </li>
+                            <li>
+                                Produtos sustentáveis
+                            </li>
+                            <li>
+                                Jardinagem
+                            </li>
+                        </ul>
                         </figure>
                     </div>
                 </article>
+            </section>
+        </div>
+        <section class="servicos">
+            <article aria-labelledby="lista-servico">
+                <h2 id="lista-servico">Serviços Disponiveis</h2>
+                <div>
+                    <figure>
+                        <img src="../assets/img/artesanato.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Bijuterias artesanais</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;112 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/img/sustentavel.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Produtos sustentáveis</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;98 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/img/jardinagem.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Jardinagem</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;67 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/img/estatuas-madeira.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Estatuas de madeira</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;45 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/img/escova.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Estatuas de madeira</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;33 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/img/talheres.png" alt="Jardinagem">
+                        <figcaption>
+                            <h3>Estatuas de madeira</h3>
+                            <img src="../assets/icons/Rating.svg" alt="Contém 45 avaliações" class="avaliacao-servico">
+                            <p>&#40;29 avaliações&#41;</p>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="">
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
         </section>
     </main>
 
