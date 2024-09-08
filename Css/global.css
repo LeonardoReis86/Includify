@@ -10,49 +10,65 @@ body {
     color: #333333;
 }
 
-/* Header css */
+main,
+header,
+footer {
+    min-width: 17.5rem;
+}
 
-header {
+header>div {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    max-width: 80rem;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* Estilo geral do Header */
+header {
     background-color: #2B468B;
     color: #fafafa;
-    padding: 10px;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.logo-container>h1 {
-    margin-left: 10px;
-    font-size: 24px;
+.logo-container h1 {
+    font-size: 1.25rem;
 }
 
 nav ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
     list-style: none;
 }
 
 nav ul li {
-    padding-inline: 30px;
+    padding-block: 10px;
 }
 
 nav ul li a {
     color: #fafafa;
-    font-size: 18px;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
 .log-in {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #fafafa;
-    padding-inline: 12px;
-    padding-block: 4px;
+    padding: 8px 12px;
     border-radius: 40px;
     width: fit-content;
 }
@@ -62,12 +78,14 @@ nav ul li a {
     padding-left: 10px;
 }
 
-/* Footer css */
+/* Estilo geral do Footer */
 
 footer {
+    border-radius: 30px 30px 0px 0px;
+    padding-block-start: 10px;
+    text-align: center;
     background-color: #2B468B;
     color: #fafafa;
-    border-radius: 30px 30px 0px 0px;
 }
 
 footer a {
@@ -82,41 +100,40 @@ footer ul {
 footer ul li {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 footer ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .secao-footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 5rem;
-    padding-block: 1rem;
-}
-
-.secao-footer section {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 25px;
-}
-
-.secao-diretos {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #233863;
-    border-radius: 30px 30px 0px 0px;
-    padding: 5px;
+    gap: 20px;
+    padding: 10px;
 }
 
 .secao-social-media {
-    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-block: 20px;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-block-start: 10px;
+    gap: 4rem;
 }
 
 .logo-footer {
@@ -124,15 +141,79 @@ footer ul li a {
     align-items: center;
 }
 
-.navegacao-footer ul li:nth-child(2),
-.navegacao-contato ul li:nth-child(2) {
-    margin-top: 15px;
+.navegacao-footer ul li,
+.navegacao-contato ul li {
+    align-items: center;
 }
 
-footer .navegacao-footer ul li {
-    align-items: start;
+.navegacao-contato ul li a {
+    flex-direction: row-reverse;
 }
 
-footer .navegacao-contato ul li {
-    align-items: end;
+.navegacao-footer ul,
+.navegacao-contato ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.secao-diretos {
+    background-color: #233863;
+    border-radius: 30px 30px 0px 0px;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (min-width: 48rem) {
+
+    /* Header */
+    header>div {
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    /* Footer*/
+    .secao-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 5rem;
+    }
+
+    .secao-social-media {
+        margin-left: 4rem;
+    }
+
+    .navegacao-footer ul {
+        align-items: flex-start;
+    }
+
+    .navegacao-contato ul {
+        align-items: flex-end;
+    }
+
+    .navegacao-footer ul,
+    .navegacao-contato ul {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .navegacao-contato ul li a {
+        flex-direction: row;
+    }
+
+    .secao-footer {
+        padding-inline: 2rem;
+    }
+
+    .redes-sociais {
+        margin-block-start: 10px;
+    }
 }
