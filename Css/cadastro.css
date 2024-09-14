@@ -1,0 +1,119 @@
+@import url(global.css);
+
+/*Conteiner do Formulario*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-perfil {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  background: var(--color-background-card);
+  border-radius: 8px;
+}
+
+
+/*Form */
+
+main h4, main h1 {
+  margin-bottom: 8px;
+  color: var(--color-standard)
+}
+
+main h1 {
+  font-size: var(--font-size-h1);
+}
+
+main h4 {
+  font-size: var(--font-size-h5);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--font-size-p);
+  height: auto;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  background-color: var(--color-background-input);
+  color: var(--color-standard);
+  margin-bottom: 20px;
+}
+
+select {
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--font-size-p);
+  height: auto;
+  margin: 0;
+  padding: 8px;
+  width: 6rem;
+  background-color: var(--color-background-input);
+  color: var(--color-standard);
+  margin-bottom: 20px;
+}
+
+select :invalid {
+  color: var(--font-size-p);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 12px 4px 16px 0;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  font-size: var(--font-size-p);
+  color: var(--color-backgroud);
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--color-standard);
+  border: none;
+}
+
+/*Form */
+@media screen and (max-width: 768px) {
+  .container-form {
+    width: 25rem;
+    margin: 1rem auto;
+    padding: auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .container-form {
+    width: 50%;
+    margin: 1rem auto;
+    padding: auto;
+  }
+}
