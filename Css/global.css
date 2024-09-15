@@ -1,32 +1,36 @@
 :root {
-  --color-backgroud: #fafafa;
   /* Cor de fundo */
+  --color-backgroud: #FAFAFA;
+  /* Cor da fonte */
   --color-font: #262626;
-  /* Cor de fundo */
-  --color-standard: #2B468B;
   /* Cor para titulos e botões principais */
-  --color-border: #203568;
+  --color-standard: #2B468B;
   /* Cor para bordas */
+  --color-border: #203568;
+  /* Cor para fundo dos cards */
   --color-background-card: #DFE3EE;
-  /* Cor para fundo */
+  /* Cor para fundo dos inputs*/
   --color-background-input: #EAEDF3;
+  /* Cor para os placeholders*/
+  --color-placeholder: #777777;
   /* Cor para fundo dos botões */
-  --color-button-secondary: #BF4F1B;
-  /* Cor para destaque (botões, link e cards) */
-  --font-size-h1: 40px;
+  --color-button-primary: #BF4F1B;
+  /* Cor para o hover de fundo dos botões */
+  --color-hover-button-primary: #D35400;
   /* Tamanho da fonte h1 */
-  --font-size-h2: 36px;
+  --font-size-h1: 40px;
   /* Tamanho da fonte h2 */
-  --font-size-h3: 32px;
+  --font-size-h2: 36px;
   /* Tamanho da fonte h3 */
-  --font-size-h4: 28px;
+  --font-size-h3: 32px;
   /* Tamanho da fonte h4 */
-  --font-size-h5: 24px;
+  --font-size-h4: 28px;
   /* Tamanho da fonte h5 */
-  --font-size-h6: 20px;
+  --font-size-h5: 24px;
   /* Tamanho da fonte h6 */
-  --font-size-p: 16px;
+  --font-size-h6: 20px;
   /* Tamanho da fonte p */
+  --font-size-p: 16px;
 }
 
 * {
@@ -37,8 +41,8 @@
 }
 
 body {
-  background-color: #fafafa;
-  color: #333333;
+  background-color: var(--color-backgroud);
+  color: var(--color-font);
 }
 
 main,
@@ -62,8 +66,8 @@ main {
 
 /* Estilo geral do Header */
 header {
-  background-color: #2B468B;
-  color: #fafafa;
+  background-color: var(--color-standard);
+  color: var(--color-backgroud);
 }
 
 .logo-container {
@@ -89,7 +93,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fafafa;
+  color: var(--color-backgroud);
   font-size: 1.2rem;
   text-decoration: none;
 }
@@ -98,14 +102,14 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fafafa;
+  background-color: var(--color-backgroud);
   padding: 8px 12px;
   border-radius: 40px;
   width: fit-content;
 }
 
 .log-in span {
-  color: #333333;
+  color: var(--color-font);
   padding-left: 10px;
 }
 
@@ -115,12 +119,12 @@ footer {
   border-radius: 30px 30px 0px 0px;
   padding-block-start: 10px;
   text-align: center;
-  background-color: #2B468B;
-  color: #fafafa;
+  background-color: var(--color-standard);
+  color: var(--color-backgroud);
 }
 
 footer a {
-  color: #fafafa;
+  color: var(--color-backgroud);
   text-decoration: none;
 }
 
@@ -191,7 +195,7 @@ footer ul li a {
 }
 
 .secao-diretos {
-  background-color: #233863;
+  background-color: var(--color-border);
   border-radius: 30px 30px 0px 0px;
   padding: 10px;
 }
@@ -201,50 +205,50 @@ footer ul li a {
 
   /* Header */
   header>div {
-      margin: 0 auto;
-      flex-direction: row;
-      justify-content: space-between;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   nav ul {
-      flex-direction: row;
-      gap: 20px;
+    flex-direction: row;
+    gap: 20px;
   }
 
   /* Footer*/
   .secao-footer {
-      flex-direction: row;
-      justify-content: space-between;
-      padding-inline: 5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 5rem;
   }
 
   .secao-social-media {
-      margin-left: 4rem;
+    margin-left: 4rem;
   }
 
   .navegacao-footer ul {
-      align-items: flex-start;
+    align-items: flex-start;
   }
 
   .navegacao-contato ul {
-      align-items: flex-end;
+    align-items: flex-end;
   }
 
   .navegacao-footer ul,
   .navegacao-contato ul {
-      flex-wrap: nowrap;
-      flex-direction: column;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
 
   .navegacao-contato ul li a {
-      flex-direction: row;
+    flex-direction: row;
   }
 
   .secao-footer {
-      padding-inline: 2rem;
+    padding-inline: 2rem;
   }
 
   .redes-sociais {
-      margin-block-start: 10px;
+    margin-block-start: 10px;
   }
 }

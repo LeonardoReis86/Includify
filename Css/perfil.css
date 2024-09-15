@@ -1,3 +1,5 @@
+@import url(global.css);
+
 main {
     padding-block: 2rem;
     max-width: 1280px;
@@ -33,7 +35,7 @@ main>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fafafa;
+    color: var(--color-backgroud);
     gap: 20px;
     min-width: 17.5rem;
     padding-block: 3.125rem;
@@ -72,7 +74,7 @@ main>div {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: #2b468b1e;
+    background-color: var(--color-standard)1e;
 }
 
 .secao-perfil>:last-child img {
@@ -150,8 +152,8 @@ main>div {
     padding-inline: 5rem;
     font-weight: 600;
     border-radius: 10px;
-    background-color: #BF4F1B;
-    color: #fafafa;
+    background-color: var(--color-button-primary);
+    color: var(--color-backgroud);
     text-decoration: none;
     align-self: center;
     margin-block: 1rem;
@@ -180,9 +182,9 @@ article[aria-labelledby="servicos-prestados"] ul {
 }
 
 article[aria-labelledby="servicos-prestados"] ul li {
-    color: #2B468B;
+    color: var(--color-standard);
     font-size: 0.7rem;
-    background-color: #DFE3EE;
+    background-color: var(--color-background-card);
     border-radius: 8px;
     padding-block: 0.3rem;
     padding-inline: 0.5rem;
@@ -232,8 +234,8 @@ article[aria-labelledby="servicos-prestados"] ul li {
     width: fit-content;
     gap: 8px;
     text-decoration: none;
-    background-color: #BF4F1B;
-    color: #fafafa;
+    background-color: var(--color-button-primary);
+    color: var(--color-backgroud);
     padding-inline: 1rem;
     padding-block: 8px;
     border: none;
@@ -243,11 +245,11 @@ article[aria-labelledby="servicos-prestados"] ul li {
 }
 
 .detalhes-btn:hover {
-    background-color: #ce5219;
+    background-color: var(--color-hover-button-primary);
 }
 
 .servicos div figcaption h3 {
-    color: #203568;
+    color: var(--color-border);
 }
 
 @media (min-width: 48rem) {

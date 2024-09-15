@@ -1,3 +1,5 @@
+@import url(global.css);
+
 section[aria-labelledby="incluso-servico"] {
     display: flex;
     flex-direction: column;
@@ -39,10 +41,10 @@ section[aria-labelledby="servico-detalhe"] {
 .img-anunciante {
     display: flex;
     align-items: center;
-    background-color: #DFE3EE;
+    background-color: var(--color-background-card);
     padding-block: 0.7rem;
     padding-inline: 0.8rem;
-    border: 1px solid #203568;
+    border: 1px solid var(--color-border);
     border-radius: 100%;
 }
 
@@ -56,7 +58,7 @@ section[aria-labelledby="servico-detalhe"] {
 
 .info-anunciante a {
     font-size: 0.8rem;
-    color: #2B468B;
+    color: var(--color-standard);
     font-weight: 600;
     text-align: start;
     text-decoration: underline;
@@ -83,7 +85,7 @@ section[aria-labelledby="servico-detalhe"] {
 }
 
 .descricao-servico .categorias-servico li {
-    color: #252525;
+    color: var(--color-font);
     font-size: 0.7rem;
     background-color: #96e878a2;
     border-radius: 8px;
@@ -139,8 +141,8 @@ section[aria-labelledby="servico-detalhe"] {
     text-align: center;
     padding-block: 12px;
     padding-inline: 20px;
-    background-color: #BF4F1B;
-    color: #fafafa;
+    background-color: var(--color-button-primary);
+    color: var(--color-backgroud);
     border-radius: 10px;
     text-decoration: none;
 }
@@ -166,7 +168,7 @@ section[aria-labelledby="incluso-servico"] h2 {
 }
 
 .servico-item {
-    background-color: #fafafa;
+    background-color: var(--color-backgroud);
     padding: 20px;
     margin: 10px;
     border-radius: 25px;
@@ -180,7 +182,7 @@ section[aria-labelledby="incluso-servico"] h2 {
 
 .servico-item h3 {
     font-size: 2rem;
-    color: #2B468B;
+    color: var(--color-standard);
 }
 
 .servico-item p {
@@ -242,8 +244,8 @@ section[aria-labelledby="incluso-servico"] h2 {
         width: 100%;
         margin-top: 20px;
         font-weight: 600;
-        background-color: #BF4F1B;
-        color: #fafafa;
+        background-color: var(--color-button-primary);
+        color: var(--color-backgroud);
         border: none;
         cursor: pointer;
     }

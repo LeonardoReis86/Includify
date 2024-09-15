@@ -1,3 +1,5 @@
+@import url(global.css);
+
 .main-fale-conosco {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
 
 .secao-fale-conosco>.logo-container>h1 {
   font-size: 20px;
-  color: #2B468B;
+  color: var(--color-standard);
 }
 
 .form-container {
@@ -33,7 +35,7 @@
 }
 
 .form-container>h1 {
-  color: #434343
+  color: var(--color-font);
 }
 
 .form-container label {
@@ -42,16 +44,16 @@
 
 .form-container input,
 .form-container textarea {
-  background-color: #DFE3EE;
+  background-color: var(--color-background-card);
   padding: 8px;
-  border: 1px solid #203568;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   resize: none;
 }
 
 .form-container input::placeholder,
 .form-container textarea::placeholder {
-  color: #2B468B;
+  color: var(--color-standard);
   opacity: 1;
 }
 
@@ -61,15 +63,15 @@
 
 .form-container button {
   padding-block: 7px;
-  background-color: #BF4F1B;
+  background-color: var(--color-button-primary);
   border: none;
-  color: #fafafa;
+  color: var(--color-backgroud);
   border-radius: 10px;
   cursor: pointer;
 }
 
 .form-container button:hover {
-  background-color: #D35400;
+  background-color: var(--color-hover-button-primary);
 }
 
 .image-container {
