@@ -49,15 +49,15 @@ section[aria-labelledby="servico-detalhe"] {
 }
 
 .info-anunciante h3 {
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
 }
 
 .info-anunciante p {
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
 }
 
 .info-anunciante a {
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
     color: var(--color-standard);
     font-weight: 600;
     text-align: start;
@@ -74,7 +74,7 @@ section[aria-labelledby="servico-detalhe"] {
 }
 
 .descricao-servico h1 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-h1);
 }
 
 .descricao-servico .categorias-servico {
@@ -86,7 +86,7 @@ section[aria-labelledby="servico-detalhe"] {
 
 .descricao-servico .categorias-servico li {
     color: var(--color-font);
-    font-size: 0.7rem;
+    font-size: var(--font-size-p);
     background-color: #96e878a2;
     border-radius: 8px;
     padding-block: 0.3rem;
@@ -94,7 +94,7 @@ section[aria-labelledby="servico-detalhe"] {
 }
 
 .tag-preco {
-    font-size: 2rem;
+    font-size: var(--font-size-h3);
     font-weight: 700;
 }
 
@@ -106,7 +106,7 @@ section[aria-labelledby="servico-detalhe"] {
     gap: 5px;
     margin-block: 10px;
     margin-bottom: 30px;
-    font-size: 0.9rem;
+    font-size: var(--font-size-p);
 }
 
 .avaliacao-servico {
@@ -148,12 +148,12 @@ section[aria-labelledby="servico-detalhe"] {
 }
 
 section[aria-labelledby="incluso-servico"] h2 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h2);
     text-align: center;
 }
 
 .detalhe-do-titulo {
-    font-size: 1.2rem;
+    font-size: var(--font-size-h5);
     text-align: center;
 }
 
@@ -181,12 +181,12 @@ section[aria-labelledby="incluso-servico"] h2 {
 }
 
 .servico-item h3 {
-    font-size: 2rem;
+    font-size: var(--font-size-h3);
     color: var(--color-standard);
 }
 
 .servico-item p {
-    font-size: 1rem;
+    font-size: var(--font-size-p);
 
 }
 

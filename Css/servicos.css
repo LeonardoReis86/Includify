@@ -23,7 +23,7 @@ main li {
 }
 
 .secao-busca h1 {
-    font-size: 2.6rem;
+    font-size: var(--font-size-h1);
     font-weight: bold;
 }
 
@@ -102,7 +102,7 @@ section[aria-labelledby="filtros-busca"] select {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
-    font-size: 1rem;
+    font-size: var(--font-size-p);
     background-color: var(--color-background-card);
     flex: 1;
     cursor: pointer;
@@ -160,7 +160,7 @@ aside[aria-labelledby="secao-filtros"] {
 }
 
 aside[aria-labelledby="secao-filtros"] h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
     color: var(--color-font);
 }
 
@@ -220,7 +220,7 @@ aside[aria-labelledby="secao-filtros"] form {
     gap: 8px;
     background-color: var(--color-backgroud);
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: var(--font-size-p);
     margin-block: 1rem;
     color: var(--color-standard);
 }
@@ -283,12 +283,12 @@ section[aria-labelledby="secao-servicos"] {
 }
 
 .servico-card h3 {
-    font-size: 1.2rem;
+    font-size: var(--font-size-h5);
     color: var(--color-standard);
 }
 
 .servico-card h4 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h4);
     color: var(--color-font);
 }
 
@@ -437,6 +437,6 @@ nav[aria-labelledby="navegacao-paginacao"] ul li {
 
     button[type="submit"] {
         padding: 12px 24px;
-        font-size: 1.1rem;
+        font-size: var(--font-size-p);
     }
 }

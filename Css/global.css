@@ -18,19 +18,19 @@
   /* Cor para o hover de fundo dos botões */
   --color-hover-button-primary: #D35400;
   /* Tamanho da fonte h1 */
-  --font-size-h1: 40px;
+  --font-size-h1: 2.5rem;
   /* Tamanho da fonte h2 */
-  --font-size-h2: 36px;
+  --font-size-h2: 2.25rem;
   /* Tamanho da fonte h3 */
-  --font-size-h3: 32px;
+  --font-size-h3: 2rem;
   /* Tamanho da fonte h4 */
-  --font-size-h4: 28px;
+  --font-size-h4: 1.75rem;
   /* Tamanho da fonte h5 */
-  --font-size-h5: 24px;
+  --font-size-h5: 1.5rem;
   /* Tamanho da fonte h6 */
-  --font-size-h6: 20px;
+  --font-size-h6: 1.25rem;
   /* Tamanho da fonte p */
-  --font-size-p: 16px;
+  --font-size-p: 1rem;
 }
 
 * {

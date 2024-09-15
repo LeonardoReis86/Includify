@@ -15,7 +15,7 @@
 }
 
 .secao-fale-conosco>.logo-container>h1 {
-  font-size: 20px;
+  font-size: var(--font-size-h1);
   color: var(--color-standard);
 }
 

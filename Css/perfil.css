@@ -77,16 +77,15 @@ main>div {
     background-color: var(--color-standard)1e;
 }
 
+.secao-perfil>:last-child {
+    font-size: var(--font-size-p);
+}
+
 .secao-perfil>:last-child img {
     width: 6.25rem;
 }
 
-.secao-perfil>:last-child span {
-    font-size: 0.8rem;
-}
-
 .secao-perfil>:last-child p {
-    font-size: 0.8rem;
     font-weight: 600;
 }
 
@@ -99,7 +98,7 @@ main>div {
 }
 
 .perfil-ususario figcaption {
-    font-size: 1.4rem;
+    font-size: var(--font-size-h4);
 }
 
 .perfil-ususario img {
@@ -119,7 +118,7 @@ main>div {
 }
 
 .apresentacao>* {
-    margin-inline: 2rem;
+    margin-inline: 32px;
 }
 
 .apresentacao p {
@@ -127,7 +126,7 @@ main>div {
 }
 
 .apresentacao h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
     font-weight: 500;
 }
 
@@ -144,7 +143,7 @@ main>div {
 }
 
 .quem-sou div p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-p);
 }
 
 .quem-sou a {
@@ -169,7 +168,7 @@ article[aria-labelledby="servicos-prestados"]>div {
 }
 
 article[aria-labelledby="servicos-prestados"] h3 {
-    font-size: 2rem;
+    font-size: var(--font-size-h3);
     font-weight: 500;
 }
 
@@ -183,7 +182,8 @@ article[aria-labelledby="servicos-prestados"] ul {
 
 article[aria-labelledby="servicos-prestados"] ul li {
     color: var(--color-standard);
-    font-size: 0.7rem;
+    font-size: var(--font-size-p);
+    font-weight: 600;
     background-color: var(--color-background-card);
     border-radius: 8px;
     padding-block: 0.3rem;
@@ -204,7 +204,7 @@ article[aria-labelledby="servicos-prestados"] ul li {
 }
 
 .servicos>article h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
     font-weight: 500;
 }
 
