@@ -73,7 +73,7 @@ section[aria-labelledby="servico-detalhe"] {
     width: 90%;
 }
 
-.descricao-servico h1 {
+.descricao-servico h2 {
     font-size: var(--font-size-h1);
 }
 
