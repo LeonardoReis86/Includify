@@ -1,0 +1,61 @@
+.competencias-section {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  justify-content: space-between;
+}
+
+.competencias-decoracao {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.elipses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 10px; /* Espaçamento entre as elipses */
+}
+
+.elipse {
+  width: 30px;
+  height: 30px;
+  background-color: #2B468B;
+  opacity: 0.08;
+  border-radius: 50%;
+}
+
+.competencias-content {
+  flex: 2;
+  max-width: 600px;
+  margin-left: 60px; /* Aumentado para dar mais espaçamento entre as elipses e o conteúdo */
+}
+
+.competencias-section h2 {
+  font-size: 28px;
+  color: #2B468B;
+  margin-bottom: 20px;
+}
+
+.competencias-section p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.link-text {
+  color: #2B468B;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  outline: none;
+}
+
+.link-text:hover,
+.link-text:focus {
+  text-decoration: underline;
+  color: #1f365d;
+  outline: 2px dashed #2B468B;
+  outline-offset: 4px;
+}
