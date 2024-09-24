@@ -1,0 +1,213 @@
+Y/* Reset para garantir consistência no layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo geral do header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2B468B; /* Cor de fundo do header */
+  border-bottom: 1px solid #dee2e6; /* Linha sutil abaixo do header */
+}
+
+/* Container flexível para logo, nome e menu de navegação */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo do container do logo e nome */
+.logo-container {
+  display: flex;
+  align-items: center; /* Alinhamento vertical */
+}
+
+/* Estilo da imagem do logo */
+.logo-container img {
+  width: 80px; /* Ajuste o tamanho do logo conforme necessário */
+  height: auto;
+  margin-right: 10px; /* Espaço entre o logo e o nome da empresa */
+}
+
+/* Estilo do nome da empresa */
+.company-name {
+  font-size: 24px;
+  color: #FAFAFA; /* Cor do texto do nome */
+  font-weight: bold;
+  margin-left: 10px; /* Espaço entre o logo e o nome da empresa */
+}
+
+/* Estilo do menu de navegação */
+nav {
+  display: flex;
+}
+
+/* Estilo da lista do menu */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Estilo dos itens da lista do menu */
+nav ul li {
+  margin-left: 20px; /* Espaçamento entre os itens do menu */
+  display: flex;
+  align-items: center; /* Alinhar verticalmente os itens */
+}
+
+/* Estilo dos links do menu */
+nav ul li a {
+  text-decoration: none;
+  color: #FAFAFA;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo do ícone de login */
+nav ul li a img {
+  margin-left: 8px; /* Espaço entre o texto e o ícone */
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilização footer*/
+footer {
+  background-color: #2B468B;
+  color: #FAFAFA;
+  padding: 20px;
+  padding-bottom: 50px; /* Espaço adicional no fundo para o parágrafo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-links, .footer-social, .footer-support {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-social {
+  align-items: center; /* Centraliza o conteúdo do meio */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones das redes sociais horizontalmente */
+  width: 100%; /* Garante que a seção ocupe a largura total permitida */
+}
+
+.footer-social h3, .footer-support a, .auth-links a {
+  margin-bottom: 10px; /* Espaçamento vertical entre os itens */
+}
+
+.footer-links img, .footer-support img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Remover decoração de texto dos links no footer, ajustar cores e espaçamento */
+footer a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #FAFAFA; /* Define a cor dos links para branco */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaçamento vertical entre links */
+}
+
+/* Estilo para ícones nos links do footer para garantir espaçamento consistente */
+footer a img {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  width: 20px; /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
+}
+
+/* Assegura que o texto do footer não seja sobreposto pelos links ou ícones */
+footer {
+  padding-bottom: 60px; /* Aumenta o padding inferior para acomodar o texto centralizado */
+}
+
+
+/* Estilo adicional para centralizar o parágrafo */
+footer p {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  position: absolute; /* Posiciona absolutamente no fundo */
+  bottom: 10px; /* Espaço do fundo */
+  width: 100%; /* Largura completa do footer */
+  left: 0;
+  background-color: #233863;
+}
+
+/* Estilização específica para as listas no footer para remover bullets */
+.footer-section ul {
+  list-style: none; /* Remove os bullets dos itens de lista */
+  padding: 0; /* Remove padding padrão para alinhar corretamente dentro do footer */
+}
+
+/* Estilo para ícones nos links do footer para garantir espaçamento consistente */
+footer a img {
+  margin-left: 10px; /* Aumenta o espaço entre o texto e o ícone */
+  width: 20px; /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
+}
+
+/* Ajuste para alinhar os itens de lista dentro das seções do footer */
+.footer-section li {
+  display: flex; /* Utiliza flexbox para alinhar ícones e texto horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente dentro da lista */
+  margin-bottom: 10px; /* Espaçamento entre cada item da lista */
+}
+
+/* Ajustes adicionais para links para garantir legibilidade e acessibilidade */
+footer a {
+  text-decoration: none; /* Remove sublinhado dos links */
+  color: #FAFAFA; /* Cor branca para todos os links no footer */
+  display: flex;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente os elementos dentro desta div */
+  justify-content: center; /* Centraliza verticalmente os elementos, se necessário */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Centraliza horizontalmente o logo e o h3 */
+}
+
+.social-icons {
+  margin-top: 10px; /* Adiciona espaço entre o h3 e os ícones das redes sociais */
+}
+
+/* Ajustar o tamanho dos ícones das redes sociais no footer */
+.social-icons img {
+  width: 30px;  /* Aumentar a largura dos ícones */
+  height: 30px; /* Aumentar a altura dos ícones */
+  margin-right: 15px; /* Espaçamento entre os ícones */
+}
