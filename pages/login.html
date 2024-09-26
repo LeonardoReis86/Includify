@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Includify - LogIn</title> 
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png"> 
-    <meta name="description" content="Página para efetuar logIn na Includify">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Includify - LogIn</title>
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
+  <meta name="description" content="Página para efetuar logIn na Includify">
+  <link rel="stylesheet" href="../Css/login.css"> <!-- Link para o CSS -->
 </head>
+
 <body>
-  <div class="logo-container">
-      <a href="../index.html" aria-label="Ir para a página inicial">
-        <img src="../assets/img/logo.png" alt="Includify Logo" width="70">
-      </a>
-      <h1>Includify</h1>
+  <!-- Container principal usando flexbox -->
+  <div class="container">
+    <!-- Container à esquerda -->
+    <div class="left-container">
+      <!-- Cabeçalho da página -->
+      <header>
+        <div class="logo-container">
+          <a href="../index.html" aria-label="Ir para a página inicial">
+            <img src="../assets/img/logo.png" alt="Includify Logo" width="70">
+          </a>
+          <h1>Includify</h1>
+        </div>
+      </header>
+
+      <!-- Mensagem de boas-vindas -->
+      <section aria-labelledby="welcome-title">
+        <p>Onde a inclusão abre portas para seu talento!</p>
+      </section>
+    </div>
+
+    <!-- Linha horizontal de divisão -->
+    <div class="divider"></div>
+
+    <main>
+      <section aria-labelledby="login-title">
+        <!-- Título do Formulário -->
+        <h2 id="login-title">Entrar</h2>
+
+        <!-- Formulário de Login -->
+        <form action="/login" method="post" autocomplete="off">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="E-mail" aria-label="Insira seu e-mail"
+            required><br><br>
+
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" placeholder="Senha" aria-label="Insira sua senha"
+            autocomplete="current-password" required><br><br>
+
+          <a href="/recuperar-senha" aria-label="Esqueci a senha">Esqueci a senha</a><br><br>
+
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me" aria-label="Me mantenha conectado">
+            Me mantenha conectado
+          </label><br><br>
+
+          <button type="submit" aria-label="Entrar na conta">Entrar</button><br><br>
+        </form>
+
+        <!-- Link para Criar Conta -->
+        <div>
+          <a href="./cadastro.html" class="create-account" aria-label="Criar uma nova conta">Criar conta</a>
+        </div>
+      </section>
+    </main>
   </div>
 
-  <p>Onde a inclusão abre portas para seu talento!</p>
-    
-  <h1>Entrar</h1>
-
-  <form action="/login" method="post">
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" placeholder="E-mail" aria-label="Insira seu e-mail" required><br><br>
-
-    <label for="password">Senha:</label>
-    <input type="password" id="password" placeholder="Senha" aria-label="Insira sua senha" required><br><br>
-
-    <a href="/recuperar-senha" aria-label="Esqueci a senha">Esqueci a senha</a><br><br>
-
-    <label for="remember-me">
-      <input type="checkbox" id="remember-me" aria-label="Me mantenha conectado">
-      Me mantenha conectado
-    </label><br><br>
-
-    <button type="submit" aria-label="Entrar na conta">Entrar</button><br><br>
-  </form>
-
-  <a href="./cadastro.html" class="create-account" aria-label="Criar uma nova conta">Criar conta</a>
 </body>
+
 </html>
