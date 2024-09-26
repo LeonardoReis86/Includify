@@ -3,53 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Includify - LogIn</title> 
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png"> 
+    <title>Includify - LogIn</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para efetuar logIn na Includify">
+    <link rel="stylesheet" href="../style.css"> <!-- Link para o CSS -->
 </head>
 <body>
-  <!-- Cabeçalho da página -->
-  <header>
-    <div class="logo-container">
-      <a href="../index.html" aria-label="Ir para a página inicial">
-        <img src="../assets/img/logo.png" alt="Includify Logo" width="70">
-      </a>
-      <h1>Includify</h1>
-  </div>
-  </header>
+  <!-- Container principal usando flexbox -->
+  <div class="container">
+    <!-- Container à esquerda -->
+    <div class="left-container">
+      <!-- Cabeçalho da página -->
+      <header>
+        <div class="logo-container">
+          <a href="../index.html" aria-label="Ir para a página inicial">
+            <img src="../assets/img/logo.png" alt="Includify Logo" width="70">
+          </a>
+          <h1>Includify</h1>
+        </div>
+      </header>
 
-  <main>
-    <section aria-labelledby="login-title">
-      <!-- Mensagem de boas vindas -->
-      <p>Onde a inclusão abre portas para seu talento!</p>
+      <!-- Mensagem de boas-vindas -->
+      <section aria-labelledby="welcome-title">
+        <p>Onde a inclusão abre portas para seu talento!</p>
+      </section>
+    </div>
+
+    <!-- Linha horizontal de divisão -->
+    <div class="divider"></div>
+
+    <main>
+      <section aria-labelledby="login-title">
+        <!-- Título do Formulário -->
+        <h2 id="login-title">Entrar</h2>
+
+        <!-- Formulário de Login -->
+        <form action="/login" method="post" autocomplete="off">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="E-mail" aria-label="Insira seu e-mail" required><br><br>
       
-      <!-- Título do Formulário -->
-      <h1 id="login-title">Entrar</h1>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" placeholder="Senha" aria-label="Insira sua senha" autocomplete="current-password" required><br><br>
+      
+          <a href="/recuperar-senha" aria-label="Esqueci a senha">Esqueci a senha</a><br><br>
+      
+          <label for="remember-me">
+            <input type="checkbox" id="remember-me" aria-label="Me mantenha conectado">
+            Me mantenha conectado
+          </label><br><br>
+      
+          <button type="submit" aria-label="Entrar na conta">Entrar</button><br><br>
+        </form>
 
-      <!-- Formulário de Login -->
-      <form action="/login" method="post">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" placeholder="E-mail" aria-label="Insira seu e-mail" required><br><br>
-    
-        <label for="password">Senha:</label>
-        <input type="password" id="password" placeholder="Senha" aria-label="Insira sua senha" required><br><br>
-    
-        <a href="/recuperar-senha" aria-label="Esqueci a senha">Esqueci a senha</a><br><br>
-    
-        <label for="remember-me">
-          <input type="checkbox" id="remember-me" aria-label="Me mantenha conectado">
-          Me mantenha conectado
-        </label><br><br>
-    
-        <button type="submit" aria-label="Entrar na conta">Entrar</button><br><br>
-      </form>
-    
-  </main>
+        <!-- Link para Criar Conta -->
+        <div>
+          <a href="./cadastro.html" class="create-account" aria-label="Criar uma nova conta">Criar conta</a>
+        </div>
+      </section>
+    </main>
+  </div>
   
-  <!-- Link para Criar Conta -->
-  <div>
-    <a href="./cadastro.html" class="create-account" aria-label="Criar uma nova conta">Criar conta</a>
-  </div> 
- 
 </body>
 </html>

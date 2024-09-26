@@ -1,0 +1,76 @@
+/* Estilo geral do corpo */
+body {
+  background-color: #2B4687; /* Cor de fundo da página */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; /* Remove margens padrão */
+  height: 100vh; /* Altura da página */
+  display: flex; /* Usar flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo na página */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* Container principal usando flexbox */
+.container {
+  display: flex; /* Usar flexbox para layout */
+  width: 80%; /* Largura do container principal */
+  max-width: 1200px; /* Largura máxima do container */
+}
+
+/* Estilo para o container à esquerda */
+.left-container {
+  width: 50%; /* Largura do container à esquerda */
+  padding: 20px; /* Espaçamento interno */
+  color: white; /* Cor do texto */
+}
+
+/* Linha horizontal para dividir */
+.divider {
+  width: 2px; /* Largura da linha */
+  background-color: white; /* Cor da linha */
+  height: 100%; /* Altura da linha para ocupar todo o container */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+  padding: 20px; /* Espaço interno */
+  background-color: white; /* Fundo branco */
+  border-radius: 8px; /* Arredonda os cantos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  width: 50%; /* Largura do container principal */
+}
+
+/* Estilo para o cabeçalho */
+header {
+  margin-bottom: 10px; /* Espaçamento abaixo do cabeçalho */
+}
+
+/* Estilo para a seção de boas-vindas */
+section[aria-labelledby="welcome-title"] {
+  margin-bottom: 20px; /* Espaço abaixo da seção de boas-vindas */
+  font-size: 50px; /* Tamanho da fonte ajustado */
+  line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Estilo para o container da logo e título */
+.logo-container {
+  display: flex; /* Alinha os itens em linha */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para a imagem do logo */
+.logo-container img {
+  width: 200px; /* Tamanho desejado */
+  height: auto; /* Mantém a proporção */
+}
+
+/* Estilo para o título */
+h1 {
+  margin-left: 10px; /* Espaço à esquerda do título */
+  font-size: 60px; /* Tamanho da fonte do título aumentado */
+  color: white; /* Cor do texto para contraste */
+}
+
+/* Estilo para o título e parágrafo */
+main h2, main p, main label {
+  text-align: left; /* Alinhamento à esquerda */
+}
