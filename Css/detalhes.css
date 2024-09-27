@@ -1,5 +1,10 @@
 @import url(global.css);
 
+main {
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
 section[aria-labelledby="incluso-servico"] {
     display: flex;
     flex-direction: column;
@@ -69,11 +74,11 @@ section[aria-labelledby="servico-detalhe"] {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: justify;
     width: 90%;
 }
 
 .descricao-servico h2 {
+    text-align: center;
     font-size: var(--font-size-h1);
 }
 
@@ -142,9 +147,13 @@ section[aria-labelledby="servico-detalhe"] {
     padding-block: 12px;
     padding-inline: 20px;
     background-color: var(--color-button-primary);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     border-radius: 10px;
     text-decoration: none;
+}
+
+section[aria-labelledby="incluso-servico"] {
+    margin-top: 4rem;
 }
 
 section[aria-labelledby="incluso-servico"] h2 {
@@ -168,7 +177,7 @@ section[aria-labelledby="incluso-servico"] h2 {
 }
 
 .servico-item {
-    background-color: var(--color-backgroud);
+    background-color: var(--color-background);
     padding: 20px;
     margin: 10px;
     border-radius: 25px;
@@ -216,12 +225,15 @@ section[aria-labelledby="incluso-servico"] h2 {
         margin-bottom: 0px;
     }
 
+    .descricao-servico h2 {
+        text-align: left;
+    }
+
     .descricao-servico {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-        text-align: justify;
     }
 
     .descricao-servico .avaliacoes {
@@ -245,7 +257,7 @@ section[aria-labelledby="incluso-servico"] h2 {
         margin-top: 20px;
         font-weight: 600;
         background-color: var(--color-button-primary);
-        color: var(--color-backgroud);
+        color: var(--color-background);
         border: none;
         cursor: pointer;
     }
