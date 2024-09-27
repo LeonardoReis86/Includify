@@ -1,6 +1,10 @@
+@import url(acessibilidade.css);
+
 :root {
+  --color-contraste-preto: #000;
+  --color-contraste-branco: #fff;
   /* Cor de fundo */
-  --color-backgroud: #FAFAFA;
+  --color-background: #FAFAFA;
   /* Cor da fonte */
   --color-font: #262626;
   /* Cor para titulos e botões principais */
@@ -18,19 +22,19 @@
   /* Cor para o hover de fundo dos botões */
   --color-hover-button-primary: #D35400;
   /* Tamanho da fonte h1 */
-  --font-size-h1: 2.5rem;
+  --font-size-h1: 2.5em;
   /* Tamanho da fonte h2 */
-  --font-size-h2: 2.25rem;
+  --font-size-h2: 2.25em;
   /* Tamanho da fonte h3 */
-  --font-size-h3: 2rem;
+  --font-size-h3: 2em;
   /* Tamanho da fonte h4 */
-  --font-size-h4: 1.75rem;
+  --font-size-h4: 1.75em;
   /* Tamanho da fonte h5 */
-  --font-size-h5: 1.5rem;
+  --font-size-h5: 1.5em;
   /* Tamanho da fonte h6 */
-  --font-size-h6: 1.25rem;
+  --font-size-h6: 1.25em;
   /* Tamanho da fonte p */
-  --font-size-p: 1rem;
+  --font-size-p: 1em;
 }
 
 * {
@@ -52,15 +56,30 @@
   white-space: nowrap;
 }
 
+[vw-access-button] {
+  display: none !important;
+}
+
 body {
-  background-color: var(--color-backgroud);
+  background-color: var(--color-background);
   color: var(--color-font);
+  font-size: var(--font-size-p);
+  transition: font-size ease-in-out 0.2s;
 }
 
 main,
 header,
 footer {
-  min-width: 17.5rem;
+  min-width: 23.4rem;
+}
+
+#header {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  position: sticky;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.411);
 }
 
 header>div {
@@ -68,18 +87,54 @@ header>div {
   flex-direction: column;
   align-items: center;
   max-width: 80rem;
-  padding: 10px;
-  text-align: center;
+  padding-top: 10px;
+  padding-inline: 10px;
 }
 
-main {
-  min-height: 100vh;
+header .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-icon {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger-icon:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 /* Estilo geral do Header */
 header {
   background-color: var(--color-standard);
-  color: var(--color-backgroud);
+  color: var(--color-background);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
 .logo-container a {
@@ -87,18 +142,43 @@ header {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--color-backgroud);
+  color: var(--color-background);
+}
+
+.logo-container img {
+  width: 3em;
 }
 
 .logo-container h1 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
+}
+
+#navegacao-principal {
+  position: fixed;
+  top: -250px;
+  width: 100%;
+  padding-top: 5px;
+  background-color: var(--color-standard);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.5s ease-in-out;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.535);
+  z-index: 10;
+}
+
+#navegacao-principal.active {
+  top: 116px;
+  z-index: 100;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.535);
 }
 
 nav ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
 }
 
@@ -107,8 +187,8 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--color-backgroud);
-  font-size: 1.2rem;
+  color: var(--color-background);
+  font-size: 1.2em;
   text-decoration: none;
 }
 
@@ -116,15 +196,23 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-backgroud);
+  background-color: var(--color-background);
   padding: 8px 12px;
   border-radius: 40px;
   width: fit-content;
 }
 
+.log-in:hover {
+  background-color: #ddd;
+}
+
 .log-in span {
   color: var(--color-font);
   padding-left: 10px;
+}
+
+.log-in img {
+  width: 1.55em;
 }
 
 /* Estilo geral do Footer */
@@ -134,11 +222,11 @@ footer {
   padding-block-start: 10px;
   text-align: center;
   background-color: var(--color-standard);
-  color: var(--color-backgroud);
+  color: var(--color-background);
 }
 
 footer a {
-  color: var(--color-backgroud);
+  color: var(--color-background);
   text-decoration: none;
 }
 
@@ -157,6 +245,15 @@ footer ul li a {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.redes-sociais a {
+  width: 44px;
+  height: 44px;
+}
+
+footer ul li a img {
+  width: 1.55em;
 }
 
 .secao-footer {
@@ -190,6 +287,14 @@ footer ul li a {
   align-items: center;
 }
 
+.logo-footer img {
+  width: 3em;
+}
+
+.logo-footer h3 {
+  font-size: var(--font-size-h4);
+}
+
 .navegacao-footer ul li,
 .navegacao-contato ul li {
   align-items: center;
@@ -219,14 +324,52 @@ footer ul li a {
 
   /* Header */
   header>div {
+    display: block;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding-top: 10px;
+    padding-inline: 10px;
+  }
+
+  header .header-container {
     margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .logo-container {
+    padding-bottom: 0px;
+  }
+
+  nav#navegacao-principal {
+    position: initial;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    background-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   nav ul {
     flex-direction: row;
     gap: 20px;
+  }
+
+  .close-btn {
+    display: none;
+    position: initial;
   }
 
   /* Footer*/
