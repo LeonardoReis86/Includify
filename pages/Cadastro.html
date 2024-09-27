@@ -8,204 +8,133 @@
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para se cadastrar na Includify">
     <link rel="stylesheet" href="/Css/cadastro.css">
+    <script src="../js/cadastro.js" defer></script>
+    <script src="../js/acessibilidade.js" defer></script>
+    <!-- <script src="../js/main.js" defer></script> -->
 </head>
 
 <body>
-    <header>
+    <header id="header" tabindex="-1">
         <div>
-            <div class="logo-container">
-                <a href="../index.html" aria-label="Ir para a página inicial">
-                    <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
-                    <h2>Includify</h2>
-                </a>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <span>Acessibilidade</span>
+                <div>
+                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                        <span class="sr-only">Diminuir tamanho da fonte</span>
+                        A-
+                    </button>
+                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                        <span class="sr-only">Normalizar tamanho da fonte</span>
+                        aA
+                    </button>
+                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                        <span class="sr-only">Aumentar tamanho da fonte</span>
+                        A+
+                    </button>
+                </div>
+                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                    <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
+                </button>
+                <button id="vlibras-button" aria-label="Ativar VLibras">
+                    <span class="sr-only">Ativar/desativar VLibras</span>
+                    <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
+                </button>
             </div>
-            <nav aria-label="Navegação principal">
-                <ul class="menu-principal">
-                    <li>
-                        <a href="../index.html" aria-label="Acessar a página Home">Home</a>
-                    </li>
-                    <li>
-                        <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
-                    </li>
-                    <li>
-                        <a href="./login.html" aria-label="Acessar a página logIn" class="log-in">
-                            <img src="../assets/icons/logInDark.svg" alt="Icone de logIn" width="30">
-                            <span>Login</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class=" header-container">
+                <div class="logo-container">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                        <h2>Includify</h2>
+                    </a>
+                    <button class="hamburger" aria-label="Abrir menu" id="hamburger-button">
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                    </button>
+                </div>
+                <nav id="navegacao-principal" aria-label="Navegação principal">
+                    <ul class="menu-principal">
+                        <li>
+                            <a href="../index.html" aria-label="Acessar a página Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" aria-label="Acessar a página Login" class="log-in">
+                                <img src="../assets/icons/logInDark.svg" alt="Ícone de Login" width="30">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <!-- <div class="container-perfil">
-            <div class="perfil">
-                <img class="img-perfil" src="/assets/icons/User.svg" alt="Foto de Perfil">
-            </div>
-            <button type="submit" class="button-img-perfil">Carregar Foto</button>
-        </div> -->
-        <div class="container-form">
-            <form>
-                <h1>Cadastro</h1>
-                <h4>Nome</h4>
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="text" name="sobrenome" placeholder="Sobrenome">
-                <h4>Data de Nascimento</h4>
-                <select name="dia" id="dia">
-                    <option value="" disabled selected>Dia</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                </select>
-                <select name="mes" id="mes">
-                    <option value="" disabled selected>Mês</option>
-                    <option value="1">Janeiro</option>
-                    <option value="2">Fevereiro</option>
-                    <option value="3">Março</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Maio</option>
-                    <option value="6">Junho</option>
-                    <option value="7">Julho</option>
-                    <option value="8">Agosto</option>
-                    <option value="9">Setembro</option>
-                    <option value="10">Outubro</option>
-                    <option value="11">Novembro</option>
-                    <option value="12">Dezembro</option>
-                </select>
-                <select name="ano" id="ano">
-                    <option value="" disabled selected>Ano</option>
-                    <option value="2006">2006</option>
-                    <option value="2005">2005</option>
-                    <option value="2004">2004</option>
-                    <option value="2003">2003</option>
-                    <option value="2002">2002</option>
-                    <option value="2001">2001</option>
-                    <option value="2000">2000</option>
-                    <option value="1999">1999</option>
-                    <option value="1998">1998</option>
-                    <option value="1997">1997</option>
-                    <option value="1996">1996</option>
-                    <option value="1995">1995</option>
-                    <option value="1994">1994</option>
-                    <option value="1993">1993</option>
-                    <option value="1992">1992</option>
-                    <option value="1991">1991</option>
-                    <option value="1990">1990</option>
-                    <option value="1989">1989</option>
-                    <option value="1988">1988</option>
-                    <option value="1987">1987</option>
-                    <option value="1986">1986</option>
-                    <option value="1985">1985</option>
-                    <option value="1984">1984</option>
-                    <option value="1983">1983</option>
-                    <option value="1982">1982</option>
-                    <option value="1981">1981</option>
-                    <option value="1980">1980</option>
-                    <option value="1979">1979</option>
-                    <option value="1978">1978</option>
-                    <option value="1977">1977</option>
-                    <option value="1976">1976</option>
-                    <option value="1975">1975</option>
-                    <option value="1974">1974</option>
-                    <option value="1973">1973</option>
-                    <option value="1972">1972</option>
-                    <option value="1971">1971</option>
-                    <option value="1970">1970</option>
-                    <option value="1969">1969</option>
-                    <option value="1968">1968</option>
-                    <option value="1967">1967</option>
-                    <option value="1966">1966</option>
-                    <option value="1965">1965</option>
-                    <option value="1964">1964</option>
-                    <option value="1963">1963</option>
-                    <option value="1962">1962</option>
-                    <option value="1961">1961</option>
-                    <option value="1960">1960</option>
-                    <option value="1959">1959</option>
-                    <option value="1958">1958</option>
-                    <option value="1957">1957</option>
-                    <option value="1956">1956</option>
-                    <option value="1955">1955</option>
-                    <option value="1954">1954</option>
-                    <option value="1953">1953</option>
-                    <option value="1952">1952</option>
-                    <option value="1951">1951</option>
-                    <option value="1950">1950</option>
-                    <option value="1949">1949</option>
-                    <option value="1948">1948</option>
-                    <option value="1947">1947</option>
-                    <option value="1946">1946</option>
-                    <option value="1945">1945</option>
-                    <option value="1944">1944</option>
-                    <option value="1943">1943</option>
-                    <option value="1942">1942</option>
-                    <option value="1941">1941</option>
-                    <option value="1940">1940</option>
-                    <option value="1939">1939</option>
-                    <option value="1938">1938</option>
-                    <option value="1937">1937</option>
-                    <option value="1936">1936</option>
-                    <option value="1935">1935</option>
-                    <option value="1934">1934</option>
-                    <option value="1933">1933</option>
-                    <option value="1932">1932</option>
-                    <option value="1931">1931</option>
-                    <option value="1930">1930</option>
-                    <option value="1929">1929</option>
-                    <option value="1928">1928</option>
-                    <option value="1927">1927</option>
-                    <option value="1926">1926</option>
-                    <option value="1925">1925</option>
-                    <option value="1924">1924</option>
-                </select>
-                <h4>Sexo</h4>
-                <input type="radio" name="sexo" value="M">Masculino
-                <input type="radio" name="sexo" value="F">Feminino
-                <input type="radio" name="sexo" value="O">Outro
-                <h4>Empreendedor?</h4>
-                <input type="radio" name="empreendedor" value="sim">Sim
-                <input type="radio" name="empreendedor" value="nao">Não
-                <h4>E-Mail</h4>
-                <input type="text" name="email" placeholder="Email">
-                <h4>Senha</h4>
-                <input type="password" name="senha" placeholder="Senha">
-                <input type="password" name="confirmar_senha" placeholder="Confirmar Senha">
-                <br>
-                <br>
-                <button type="submit">Cadastrar</button>
-            </form>
-        </div>
+    <main class="main-container">
+        <section class="container-perfil">
+            <img class="img-perfil" id="imagemExibida" src="/assets/icons/User-profile.svg" alt="Foto de Perfil">
+            <label for="imagemInput" class="custom-file-upload">Carregar imagem</label>
+            <input type="file" id="imagemInput" accept="image/*">
+        </section>
+        <section class="container-form">
+            <form id="dados-pessoais-form">
+                <h1>Dados Pessoais</h1>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Primeiro Nome">
+                <small class="error-message" id="nome-error"></small>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                <small class="error-message" id="sobrenome-error"></small>
 
-    </div>
+                <label for="data-nascimento">Data de Nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" placeholder="dd/mm/aaaa">
+                <small class="error-message" id="data-nascimento-error"></small>
+
+                <section class="opcoes">
+                    <div>
+                        <label for="sexo">Sexo</label>
+                        <span><input type="radio" id="sexo-masculino" name="sexo" value="M"> Masculino</span>
+                        <span><input type="radio" id="sexo-feminino" name="sexo" value="F"> Feminino</span>
+                        <small class="error-message" id="sexo-error"></small>
+                    </div>
+                    <div>
+                        <label for="empreendedor">Empreendedor</label>
+                        <span><input type="radio" id="empreendedor-sim" name="empreendedor" value="sim"> Sim</span>
+                        <span><input type="radio" id="empreendedor-nao" name="empreendedor" value="nao"> Não</span>
+                        <small class="error-message" id="empreendedor-error"></small>
+                    </div>
+                </section>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <small class="error-message" id="email-error"></small>
+
+                <div class="password-container">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <span class="toggle-password" onclick="togglePassword('senha', this)">
+                        <img src="../assets/icons/invisible.svg" alt="Mostrar senha" class="senha">
+                    </span>
+                </div>
+                <small class="error-message" id="senha-error"></small>
+
+                <div class="password-container">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha">
+                    <span class="toggle-password" onclick="togglePassword('confirmar-senha', this)">
+                        <img src="../assets/icons/invisible.svg" class="confirmar-senha">
+                    </span>
+                </div>
+                <small class="error-message" id="confirmar-senha-error"></small>
+                <!-- Botões de ação -->
+                <div class="form-buttons">
+                    <button type="submit" class="button-cadastrar">Cadastrar</button>
+                    <button type="button" class="button-continuar">Continuar</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <section class="secao-footer">
@@ -213,21 +142,21 @@
                 <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
                 <ul>
                     <li>
-                        <a href="./login.html" aria-label="Acessar a página logIn">
-                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
+                        <a href="./login.html" aria-label="Acessar a página Login">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login">
                             Login
                         </a>
                     </li>
                     <li>
                         <a href="./cadastro.html" aria-label="Acessar a página de Cadastro">
-                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro">
                             Cadastre-se
                         </a>
                     </li>
                 </ul>
             </div>
             <section aria-labelledby="secao-social-media" class="secao-social-media">
-                <h2 id="secao-social-media" class="sr-only">Seção com as redes socias da Includify</h2>
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes sociais da Includify</h2>
                 <div class="logo-footer">
                     <a href="../index.html" aria-label="Ir para a página inicial">
                         <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
@@ -235,26 +164,26 @@
                     <h3>Includify</h3>
                 </div>
                 <nav aria-labelledby="navegacao-social-media">
-                    <h3 id="navegacao-social-media" class="sr-only">Navegacao das redes socias da Includify</h3>
+                    <h3 id="navegacao-social-media" class="sr-only">Navegação das redes sociais da Includify</h3>
                     <ul class="redes-sociais">
                         <li>
                             <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
-                                <img src="../assets/icons/Facebook.svg" alt="Facebook" width="25">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
-                                <img src="../assets/icons/Instagram.svg" alt="Instagram" width="25">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
-                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
-                                <img src="../assets/icons/Youtube.svg" alt="YouTube" width="25">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube">
                             </a>
                         </li>
                     </ul>
@@ -288,7 +217,16 @@
             </p>
         </section>
     </footer>
-
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
