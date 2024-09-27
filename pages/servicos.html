@@ -7,310 +7,426 @@
     <title>Includify - Buscar Serviços</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para buscar serviços de empreendedores">
-    <script defer src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="../css/global.css"> -->
+    <link rel="stylesheet" href="../css/servicos.css">
+    <script src="../js/acessibilidade.js" defer></script>
+    <script src="../js/servicos.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <a href="../index.html" aria-label="Ir para a página inicial">
-                <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
-            </a>
-            <h1>Includify</h1>
-        </div>
-        <nav aria-label="Navegação principal">
-            <ul class="menu-principal">
-                <li>
-                    <a href="../index.html" aria-label="Acessar a página Home">Home</a>
-                </li>
-                <li>
-                    <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
-                </li>
-                <li>
-                    <a href="./login.html" aria-label="Acessar a página logIn" class="log-in">
-                        <img src="../assets/icons/logInDark.svg" alt="Icone de logIn" width="30">
-                        <span>Login</span>
+    <header id="header" tabindex="-1">
+        <div>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <span>Acessibilidade</span>
+                <div>
+                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                        <span class="sr-only">Diminuir tamanho da fonte</span>
+                        A-
+                    </button>
+                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                        <span class="sr-only">Normalizar tamanho da fonte</span>
+                        aA
+                    </button>
+                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                        <span class="sr-only">Aumentar tamanho da fonte</span>
+                        A+
+                    </button>
+                </div>
+                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                    <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
+                </button>
+                <button id="vlibras-button" aria-label="Ativar VLibras">
+                    <span class="sr-only">Ativar/desativar VLibras</span>
+                    <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
+                </button>
+            </div>
+            <div class=" header-container">
+                <div class="logo-container">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                        <h2>Includify</h2>
                     </a>
-                </li>
-            </ul>
-        </nav>
+                    <button class="hamburger" aria-label="Abrir menu" id="hamburger-button">
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                    </button>
+                </div>
+                <nav id="navegacao-principal" aria-label="Navegação principal">
+                    <ul class="menu-principal">
+                        <li>
+                            <a href="../index.html" aria-label="Acessar a página Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" aria-label="Acessar a página Login" class="log-in">
+                                <img src="../assets/icons/logInDark.svg" alt="Ícone de Login" width="30">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
-
-    <main>
-        <section aria-labelledby="secao-busca">
-            <h1 id="secao-busca">Buscar Serviços</h1>
-            <form action="#">
-                <section aria-labelledby="barra-busca">
-                    <label for="buscar-servico">
-                        <img src="../assets/icons/Buscar.svg" alt="">
-                    </label>
-                    <input id="buscar-servico" type="search" placeholder="Busque por um serviço"
-                        aria-label="Buscar por um serviço">
+    
+    <main id="conteudo-principal">
+        <section class="secao-busca" aria-labelledby="busca-servico">
+            <form action="#" class="form-busca">
+                <h1 id="busca-servico">Buscar Serviços</h1>
+                <slot>
+                    <section class="barra-busca-container" aria-labelledby="barra-busca">
+                        <h2 id="barra-busca" class="sr-only">Busque por um serviço</h2>
+                        <div class="barra-busca">
+                            <label for="buscar-servico">
+                                <img src="../assets/icons/Buscar.svg" alt="Ícone de busca" width="20">
+                            </label>
+                            <input id="buscar-servico" type="search" placeholder="Busque por um serviço"
+                                aria-label="Buscar por um serviço">
+                        </div>
+                    </section>
                     <button type="submit">Buscar</button>
-                </section>
+                    <button type="button" id="mostrar-filtro-btn" class="mostrar-filtro"
+                        aria-controls="secao-filtros-background" aria-expanded="false">
+                        <img src="../assets/icons/Filter.svg" width="12" alt="Mostrar Filtros">
+                        Mostrar Filtros
+                    </button>
+                    <div class="overlay" role="presentation" aria-hidden="true"></div>
+                </slot>
 
                 <section aria-labelledby="filtros-busca">
-                    <label for="selecao-estado">
-                        <img src="../assets/icons/Local.svg" alt="">
-                    </label>
-                    <select id="selecao-estado" aria-label="Seleção de estado">
-                        <option value="">Estado</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="Espírito Santo">Espírito Santo</option>
-                        <option value="Minas Gerais">Minas Gerais</option>
-                    </select>
-
-                    <label for="selecao-cidade">
-                        <img src="../assets/icons/Local.svg" alt="">
-                    </label>
-                    <select id="selecao-cidade" aria-label="Seleção de Cidade">
-                        <option value=""></i>Cidade</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="São Gonçalo">São Gonçalo</option>
-                        <option value="Duque de Caxias">Duque de Caxias</option>
-                        <option value="Nova Iguaçu">Nova Iguaçu</option>
-                        <option value="Niterói">Niterói</option>
-                        <option value="Macaé">Macaé</option>
-                        <option value="Magé">Magé</option>
-                    </select>
+                    <h3 id="filtros-busca" class="sr-only">Filtre sua busca</h3>
+                    <div class="filtros-busca">
+                        <select id="selecao-estado" aria-label="Seleção de estado">
+                            <option value="" disabled selected>Estado</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                        </select>
+                    </div>
+                    <div class="filtros-busca">
+                        <select id="selecao-cidade" aria-label="Seleção de Cidade">
+                            <option value="" disabled selected>Cidade</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="São Gonçalo">São Gonçalo</option>
+                            <option value="Duque de Caxias">Duque de Caxias</option>
+                            <option value="Nova Iguaçu">Nova Iguaçu</option>
+                            <option value="Niterói">Niterói</option>
+                            <option value="Macaé">Macaé</option>
+                            <option value="Magé">Magé</option>
+                        </select>
+                    </div>
                 </section>
             </form>
         </section>
 
-        <aside aria-labelledby="secao-filtros">
-            <h2 id="secao-filtros">Filtros</h2>
-            <form action="#">
-                <fieldset>
-                    <legend>Categorias</legend>
-                    <div>
-                        <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
-                        <label for="fotografia">Fotografia</label>
+        <div class="servicos-container">
+            <div class="secao-filtros-background" id="secao-filtros-background">
+                <aside aria-labelledby="secao-filtros">
+                    <div class="header-filtro">
+                        <h2 id="secao-filtros">Filtros</h2>
+                        <button type="button" aria-label="Fechar seção de filtro">
+                            <img src="../assets/icons/Close.svg" width="25" alt="" class="close-icon">
+                        </button>
                     </div>
-                    <div>
-                        <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
-                        <label for="tecnologia">Tecnologia</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="educacao" name="categoria" value="educacao">
-                        <label for="educacao">Educação</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
-                        <label for="horticultura">Horticultura</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
-                        <label for="alimenticio">Alimentício</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
-                        <label for="paisagismo">Paisagismo</label>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Preço</legend>
-                    <div>
-                        <input type="radio" id="preco10" name="price">
-                        <label for="preco10">R$ 10 a 50</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco50" name="price">
-                        <label for="preco50">R$ 50 a 100</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco100" name="price">
-                        <label for="preco100">R$ 100 a 200</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco200" name="price">
-                        <label for="preco200">R$ 200 a 400</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco400" name="price">
-                        <label for="preco400">R$ 400 a 800</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="preco800" name="price">
-                        <label for="preco800">R$ 800 ou mais</label>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Avaliação</legend>
-                    <div>
-                        <input type="radio" id="avaliacao1" name="rating">
-                        <label for="avaliacao1">1 estrela</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao2" name="rating">
-                        <label for="avaliacao2">2 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao3" name="rating">
-                        <label for="avaliacao3">3 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao4" name="rating">
-                        <label for="avaliacao4">4 estrelas</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="avaliacao5" name="rating">
-                        <label for="avaliacao5">5 estrelas</label>
-                    </div>
-                </fieldset>
-            </form>
-        </aside>
-
-        <section aria-labelledby="secao-servicos">
-            <h2 id="secao-servicos">Mostrando 4 de 200 serviços</h2>
-            <ul>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#1</h2>
-                            <div>
-                                <h3>Serviço de Jardinagem Completo</h3>
-                                <p>R$ 250</p>
+                    <form action="#">
+                        <div class="filtro-categoria">
+                            <button type="button" class="header-categoria" aria-expanded="true"
+                                aria-controls="filtro-categorias">
+                                Categorias
+                                <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir categorias">
+                            </button>
+                            <div id="filtro-categorias" class="filtro-conteudo">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="fotografia" name="categoria" value="fotografia">
+                                        <label for="fotografia">Fotografia</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="tecnologia" name="categoria" value="tecnologia">
+                                        <label for="tecnologia">Tecnologia</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="educacao" name="categoria" value="educacao">
+                                        <label for="educacao">Educação</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="horticultura" name="categoria" value="horticultura">
+                                        <label for="horticultura">Horticultura</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="alimenticio" name="categoria" value="alimenticio">
+                                        <label for="alimenticio">Alimentício</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="paisagismo" name="categoria" value="paisagismo">
+                                        <label for="paisagismo">Paisagismo</label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <ul>
-                            <li>Rio de Janeiro / RJ</li>
-                            <li>Horticultura</li>
-                            <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.8</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação e
-                            controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#2</h2>
-                            <div>
-                                <h3>Desenvolvimento de Sites</h3>
-                                <p>R$ 500/projeto</p>
+                        <div class="filtro-preco">
+                            <button type="button" class="header-categoria" aria-expanded="true"
+                                aria-controls="filtro-preco">
+                                Preço
+                                <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir preço">
+                            </button>
+                            <div id="filtro-preco" class="filtro-conteudo">
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="preco10" name="price" value="10-50">
+                                        <label for="preco10">R$ 10 a 50</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="preco50" name="price" value="50-100">
+                                        <label for="preco50">R$ 50 a 100</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="preco100" name="price" value="100-200">
+                                        <label for="preco100">R$ 100 a 200</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="preco200" name="price" value="200-400">
+                                        <label for="preco200">R$ 200 a 400</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="preco400" name="price" value="400-800">
+                                        <label for="preco400">R$ 400 a 800</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="preco800" name="price" value="800+">
+                                        <label for="preco800">R$ 800 ou mais</label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <ul>
-                            <li>Remoto</li>
-                            <li>Tecnologia</li>
-                            <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.8</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Desenvolvimento de sites modernos e responsivos, com foco em usabilidade e SEO.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#3</h2>
-                            <div>
-                                <h3>Aulas de Inglês</h3>
-                                <p>R$ 70,00/hora</p>
+                        <div class="filtro-avaliacao">
+                            <button type="button" class="header-categoria" aria-expanded="true"
+                                aria-controls="filtro-avaliacao">
+                                Avaliação
+                                <img src="../assets/icons/DownBlue.svg" width="15" alt="Expandir avaliação">
+                            </button>
+                            <div id="filtro-avaliacao" class="filtro-conteudo">
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="avaliacao1" name="rating">
+                                        <label for="avaliacao1">1 estrela</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="avaliacao2" name="rating">
+                                        <label for="avaliacao2">2 estrelas</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="avaliacao3" name="rating">
+                                        <label for="avaliacao3">3 estrelas</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="avaliacao4" name="rating">
+                                        <label for="avaliacao4">4 estrelas</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="avaliacao5" name="rating">
+                                        <label for="avaliacao5">5 estrelas</label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <ul>
-                            <li>Rio de Janeiro / RJ</li>
-                            <li>Educação</li>
-                            <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>4.9</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Aulas de inglês personalizadas para todos os níveis, como foco em conversação e gramática.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <div>
-                            <h2>#4</h2>
-                            <div>
-                                <h3>Confeitaria</h3>
-                                <p>A partir de R$ 80</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>Santa Catarina / SC</li>
-                            <li>Alimentícios</li>
-                            <li>
-                                <div>
-                                    <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
-                                    <p>5.0</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <p>
-                            Qualidade expecional e utilizando os melhores produtos disponiveis no mercado. Nosso
-                            compromisso é transformar momentos especiais em memórias inesqueciveis com delicias que
-                            encatam tanto o paladar quantos os olhos.
-                        </p>
-                        <a href="./detalhes.html">Detalhes</a>
-                    </article>
-                </li>
-            </ul>
+                    </form>
+                </aside>
+            </div>
 
-            <nav aria-labelledby="navegacao-paginacao">
+            <section aria-labelledby="secao-servicos">
+                <h2 id="secao-servicos">Resultado</h2>
+                <p>Mostrando 4 de 200 serviços</p>
                 <ul>
                     <li>
-                        <a href="#" aria-label="Ir para a página anterior na listagem de serviços">
-                            <p>Voltar</p>
-                            <img src="../assets/icons/LeftArrow.svg" alt="Seta para esquerda">
-                        </a>
+                        <article class="servico-card">
+                            <div>
+                                <h3>#1</h3>
+                                <div class="servico-header">
+                                    <h4>Serviço de Jardinagem Completo</h4>
+                                    <p>R$ 250</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10" alt="">
+                                        Rio de Janeiro / RJ
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18" alt="">
+                                        Horticultura
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.8</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de jardinagem completo, incluindo poda de plantas, corte de grama, adubação
+                                    e controle de pragas. Garantimos que seu jardim ficará sempre saudável e bonito.
+                                </p>
+                            </div>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="Ícone de detalhes">
+                            </a>
+                        </article>
                     </li>
-                    <li>Página 1 de 25</li>
                     <li>
-                        <a href="#" aria-label="Ir para a proxima página na listagem de serviços">
-                            <p>Avançar</p>
-                            <img src="../assets/icons/RightArrow.svg" alt="Seta para direita">
-                        </a>
+                        <article class="servico-card">
+                            <div>
+                                <h3>#2</h3>
+                                <div class="servico-header">
+                                    <h4>Pintura Residencial</h4>
+                                    <p>R$ 450</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10" alt="">
+                                        São Paulo / SP
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18" alt="">
+                                        Pintura
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.5</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de pintura residencial completa, incluindo preparação das paredes, aplicação
+                                    de tinta de alta qualidade e acabamento perfeito.
+                                </p>
+                            </div>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="Ícone de detalhes">
+                            </a>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="servico-card">
+                            <div>
+                                <h3>#3</h3>
+                                <div class="servico-header">
+                                    <h4>Limpeza Pós-Obra</h4>
+                                    <p>R$ 350</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10" alt="">
+                                        Belo Horizonte / MG
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18" alt="">
+                                        Limpeza
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.7</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de limpeza pós-obra, removendo todo o entulho e sujeira, deixando seu espaço
+                                    pronto para uso imediato.
+                                </p>
+                            </div>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="Ícone de detalhes">
+                            </a>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="servico-card">
+                            <div>
+                                <h3>#4</h3>
+                                <div class="servico-header">
+                                    <h4>Reforma de Móveis</h4>
+                                    <p>R$ 300</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <img src="../assets/icons/LocalBlue.svg" width="10" alt="">
+                                        Porto Alegre / RS
+                                    </li>
+                                    <li>
+                                        <img src="../assets/icons/Categoria.svg" width="18" alt="">
+                                        Marcenaria
+                                    </li>
+                                    <li>
+                                        <div class="avaliação">
+                                            <img src="../assets/icons/Star.svg" alt="Estrela avaliacao 1">
+                                            <p>4.9</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p>
+                                    Serviço de reforma de móveis, restaurando peças antigas e danificadas, deixando-as
+                                    como novas.
+                                </p>
+                            </div>
+                            <a class="detalhes-btn" href="./detalhes.html">
+                                Detalhes
+                                <img src="../assets/icons/RightArrow.svg" alt="Ícone de detalhes">
+                            </a>
+                        </article>
                     </li>
                 </ul>
-            </nav>
-        </section>
+                <nav aria-labelledby="navegacao-paginacao">
+                    <h4 id="navegacao-paginacao" class="sr-only">Paginação da listagem de serviços</h4>
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Ir para a página anterior na listagem de serviços">
+                                <img src="../assets/icons/LeftArrow.svg" alt="Seta para esquerda">
+                                <p>Voltar</p>
+                            </a>
+                        </li>
+                        <li>Página 1 de 25</li>
+                        <li>
+                            <a href="#" aria-label="Ir para a próxima página na listagem de serviços">
+                                <p>Avançar</p>
+                                <img src="../assets/icons/RightArrow.svg" alt="Seta para direita">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </main>
 
     <footer>
         <section class="secao-footer">
             <div class="navegacao-footer" aria-labelledby="navegacao-footer">
+                <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
                 <ul>
                     <li>
-                        <a href="./login.html" aria-label="Acessar a página logIn">
-                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
+                        <a href="./login.html" aria-label="Acessar a página Login">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login">
                             Login
                         </a>
                     </li>
                     <li>
                         <a href="./cadastro.html" aria-label="Acessar a página de Cadastro">
-                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro">
                             Cadastre-se
                         </a>
                     </li>
                 </ul>
             </div>
             <section aria-labelledby="secao-social-media" class="secao-social-media">
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes sociais da Includify</h2>
                 <div class="logo-footer">
                     <a href="../index.html" aria-label="Ir para a página inicial">
                         <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
@@ -318,31 +434,33 @@
                     <h3>Includify</h3>
                 </div>
                 <nav aria-labelledby="navegacao-social-media">
+                    <h3 id="navegacao-social-media" class="sr-only">Navegação das redes sociais da Includify</h3>
                     <ul class="redes-sociais">
                         <li>
                             <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
-                                <img src="../assets/icons/Facebook.svg" alt="Facebook" width="25">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
-                                <img src="../assets/icons/Instagram.svg" alt="Instagram" width="25">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
-                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
-                                <img src="../assets/icons/Youtube.svg" alt="YouTube" width="25">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube">
                             </a>
                         </li>
                     </ul>
                 </nav>
             </section>
             <div class="navegacao-contato" aria-labelledby="navegacao-contato">
+                <h4 id="navegacao-contato" class="sr-only">Navegação de contato do footer</h4>
                 <ul>
                     <li>
                         <a href="./fale-conosco.html" aria-label="Acessar página Fale Conosco">
@@ -359,7 +477,8 @@
                 </ul>
             </div>
         </section>
-        <section class="secao-diretos">
+        <section class="secao-diretos" aria-labelledby="secao-diretos">
+            <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
             <p>
                 <small>
                     ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados • Design by
@@ -368,6 +487,16 @@
             </p>
         </section>
     </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

@@ -5,222 +5,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Includify</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
-    <meta name="description" content="Página inicial da includify">
-    <link rel="stylesheet" href="./Css/global.css">
+    <link rel="stylesheet" href="./Css/index.css">
+    <script src="../js/acessibilidade.js" defer></script>
+    <!-- <script src="../js/main.js" defer></script> -->
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <a href="index.html" aria-label="Ir para a página inicial">
-                <img src="assets/img/logo.png" alt="Includify Logo" width="50">
-            </a>
-            <h1>Includify</h1>
-        </div>
-        <nav aria-label="Navegação principal">
-            <ul class="menu-principal">
-                <li>
-                    <a href="index.html" aria-label="Acessar a página Home">Home</a>
-                </li>
-                <li>
-                    <a href="pages/servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
-                </li>
-                <li>
-                    <a href="pages/login.html" aria-label="Acessar a página logIn" class="log-in">
-                        <img src="assets/icons/LogInDark.svg" alt="Icone de logIn" width="30">
-                        <span>Login</span>
+    <header id="header" tabindex="-1">
+        <div>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <span>Acessibilidade</span>
+                <div>
+                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                        <span class="sr-only">Diminuir tamanho da fonte</span>
+                        A-
+                    </button>
+                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                        <span class="sr-only">Normalizar tamanho da fonte</span>
+                        aA
+                    </button>
+                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                        <span class="sr-only">Aumentar tamanho da fonte</span>
+                        A+
+                    </button>
+                </div>
+                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                    <img src="/assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
+                </button>
+                <button id="vlibras-button" aria-label="Ativar VLibras">
+                    <span class="sr-only">Ativar/desativar VLibras</span>
+                    <img src="/assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
+                </button>
+            </div>
+            <div class=" header-container">
+                <div class="logo-container">
+                    <a href="index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                        <h2>Includify</h2>
                     </a>
-                </li>
-            </ul>
-        </nav>
+                    <button class="hamburger" aria-label="Abrir menu" id="hamburger-button">
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                    </button>
+                </div>
+                <nav id="navegacao-principal" aria-label="Navegação principal">
+                    <ul class="menu-principal">
+                        <li>
+                            <a href="index.html" aria-label="Acessar a página Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./pages/servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./pages/login.html" aria-label="Acessar a página Login" class="log-in">
+                                <img src="../assets/icons/logInDark.svg" alt="Ícone de Login" width="30">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <!-- Banner com imagem e textos -->
+    <main class="main-content">
         <section aria-label="Banner principal" class="banner-section">
-            <div class="banner-content">
-                <h2>Somos <span class="includify-highlight">Includify</span></h2>
-                <p><strong>Trabalhamos para que você seja visto.</strong></p>
+            <div>
+                <h2>Somos a<span class="includify-highlight"> Includify</span></h2>
+                <p>Trabalhamos para que você seja visto.</p>
                 <div class="banner-buttons">
                     <a href="./pages/cadastro.html" class="btn btn-primary"
                         aria-label="Promova-se na Includify">Promova-se</a>
                     <a href="./pages/servicos.html" class="btn btn-secondary"
-                        aria-label="Procurar serviços na Includify">Procure aqui</a>
+                        aria-label="Procurar serviços na Includify">Procure
+                        aqui</a>
                 </div>
             </div>
         </section>
-        <!-- Section: Conhecemos as pessoas e valorizamos competências -->
-        <section aria-labelledby="competencias-title" class="competencias-section">
-            <!-- Elementos decorativos de elipses -->
-            <div class="competencias-decoracao" aria-hidden="true">
-                <div class="elipses-grid">
-                    <!-- Elipses decorativas -->
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
+        <section id="content" tabindex="-1">
+            <div class="elipses-container">
+                <div class="elipses">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="elipses">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="elipses">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
-            <div class="competencias-content">
-                <!-- Título da section -->
-                <h2 id="competencias-title">Conhecemos as pessoas e valorizamos competências</h2>
-                <!-- Descrição sobre competências -->
-                <p>Ajudamos empreendedores e autônomos com deficiência a divulgar seus negócios, produtos e serviços de
-                    forma gratuita. Venha fazer parte da nossa rede de talentos e destaque seu empreendimento no
-                    mercado.</p>
-                <!-- Link para cadastro de negócios -->
-                <a href="#" class="link-text" aria-label="Cadastre seu negócio e alcance mais clientes">Cadastre seu
-                    negócio agora e alcance mais clientes!</a>
+            <div class="introducao">
+                <h3>Conhecemos as pessoas e valorizamos competências</h3>
+                <p>
+                    Ajudamos empreendedores e autônomos com deficiência a divulgar seus negócios, produtos e serviços de
+                    forma
+                    gratuita. Venha fazer parte da nossa rede de talentos e destaque seu empreendimento no mercado.
+                </p>
+                <a href="#" class="btn register-btn">Cadastre seu negócio agora e alcance mais clientes!</a>
             </div>
         </section>
-        <!-- Section: Artigos em Destaque -->
-        <section aria-labelledby="artigos-destaque-title" class="artigos-section">
-            <!-- Título invisível para leitores de tela -->
-            <h2 id="artigos-destaque-title" class="visually-hidden">Artigos em Destaque</h2>
-            <div class="cards-container">
-                <!-- Primeiro artigo em destaque -->
-                <article class="card">
-                    <img src="./assets/img/card1Image.png" alt="Descrição da imagem do artigo 1">
-                    <h3>Pessoas PCD aderem ao empreendedorismo</h3>
-                    <p>Com o avanço do trabalho remoto e novas ferramentas de comunicação, pessoas com deficiência
-                        encontram mais oportunidades para montar o próprio negócio e ter independência financeira.</p>
-                    <a href="https://www.terra.com.br/noticias/dino/pessoas-com-deficiencia-optam-pelo-empreendedorismo-como-forma-de-insercao-no-mercado-de-trabalho,89d2e2ef97853c84b3448fd470b8f4cc1bln17mz.html"
-                        target="_blank" class="btn btn-leia-artigo"
-                        aria-label="Leia o artigo completo sobre o tema 1">Leia o Artigo</a>
-                </article>
-                <!-- Segundo artigo em destaque -->
-                <article class="card">
-                    <img src="./assets/img/card2Image.png" alt="Descrição da imagem do artigo 2">
-                    <h3>Pessoas com deficiência (PCD) no empreendedorismo</h3>
-                    <p>O Brasil possui cerca de 45 milhões de pessoas com alguma deficiência, segundo o último censo do
-                        Instituto Brasileiro de Geografia e Estatística (IBGE), realizado em 2010. O número corresponde
-                        a 23% da população do país.</p>
-                    <a href="https://empreender360.aliancaempreendedora.org.br/pessoas-com-deficiencia-no-empreendedorismo/#:~:text=Conforme%20a%20pesquisa%20realizada%20pelo,realizam%20seu%20trabalho%20em%20casa"
-                        target="_blank" class="btn btn-leia-artigo"
-                        aria-label="Leia o artigo completo sobre o tema 2">Leia o Artigo</a>
-                </article>
-            </div>
-            <!-- Elementos decorativos de elipses à direita -->
-            <div class="artigos-decoracao" aria-hidden="true">
-                <div class="elipses-grid">
-                    <!-- 10 linhas de 3 colunas de elipses -->
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                    <div class="elipse"></div>
-                </div>
-            </div>
+        <section class="articles-section" id="menu">
+            <article class="article-card">
+                <img src="./assets/img/card1Image.png" alt="">
+                <h4>Pessoas PCD aderem ao empreendedorismo</h4>
+                <p>Com o avanço do trabalho remoto e novas ferramentas de comunicação, pessoas com deficiência encontram
+                    mais oportunidades para montar o próprio negócio e ter independência financeira.
+                </p>
+                <a href="https://www.terra.com.br/noticias/dino/pessoas-com-deficiencia-optam-pelo-empreendedorismo-como-forma-de-insercao-no-mercado-de-trabalho,89d2e2ef97853c84b3448fd470b8f4cc1bln17mz.html"
+                    class="article-link" target="_blank">Leia o artigo</a>
+            </article>
+            <article class="article-card">
+                <img src="./assets/img/card2Image.png" alt="">
+                <h4>Pessoas com deficiência (PCD) no empreendedorismo</h4>
+                <p>O Brasil possui cerca de 45 milhões de pessoas com alguma deficiência, segundo o último censo do
+                    Instituto Brasileiro de Geografia e Estatística (IBGE), realizado em 2010. O número corresponde a
+                    23% da população do país.</p>
+                <a href="https://empreender360.aliancaempreendedora.org.br/pessoas-com-deficiencia-no-empreendedorismo/#:~:text=Conforme%20a%20pesquisa%20realizada%20pelo,realizam%20seu%20trabalho%20em%20casa"
+                    class="article-link" target="_blank">Leia o artigo</a>
+            </article>
         </section>
     </main>
 
     <footer>
         <section class="secao-footer">
             <div class="navegacao-footer" aria-labelledby="navegacao-footer">
+                <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
                 <ul>
                     <li>
-                        <a href="pages/login.html" aria-label="Acessar a página logIn">
-                            <img src="assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
+                        <a href="./pages/login.html" aria-label="Acessar a página Login">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
                             Login
                         </a>
                     </li>
                     <li>
-                        <a href="pages/Cadastro.html" aria-label="Acessar a página de Cadastro">
-                            <img src="assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
+                        <a href="./pages/cadastro.html" aria-label="Acessar a página de Cadastro">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
                             Cadastre-se
                         </a>
                     </li>
                 </ul>
             </div>
             <section aria-labelledby="secao-social-media" class="secao-social-media">
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes sociais da Includify</h2>
                 <div class="logo-footer">
-                    <a href="index.html" aria-label="Ir para a página inicial">
-                        <img src="assets/img/logo.png" alt="Includify Logo" width="45">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
                     </a>
                     <h3>Includify</h3>
                 </div>
                 <nav aria-labelledby="navegacao-social-media">
+                    <h3 id="navegacao-social-media" class="sr-only">Navegação das redes sociais da Includify</h3>
                     <ul class="redes-sociais">
                         <li>
                             <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
-                                <img src="assets/icons/Facebook.svg" alt="Facebook" width="25">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook" width="25">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
-                                <img src="assets/icons/Instagram.svg" alt="Instagram" width="25">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram" width="25">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
-                                <img src="assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
-                                <img src="assets/icons/Youtube.svg" alt="YouTube" width="25">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube" width="25">
                             </a>
                         </li>
                     </ul>
                 </nav>
             </section>
             <div class="navegacao-contato" aria-labelledby="navegacao-contato">
+                <h4 id="navegacao-contato" class="sr-only">Navegação de contato do footer</h4>
                 <ul>
                     <li>
-                        <a href="pages/fale-conosco.html" aria-label="Acessar página Fale Conosco">
+                        <a href="./pages/fale-conosco.html" aria-label="Acessar página Fale Conosco">
                             Fale Conosco
-                            <img src="assets/icons/Phone.svg" alt="Ícone Fale Conosco">
+                            <img src="../assets/icons/Phone.svg" alt="Ícone Fale Conosco">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Acessar página Dúvidas Frequentes">
                             Dúvidas Frequentes
-                            <img src="assets/icons/DuvidasFrequentes.svg" alt="Ícone Dúvidas Frequentes">
+                            <img src="../assets/icons/DuvidasFrequentes.svg" alt="Ícone Dúvidas Frequentes">
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="secao-diretos">
+        <section class="secao-diretos" aria-labelledby="secao-diretos">
+            <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
             <p>
                 <small>
                     ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados • Design by
@@ -229,6 +223,16 @@
             </p>
         </section>
     </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

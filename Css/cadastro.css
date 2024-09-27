@@ -1,0 +1,183 @@
+@import url(global.css);
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding-block: 2rem;
+  gap: 3rem;
+}
+
+.container-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 20rem;
+  color: var(--color-background);
+  gap: 1.2rem;
+  max-width: 20rem;
+  padding-inline: 2.5rem;
+  border-radius: 15px;
+  background: rgb(63, 105, 206);
+  background: linear-gradient(90deg, rgba(63, 105, 206, 1) 8%, rgba(32, 53, 104, 1) 100%);
+}
+
+.img-perfil {
+  border-radius: 50%;
+  height: 65%;
+  max-width: 90%;
+}
+
+.container-form {
+  margin-inline: 1rem;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.129);
+}
+
+form h1 {
+  color: var(--color-standard);
+  font-size: var(--font-size-h3);
+  margin-bottom: 20px;
+}
+
+#imagemInput {
+  display: none;
+}
+
+.custom-file-upload {
+  font-size: var(--font-size-h6);
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.custom-file-upload:hover {
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: var(--font-size-p);
+  font-weight: 600;
+  color: var(--color-standard)
+}
+
+.opcoes {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.opcoes div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.opcoes div>span {
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+  background-color: var(--color-background-card);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+}
+
+form input::placeholder {
+  color: var(--color-placeholder);
+  font-weight: 600;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 42px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 25px;
+  height: 25px;
+}
+
+.password-toggle-show {
+  display: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+form input.error {
+  border-color: red;
+}
+
+form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-cadastrar {
+  background-color: var(--color-button-primary);
+  width: 40%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button-cadastrar:hover {
+  cursor: pointer;
+}
+
+.button-continuar {
+  background-color: var(--color-standard);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.button-continuar:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .container-form {
+    width: 90%;
+    height: 100%;
+    margin-inline: 0rem;
+  }
+
+}
