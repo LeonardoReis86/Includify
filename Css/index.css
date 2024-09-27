@@ -9,7 +9,7 @@
 }
 
 .banner-section {
-  background-image: url('../../assets/img/bannerImage.png');
+  background-color: var(--color-standard);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -34,6 +34,7 @@
 }
 
 .includify-highlight {
+  background-color: var(--color-background);
   color: #091865;
   font-weight: 600;
 }
@@ -180,4 +181,13 @@
   .elipses-container {
     display: flex;
   }
-} 
+
+  .banner-section {
+    background-image: url('../../assets/img/bannerImage.png');
+  }
+
+  .includify-highlight {
+    background-color: transparent;
+  }
+
+}
