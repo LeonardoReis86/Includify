@@ -2,6 +2,7 @@
 
 body.no-scroll {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -71,7 +72,7 @@ main li {
 
 button[type="submit"] {
     background-color: var(--color-button-primary);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     padding: 12px 0;
     border: none;
     border-radius: 8px;
@@ -96,17 +97,27 @@ section[aria-labelledby="filtros-busca"] label {
     gap: 8px;
 }
 
-section[aria-labelledby="filtros-busca"] select {
-    border: none;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    font-size: var(--font-size-p);
-    background-color: var(--color-background-card);
+select {
     flex: 1;
+    padding: 8px;
+    padding-left: 25px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    font-size: var(--font-size-p);
+    color: #333;
+    min-width: 15rem;
     cursor: pointer;
-    appearance: none;
+    position: relative;
+    background-color: var(--color-background-card);
+    background-image: url('../assets/icons/LocalBlue.svg');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 12px;
+    transition: border-radius 0.2s, outline 0.2s;
+}
+
+select:focus {
+    border-radius: 10px 10px 0px 0px;
 }
 
 .filtros-busca label, .filtros-busca img {
@@ -117,13 +128,6 @@ section[aria-labelledby="filtros-busca"] select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-background-card);
-    border-radius: 10px;
-    padding: 8px;
-    gap: 8px;
-    border: 1px solid var(--color-border);
-    min-width: 15rem;
-    position: relative;
 }
 
 .servicos-container {
@@ -155,12 +159,12 @@ section[aria-labelledby="filtros-busca"] select {
 }
 
 aside[aria-labelledby="secao-filtros"] {
-    height: 30rem;
+    height: 640px;
     overflow-y: scroll;
 }
 
 aside[aria-labelledby="secao-filtros"] h2 {
-    font-size: var(--font-size-h2);
+    font-size: 2em;
     color: var(--color-font);
 }
 
@@ -177,13 +181,19 @@ aside[aria-labelledby="secao-filtros"] form {
 }
 
 .close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 15px;
     cursor: pointer;
 }
 
 .secao-filtros-background {
     display: none;
-    background-color: var(--color-backgroud);
-    padding: 40px 20px;
+    background-color: var(--color-background);
+    padding-top: 40px;
+    padding-inline: 20px;
     border-radius: 0 70px 70px 0;
 }
 
@@ -195,7 +205,7 @@ aside[aria-labelledby="secao-filtros"] form {
     left: 0;
     height: 80%;
     border-radius: 10px 10px 0 0;
-    background-color: var(--color-backgroud);
+    background-color: var(--color-background);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
     z-index: 10;
     transition: transform 0.3s ease-in-out;
@@ -203,7 +213,7 @@ aside[aria-labelledby="secao-filtros"] form {
 
 .mostrar-filtro {
     color: var(--color-standard);
-    background-color: var(--color-backgroud);
+    background-color: var(--color-background);
     padding: 12px 0;
     border: 1px solid var(--color-standard);
     border-radius: 8px;
@@ -218,7 +228,7 @@ aside[aria-labelledby="secao-filtros"] form {
     border: none;
     font-weight: bold;
     gap: 8px;
-    background-color: var(--color-backgroud);
+    background-color: var(--color-background);
     cursor: pointer;
     font-size: var(--font-size-p);
     margin-block: 1rem;
@@ -267,11 +277,10 @@ section[aria-labelledby="secao-servicos"] {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--color-backgroud);
+    background-color: var(--color-background);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
 }
 
 .servico-header {
@@ -318,7 +327,7 @@ section[aria-labelledby="secao-servicos"] {
     gap: 8px;
     text-decoration: none;
     background-color: var(--color-button-primary);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     padding-inline: 1rem;
     padding-block: 8px;
     border: none;
@@ -339,7 +348,7 @@ nav[aria-labelledby="navegacao-paginacao"] a {
     gap: 8px;
     text-decoration: none;
     background-color: var(--color-standard);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     padding-inline: 1rem;
     padding-block: 8px;
     border: none;
@@ -362,6 +371,69 @@ nav[aria-labelledby="navegacao-paginacao"] ul li {
     list-style: none;
 }
 
+/* Acessibilidade */
+
+body.alto-contraste .secao-diretos {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste #busca-servico {
+    color: #fff;
+}
+
+body.alto-contraste .barra-busca {
+    background-color: #fff;
+}
+
+body.alto-contraste .secao-busca img {
+    filter: grayscale(1);
+}
+
+body.alto-contraste .secao-busca select {
+    background-color: #fff;
+    color: #000;
+    filter: grayscale(1);
+}
+
+body.alto-contraste #buscar-servico {
+    background-color: #fff;
+}
+
+body.alto-contraste #buscar-servico::placeholder {
+    color: #000000bb;
+}
+
+body.alto-contraste .servicos-container {
+    background-color: #131313;
+}
+
+body.alto-contraste .header-categoria {
+    background-color: #fff;
+}
+
+body.alto-contraste .header-categoria:hover {
+    background-color: #fff;
+}
+
+body.alto-contraste section[aria-labelledby="secao-servicos"] h2,
+body.alto-contraste section[aria-labelledby="secao-servicos"]>p {
+    color: #fff;
+}
+
+body.alto-contraste section[aria-labelledby="secao-servicos"] .detalhes-btn img {
+    filter: invert(1);
+}
+
+body.alto-contraste nav[aria-labelledby="navegacao-paginacao"] li {
+    color: #fff;
+}
+
+body.alto-contraste nav[aria-labelledby="navegacao-paginacao"] img {
+    filter: invert(1);
+}
+
+
 /* Estilização para telas maiores */
 @media (min-width: 48rem) {
     slot {
@@ -379,6 +451,10 @@ nav[aria-labelledby="navegacao-paginacao"] ul li {
         gap: 2.2rem;
         padding-inline-start: 0;
         border-radius: 8px;
+    }
+
+    .close-icon {
+        display: none;
     }
 
     section[aria-labelledby="secao-servicos"] {
