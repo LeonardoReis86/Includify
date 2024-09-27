@@ -1,108 +1,233 @@
-/* Estilo geral do corpo */
+@import url(global.css);
+
+#header {
+    position: fixed;
+}
+
+header>div {
+    padding-bottom: 12px;
+}
+
 body {
-  background-color: #2B4687;
-  /* Cor de fundo da página */
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  /* Remove margens padrão */
-  height: 100vh;
-  /* Altura da página */
-  display: flex;
-  /* Usar flexbox para layout */
-  justify-content: center;
-  /* Centraliza o conteúdo na página */
-  align-items: center;
-  /* Centraliza verticalmente */
+    background-color: var(--color-standard);
+    color: var(--color-background);
 }
 
-/* Container principal usando flexbox */
-.container {
-  display: flex;
-  /* Usar flexbox para layout */
-  width: 80%;
-  /* Largura do container principal */
-  max-width: 1200px;
-  /* Largura máxima do container */
-}
-
-/* Estilo para o container à esquerda */
-.left-container {
-  width: 50%;
-  /* Largura do container à esquerda */
-  padding: 20px;
-  /* Espaçamento interno */
-  color: white;
-  /* Cor do texto */
-}
-
-/* Linha horizontal para dividir */
-.divider {
-  width: 2px;
-  /* Largura da linha */
-  background-color: white;
-  /* Cor da linha */
-  height: 100%;
-  /* Altura da linha para ocupar todo o container */
-}
-
-/* Estilo para o conteúdo principal */
 main {
-  padding: 20px;
-  /* Espaço interno */
-  background-color: white;
-  /* Fundo branco */
-  border-radius: 8px;
-  /* Arredonda os cantos */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* Sombra leve */
-  width: 50%;
-  /* Largura do container principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding-block: 6rem;
+    padding-inline: 2rem;
+    gap: 5rem;
 }
 
-/* Estilo para o cabeçalho */
-header {
-  margin-bottom: 10px;
-  /* Espaçamento abaixo do cabeçalho */
+.login-introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
-/* Estilo para a seção de boas-vindas */
-section[aria-labelledby="welcome-title"] {
-  margin-bottom: 20px;
-  /* Espaço abaixo da seção de boas-vindas */
-  font-size: 50px;
-  /* Tamanho da fonte ajustado */
-  line-height: 1.5;
-  /* Espaçamento entre linhas */
+.login-introducao>div {
+    display: flex;
+    align-items: center;
 }
 
-/* Estilo para o container da logo e título */
-.logo-container {
-  display: flex;
-  /* Alinha os itens em linha */
-  align-items: center;
-  /* Centraliza verticalmente */
+.login-introducao img {
+    width: 100px;
 }
 
-/* Estilo para a imagem do logo */
-.logo-container img {
-  width: 200px;
-  /* Tamanho desejado */
-  height: auto;
-  /* Mantém a proporção */
+.login-introducao h1 {
+    font-size: var(--font-size-h1);
 }
 
-/* Estilo para o título */
-h1 {
-  margin-left: 10px;
-  /* Espaço à esquerda do título */
-  font-size: 60px;
-  /* Tamanho da fonte do título aumentado */
-  color: white;
-  /* Cor do texto para contraste */
+.login-introducao p {
+    font-size: var(--font-size-h3);
+    font-weight: 600;
+    max-width: 30rem;
+    text-align: center;
 }
 
-/* Estilo para o título e parágrafo */
-main h2, main p, main label {
-  text-align: left;
-  /* Alinhamento à esquerda */
+.login-introducao a {
+    display: none;
+    margin-top: 5rem;
+    font-size: var(--font-size-p);
+    color: var(--color-background);
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.divisor {
+    display: none;
+    border: 1px solid #adadad25;
+    width: 1px;
+    height: 50vh;
+}
+
+.forms-container {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-font);
+    background-color: var(--color-background);
+    padding-block: 40px;
+    border-radius: 15px;
+}
+
+.forms-container h1 {
+    font-size: var(--font-size-h3);
+    color: var(--color-font);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.forms-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.input-with-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    align-self: center;
+}
+
+.input-with-icon img {
+    width: 18px;
+    top: 28%;
+    right: 12%;
+    position: absolute;
+}
+
+.password-icon {
+    top: 24% !important;
+    right: 12.5% !important;
+    position: absolute;
+}
+
+.forms-container input[type="email"],
+.forms-container input[type="password"] {
+    width: 80%;
+    background-color: var(--color-background-card);
+    padding-block: 12px;
+    padding-inline: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.forms-container input::placeholder {
+    color: #2B468B;
+}
+
+.forms-container .esqueci-senha {
+    font-size: 14px;
+    align-self: center;
+    color: #2B468B;
+    margin-bottom: 2rem;
+}
+
+.remember-me {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-container {
+    width: 80%;
+    padding-block: 15px;
+    border-radius: 8px;
+    background-color: var(--color-standard);
+}
+
+form>.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button-container a {
+    text-decoration: none;
+    font-size: var(--font-size-p);
+    font-weight: 600;
+    color: var(--color-background);
+}
+
+.forms-container>.button-container {
+    margin-top: 1.5rem;
+    text-align: center;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+}
+
+.pagina-principal {
+    display: block;
+    margin-top: 3rem;
+    font-size: var(--font-size-p);
+    color: var(--color-standard);
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.forms-container>.button-container a {
+    text-decoration: none;
+    width: 100%;
+    color: var(--color-standard);
+    font-size: var(--color-standard);
+    font-weight: 600;
+    padding-block: 10px;
+    border-radius: 10px;
+    background-color: var();
+}
+
+@media (min-width: 48rem) {
+    main {
+        flex-direction: row;
+        align-items: start;
+        padding-top: 16rem;
+        padding-inline: 2rem;
+        gap: 5rem;
+    }
+
+    .divisor {
+        display: block;
+        border: 1px solid #adadad25;
+        width: 1px;
+        height: 60vh;
+    }
+
+    .login-introducao {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .login-introducao p {
+        max-width: 18rem;
+        text-align: left;
+    }
+
+    .login-introducao a {
+        display: block;
+    }
+
+    .pagina-principal {
+        display: none;
+    }
 }
