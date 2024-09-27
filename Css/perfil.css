@@ -30,12 +30,12 @@ main>div {
     gap: 10px;
 }
 
-.secao-perfil>:first-child {
+.secao-perfil .perfil-usuario-container {
     order: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--color-backgroud);
+    color: var(--color-background);
     gap: 20px;
     min-width: 17.5rem;
     padding-block: 3.125rem;
@@ -89,7 +89,7 @@ main>div {
     font-weight: 600;
 }
 
-.perfil-ususario {
+.perfil-usuario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,11 +97,11 @@ main>div {
     gap: 10px;
 }
 
-.perfil-ususario figcaption {
+.perfil-usuario figcaption {
     font-size: var(--font-size-h4);
 }
 
-.perfil-ususario img {
+.perfil-usuario img {
     width: 100px;
 }
 
@@ -122,7 +122,7 @@ main>div {
 }
 
 .apresentacao p {
-    font-size: 1.15rem;
+    font-size: 1.15eem;
 }
 
 .apresentacao h2 {
@@ -152,7 +152,7 @@ main>div {
     font-weight: 600;
     border-radius: 10px;
     background-color: var(--color-button-primary);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     text-decoration: none;
     align-self: center;
     margin-block: 1rem;
@@ -235,7 +235,7 @@ article[aria-labelledby="servicos-prestados"] ul li {
     gap: 8px;
     text-decoration: none;
     background-color: var(--color-button-primary);
-    color: var(--color-backgroud);
+    color: var(--color-background);
     padding-inline: 1rem;
     padding-block: 8px;
     border: none;
