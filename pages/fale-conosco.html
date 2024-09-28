@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,48 +7,80 @@
     <title>Includify - Fale conosco</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para se comunicar com nossa equipe">
-    <script defer src="https://kit.fontawesome.com/4f3af5bee9.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="../css/global.css"> -->
+    <link rel="stylesheet" href="../css/fale-conosco.css">
+    <script src="../js/acessibilidade.js" defer></script>
+    <!-- <script src="../js/main.js" defer></script> -->
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <a href="../index.html" aria-label="Ir para a página inicial">
-                <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
-            </a>
-            <h1>Includify</h1>
-        </div>
-        <nav aria-label="Navegação principal">
-            <ul class="menu-principal">
-                <li>
-                    <a href="../index.html" aria-label="Acessar a página Home">Home</a>
-                </li>
-                <li>
-                    <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
-                </li>
-                <li>
-                    <a href="./login.html" aria-label="Acessar a página logIn" class="log-in">
-                        <img src="../assets/icons/logInDark.svg" alt="Icone de logIn" width="30">
-                        <span>Login</span>
+    <header id="header" tabindex="-1">
+        <div>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <span>Acessibilidade</span>
+                <div>
+                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                        <span class="sr-only">Diminuir tamanho da fonte</span>
+                        A-
+                    </button>
+                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                        <span class="sr-only">Normalizar tamanho da fonte</span>
+                        aA
+                    </button>
+                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                        <span class="sr-only">Aumentar tamanho da fonte</span>
+                        A+
+                    </button>
+                </div>
+                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                    <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
+                </button>
+                <button id="vlibras-button" aria-label="Ativar VLibras">
+                    <span class="sr-only">Ativar/desativar VLibras</span>
+                    <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
+                </button>
+            </div>
+            <div class=" header-container">
+                <div class="logo-container">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                        <h2>Includify</h2>
                     </a>
-                </li>
-            </ul>
-        </nav>
+                    <button class="hamburger" aria-label="Abrir menu" id="hamburger-button">
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                    </button>
+                </div>
+                <nav id="navegacao-principal" aria-label="Navegação principal">
+                    <ul class="menu-principal">
+                        <li>
+                            <a href="../index.html" aria-label="Acessar a página Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" aria-label="Acessar a página Login" class="log-in">
+                                <img src="../assets/icons/logInDark.svg" alt="Ícone de Login" width="30">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main class="main-fale-conosco">
         <section aria-labelledby="fale-conosco" class="secao-fale-conosco">
+            <h2 class="sr-only">Formulário para contato</h2>
             <div class="logo-container">
-                <a href="../index.html" aria-label="Ir para a página inicial">
-                    <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
-                </a>
+                <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
                 <h1>Includify</h1>
             </div>
             <div class="form-container">
                 <h2 id="fale-conosco">Fale Conosco</h2>
                 <form action="#" id="form-fale-conosco">
-                    <!-- Remover labels via CSS futuramente (display: none;)-->
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Nome" aria-required="true">
                     <label for="email">E-mail</label>
@@ -69,24 +101,24 @@
     <footer>
         <section class="secao-footer">
             <div class="navegacao-footer" aria-labelledby="navegacao-footer">
-                <h3 id="navegacao-footer" class="sr-only">Navegação Principal do Rodapé</h3>
+                <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
                 <ul>
                     <li>
-                        <a href="../pages/login.html" aria-label="Acessar a página logIn">
-                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login" width="25">
+                        <a href="./login.html" aria-label="Acessar a página Login">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login">
                             Login
                         </a>
                     </li>
                     <li>
-                        <a href="cadastro.html" aria-label="Acessar a página de Cadastro">
-                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro" width="25">
+                        <a href="./cadastro.html" aria-label="Acessar a página de Cadastro">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro">
                             Cadastre-se
                         </a>
                     </li>
                 </ul>
             </div>
             <section aria-labelledby="secao-social-media" class="secao-social-media">
-                <h2 id="secao-social-media" class="sr-only">Seção de redes sociais Includify</h2>
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes sociais da Includify</h2>
                 <div class="logo-footer">
                     <a href="../index.html" aria-label="Ir para a página inicial">
                         <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
@@ -94,38 +126,38 @@
                     <h3>Includify</h3>
                 </div>
                 <nav aria-labelledby="navegacao-social-media">
-                    <h3 id="navegacao-social-media" class="sr-only">Navegação de Redes Sociais</h3>
+                    <h3 id="navegacao-social-media" class="sr-only">Navegação das redes sociais da Includify</h3>
                     <ul class="redes-sociais">
                         <li>
-                            <a href="#" aria-label="Includify no Facebook">
-                                <img src="../assets/icons/Facebook.svg" alt="Facebook" width="25">
+                            <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook">
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Includify no Instagram">
-                                <img src="../assets/icons/Instagram.svg" alt="Instagram" width="25">
+                            <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram">
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Includify no LinkedIn">
-                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn" width="25">
+                            <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="Includify no YouTube">
-                                <img src="../assets/icons/Youtube.svg" alt="YouTube" width="25">
+                            <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube">
                             </a>
                         </li>
                     </ul>
                 </nav>
             </section>
             <div class="navegacao-contato" aria-labelledby="navegacao-contato">
-                <h3 id="navegacao-contato" class="sr-only">Navegação de Contato</h3>
+                <h4 id="navegacao-contato" class="sr-only">Navegação de contato do footer</h4>
                 <ul>
                     <li>
                         <a href="./fale-conosco.html" aria-label="Acessar página Fale Conosco">
                             Fale Conosco
-                            <img src="../assets/icons/FaleConosco.svg" alt="Ícone Fale Conosco">
+                            <img src="../assets/icons/Phone.svg" alt="Ícone Fale Conosco">
                         </a>
                     </li>
                     <li>
@@ -137,7 +169,8 @@
                 </ul>
             </div>
         </section>
-        <section class="secao-diretos">
+        <section class="secao-diretos" aria-labelledby="secao-diretos">
+            <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
             <p>
                 <small>
                     ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados • Design by
@@ -146,6 +179,16 @@
             </p>
         </section>
     </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

@@ -1,43 +1,232 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/styleform.css">
     <title>Includify - Cadastro</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <meta name="description" content="Página para se cadastrar na Includify">
+    <link rel="stylesheet" href="/Css/cadastro.css">
+    <script src="../js/cadastro.js" defer></script>
+    <script src="../js/acessibilidade.js" defer></script>
+    <!-- <script src="../js/main.js" defer></script> -->
 </head>
+
 <body>
-    <nav>
-        <li>Home</li>
-        <li>Serviço</li>
-        <li>Login</li>
-    </nav>
-    <div class="container">
-        <form>
-            <h1>Cadastro</h1>
-            <h3>Nome</h3>
-            <input type="text" name="nome" placeholder="Nome">
-            <input type="text" name="sobrenome" placeholder="Sobrenome">
-            <h3>Data de Nascimento</h3>
-            <input type="date" name="data_nascimento" placeholder="Data de Nascimento">
-            <h3>Sexo</h3>
-            <input type="radio" name="sexo" value="M">Masculino
-            <input type="radio" name="sexo" value="F">Feminino
-            <input type="radio" name="sexo" value="O">Outro
-            <h3>Empreendedor?</h3>
-            <input type="radio" name="empreendedor" value="sim">Sim
-            <input type="radio" name="empreendedor" value="nao">Não
-            <h3>E-Mail</h3>
-            <input type="text" name="email" placeholder="Email">
-            <h3>Senha</h3>
-            <input type="password" name="senha" placeholder="Senha">
-            <input type="password" name="confirmar_senha" placeholder="Confirmar Senha">
-            <br>
-            <br>
-            <button type="submit">Cadastrar</button>
-        </form>
+    <header id="header" tabindex="-1">
+        <div>
+            <div id="acessibilidade-menu" class="acessibilidade-menu">
+                <span>Acessibilidade</span>
+                <div>
+                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                        <span class="sr-only">Diminuir tamanho da fonte</span>
+                        A-
+                    </button>
+                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                        <span class="sr-only">Normalizar tamanho da fonte</span>
+                        aA
+                    </button>
+                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                        <span class="sr-only">Aumentar tamanho da fonte</span>
+                        A+
+                    </button>
+                </div>
+                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                    <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
+                </button>
+                <button id="vlibras-button" aria-label="Ativar VLibras">
+                    <span class="sr-only">Ativar/desativar VLibras</span>
+                    <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
+                </button>
+            </div>
+            <div class=" header-container">
+                <div class="logo-container">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="50">
+                        <h2>Includify</h2>
+                    </a>
+                    <button class="hamburger" aria-label="Abrir menu" id="hamburger-button">
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                        <div class="hamburger-icon"></div>
+                    </button>
+                </div>
+                <nav id="navegacao-principal" aria-label="Navegação principal">
+                    <ul class="menu-principal">
+                        <li>
+                            <a href="../index.html" aria-label="Acessar a página Home">Home</a>
+                        </li>
+                        <li>
+                            <a href="./servicos.html" aria-label="Acessar a página Serviços">Serviços</a>
+                        </li>
+                        <li>
+                            <a href="./login.html" aria-label="Acessar a página Login" class="log-in">
+                                <img src="../assets/icons/logInDark.svg" alt="Ícone de Login" width="30">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="container-perfil">
+            <img class="img-perfil" id="imagemExibida" src="/assets/icons/User-profile.svg" alt="Foto de Perfil">
+            <label for="imagemInput" class="custom-file-upload">Carregar imagem</label>
+            <input type="file" id="imagemInput" accept="image/*">
+        </section>
+        <section class="container-form">
+            <form id="dados-pessoais-form">
+                <h1>Dados Pessoais</h1>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Primeiro Nome">
+                <small class="error-message" id="nome-error"></small>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                <small class="error-message" id="sobrenome-error"></small>
+
+                <label for="data-nascimento">Data de Nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" placeholder="dd/mm/aaaa">
+                <small class="error-message" id="data-nascimento-error"></small>
+
+                <section class="opcoes">
+                    <div>
+                        <label for="sexo">Sexo</label>
+                        <span><input type="radio" id="sexo-masculino" name="sexo" value="M"> Masculino</span>
+                        <span><input type="radio" id="sexo-feminino" name="sexo" value="F"> Feminino</span>
+                        <small class="error-message" id="sexo-error"></small>
+                    </div>
+                    <div>
+                        <label for="empreendedor">Empreendedor</label>
+                        <span><input type="radio" id="empreendedor-sim" name="empreendedor" value="sim"> Sim</span>
+                        <span><input type="radio" id="empreendedor-nao" name="empreendedor" value="nao"> Não</span>
+                        <small class="error-message" id="empreendedor-error"></small>
+                    </div>
+                </section>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <small class="error-message" id="email-error"></small>
+
+                <div class="password-container">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha">
+                    <span class="toggle-password" onclick="togglePassword('senha', this)">
+                        <img src="../assets/icons/invisible.svg" alt="Mostrar senha" class="senha">
+                    </span>
+                </div>
+                <small class="error-message" id="senha-error"></small>
+
+                <div class="password-container">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar Senha">
+                    <span class="toggle-password" onclick="togglePassword('confirmar-senha', this)">
+                        <img src="../assets/icons/invisible.svg" class="confirmar-senha">
+                    </span>
+                </div>
+                <small class="error-message" id="confirmar-senha-error"></small>
+                <!-- Botões de ação -->
+                <div class="form-buttons">
+                    <button type="submit" class="button-cadastrar">Cadastrar</button>
+                    <button type="button" class="button-continuar">Continuar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="secao-footer">
+            <div class="navegacao-footer" aria-labelledby="navegacao-footer">
+                <h2 id="navegacao-footer" class="sr-only">Navegação principal do footer</h2>
+                <ul>
+                    <li>
+                        <a href="./login.html" aria-label="Acessar a página Login">
+                            <img src="../assets/icons/LogIn.svg" alt="Ícone de Login">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./cadastro.html" aria-label="Acessar a página de Cadastro">
+                            <img src="../assets/icons/Cadastre-se.svg" alt="Ícone de cadastro">
+                            Cadastre-se
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <section aria-labelledby="secao-social-media" class="secao-social-media">
+                <h2 id="secao-social-media" class="sr-only">Seção com as redes sociais da Includify</h2>
+                <div class="logo-footer">
+                    <a href="../index.html" aria-label="Ir para a página inicial">
+                        <img src="../assets/img/logo.png" alt="Includify Logo" width="45">
+                    </a>
+                    <h3>Includify</h3>
+                </div>
+                <nav aria-labelledby="navegacao-social-media">
+                    <h3 id="navegacao-social-media" class="sr-only">Navegação das redes sociais da Includify</h3>
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://www.facebook.com/" aria-label="Includify no Facebook">
+                                <img src="../assets/icons/Facebook.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" aria-label="Includify no Instagram">
+                                <img src="../assets/icons/Instagram.svg" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" aria-label="Includify no LinkedIn">
+                                <img src="../assets/icons/LinkedIn.svg" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" aria-label="Includify no YouTube">
+                                <img src="../assets/icons/Youtube.svg" alt="YouTube">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="navegacao-contato" aria-labelledby="navegacao-contato">
+                <h4 id="navegacao-contato" class="sr-only">Navegação de contato do footer</h4>
+                <ul>
+                    <li>
+                        <a href="./fale-conosco.html" aria-label="Acessar página Fale Conosco">
+                            Fale Conosco
+                            <img src="../assets/icons/Phone.svg" alt="Ícone Fale Conosco">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Acessar página Dúvidas Frequentes">
+                            Dúvidas Frequentes
+                            <img src="../assets/icons/DuvidasFrequentes.svg" alt="Ícone Dúvidas Frequentes">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="secao-diretos" aria-labelledby="secao-diretos">
+            <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
+            <p>
+                <small>
+                    ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados • Design by
+                    grupo3
+                </small>
+            </p>
+        </section>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
+
 </html>
