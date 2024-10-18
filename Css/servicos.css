@@ -360,9 +360,8 @@ nav[aria-labelledby="navegacao-paginacao"] ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: center; 
+    gap: 1rem;
     padding: 0;
 }
 
@@ -371,12 +370,7 @@ nav[aria-labelledby="navegacao-paginacao"] ul li {
     list-style: none;
 }
 
-/* Acessibilidade */
-
-body.alto-contraste .secao-diretos {
-    background-color: #000;
-    color: #fff;
-}
+/* Acessibilidade */ 
 
 body.alto-contraste #busca-servico {
     color: #fff;

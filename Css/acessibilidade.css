@@ -112,6 +112,11 @@ body.alto-contraste footer {
     color: #fff;
 }
 
+body.alto-contraste .secao-diretos {
+    background-color: #000;
+    color: #fff;
+}
+
 body.alto-contraste footer .logo-footer img {
     filter: invert(1);
 }
