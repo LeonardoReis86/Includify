@@ -199,6 +199,39 @@ section[aria-labelledby="incluso-servico"] h2 {
 
 }
 
+/* Acessibilidade */
+
+body.alto-contraste main p,
+body.alto-contraste main h1,
+body.alto-contraste main h2,
+body.alto-contraste main h4,
+body.alto-contraste main h3 {
+    color: #FAFAFA;
+}
+
+body.alto-contraste .categorias-servico li {
+    color: #FAFAFA;
+    font-weight: 600;
+}
+
+body.alto-contraste .info-anunciante a {
+    color: #FAFAFA;
+    font-weight: 600;
+    background-color: transparent;
+    border: 0;
+}
+
+body.alto-contraste .detalhe-do-titulo {
+    color: #fff !important;
+}
+
+body.alto-contraste section[aria-labelledby="incluso-servico"] p,
+body.alto-contraste section[aria-labelledby="incluso-servico"] h3 {
+    color: #000;
+}
+
+
+
 /* Estilos para telas maiores */
 @media (min-width: 48rem) {
     .info-anunciante {
