@@ -112,6 +112,7 @@ main {
     top: 28%;
     right: 12%;
     position: absolute;
+
 }
 
 .password-icon {
@@ -195,6 +196,43 @@ form>.button-container {
     padding-block: 10px;
     border-radius: 10px;
     background-color: var();
+}
+
+body.alto-contraste .login-introducao h1,
+body.alto-contraste .login-introducao p,
+body.alto-contraste .login-introducao a {
+    color: #fff;
+}
+
+body.alto-contraste .login-introducao a {
+    background-color: transparent;
+    border: 0;
+}
+
+body.alto-contraste .login-introducao img {
+    filter: invert(1);
+}
+
+body.alto-contraste .input-with-icon img,
+body.alto-contraste .input-with-icon input {
+    filter: grayscale(1)
+}
+
+body.alto-contraste .esqueci-senha {
+    background-color: transparent;
+    border: 0;
+    filter: grayscale(1)
+}
+
+body.alto-contraste .button-container {
+    background-color: #FFD700;
+    border: #fff;
+}
+
+body.alto-contraste .button-container a {
+    background-color: transparent;
+    border: 0;
+    color: #000;
 }
 
 @media (min-width: 48rem) {
