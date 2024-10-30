@@ -350,8 +350,7 @@ footer ul li a img {
     right: 0;
     left: 0;
     width: fit-content;
-    background-color: transparent;
-    background-color: transparent;
+    background-color: transparent; 
     box-shadow: none;
     display: flex;
     align-items: center;

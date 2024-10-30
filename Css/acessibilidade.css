@@ -89,6 +89,15 @@ body.alto-contraste header {
     border-bottom: 1px solid #000;
 }
 
+body.alto-contraste header {
+    background-color: #131313;
+    border-bottom: 1px solid #000;
+}
+
+body.alto-contraste nav#navegacao-principal {
+    background-color: #131313;
+}
+
 body.alto-contraste header img {
     filter: invert(1);
 }
