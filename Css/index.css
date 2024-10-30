@@ -177,13 +177,39 @@
   margin-left: -3rem;
 }
 
+
+body.alto-contraste .banner-section h2,
+body.alto-contraste .banner-section p {
+  color: #fff;
+}
+
+body.alto-contraste .article-card h4,
+body.alto-contraste .article-card p {
+  color: #fff;
+}
+
+body.alto-contraste .introducao h3,
+body.alto-contraste .introducao p {
+  color: #fff;
+}
+
+body.alto-contraste .introducao a {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+}
+
+body.alto-contraste .elipses div {
+  background-color: #ffffff0c; 
+}
+
 @media (min-width: 48rem) {
   .elipses-container {
     display: flex;
   }
 
   .banner-section {
-    background-image: url('../../assets/img/bannerImage.png');
+    background-image: url('../assets/img/bannerImage.png');
   }
 
   .includify-highlight {

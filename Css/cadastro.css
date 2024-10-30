@@ -169,6 +169,11 @@ form .form-buttons {
   cursor: pointer;
 }
 
+body.alto-contraste #dados-pessoais-form h1,
+body.alto-contraste #dados-pessoais-form label {
+  color: #fff
+}
+
 @media (min-width: 48rem) {
   .main-container {
     flex-direction: row;

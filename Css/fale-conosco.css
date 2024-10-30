@@ -83,6 +83,23 @@
   display: none;
 }
 
+body.alto-contraste #fale-conosco {
+  color: #fff;
+}
+
+body.alto-contraste .logo-container h1 {
+  color: #fff;
+}
+
+body.alto-contraste .logo-container img {
+  filter: invert(1);
+}
+
+body.alto-contraste .secao-fale-conosco {
+  color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.253);
+}
+
 @media (min-width: 48rem) {
   .main-fale-conosco {
     align-items: center;

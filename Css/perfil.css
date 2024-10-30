@@ -20,7 +20,7 @@ main>div {
     justify-content: center;
     gap: 35px;
     list-style: none;
-}
+}  
 
 .secao-perfil {
     display: flex;
@@ -250,7 +250,49 @@ article[aria-labelledby="servicos-prestados"] ul li {
 
 .servicos div figcaption h3 {
     color: var(--color-border);
+} 
+
+
+/* Acessibilidade */
+
+body.alto-constraste .perfil-usuario img{
+    filter: grayscale(1)
 }
+
+body.alto-contraste .secao-perfil .perfil-usuario-container {
+    color: #000;
+    background: linear-gradient(90deg, #fafafa, #fafafa);
+}
+
+body.alto-contraste .apresentacao {
+    background-color: #fafafa;
+    box-shadow: -3px 3px 5px 1px rgba(255, 255, 255, 0.219);
+} 
+
+body.alto-contraste .secao-perfil ul li a {
+    background-color: transparent; 
+    border: 0;
+} 
+
+body.alto-contraste .secao-perfil ul li a img {
+    filter: invert(1);
+} 
+
+body.alto-contraste #lista-servico {
+    color: #fafafa;
+}
+
+body.alto-contraste article[aria-labelledby="lista-servico"] p,
+body.alto-contraste article[aria-labelledby="lista-servico"] h3 {
+    color: #fafafa;
+}
+
+body.alto-contraste .detalhes-btn img {
+    filter: invert(1);
+}
+
+
+/* Responsividade */
 
 @media (min-width: 48rem) {
     main>div {
