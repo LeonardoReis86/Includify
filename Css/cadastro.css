@@ -140,21 +140,28 @@ form input.error {
 
 form .form-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.button-cadastrar {
+.button-principal {
   background-color: var(--color-button-primary);
-  width: 40%;
+  width: 100%;
+  max-width: 20rem;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-.button-cadastrar:hover {
+.button-principal:hover {
   cursor: pointer;
+}
+
+.button-principal:disabled {
+  background-color: gray;
+  color: black;
+  cursor: default;
 }
 
 .button-continuar {
@@ -177,6 +184,10 @@ body.alto-contraste #dados-pessoais-form label {
 @media (min-width: 48rem) {
   .main-container {
     flex-direction: row;
+  }
+
+  .form-buttons {
+    justify-content: flex-end !important;
   }
 
   .container-form {

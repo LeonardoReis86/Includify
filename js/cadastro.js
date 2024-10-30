@@ -1,12 +1,12 @@
- function togglePassword(fieldId, toggleIcon) {
+function togglePassword(fieldId, toggleIcon) {
     const field = document.getElementById(fieldId)
     const isPassword = field.type === 'password'
     field.type = isPassword ? 'text' : 'password'
-    toggleIcon.querySelector('img').src = isPassword 
-        ? '../assets/icons/show.svg' 
+    toggleIcon.querySelector('img').src = isPassword
+        ? '../assets/icons/show.svg'
         : '../assets/icons/invisible.svg'
 }
- 
+
 function validateForm() {
     const fields = {
         nome: { element: document.getElementById("nome"), message: "Nome é obrigatório." },
@@ -33,7 +33,7 @@ function validateForm() {
     Object.values(fields).forEach(field => {
         const { element, message, pattern, minLen, specialChar, matchField } = field
         const value = element.value.trim()
-        
+
         if (!value) showError(field, message)
         else if (pattern && !pattern.test(value)) showError(field, "Formato de e-mail inválido.")
         else if (minLen && value.length < minLen) showError(field, message)
@@ -47,20 +47,26 @@ function validateForm() {
 
     if (formValid) alert("Formulário válido!")
 }
- 
-function toggleButtonState() {
-    const isEmpreendedorSim = document.getElementById("empreendedor-sim").checked
-    const [buttonCadastrar, buttonContinuar] = [
-        document.querySelector(".button-cadastrar"),
-        document.querySelector(".button-continuar")
-    ]
 
-    buttonCadastrar.disabled = isEmpreendedorSim
-    buttonContinuar.disabled = !isEmpreendedorSim
-    buttonCadastrar.style.backgroundColor = isEmpreendedorSim ? "gray" : ""
-    buttonContinuar.style.backgroundColor = isEmpreendedorSim ? "" : "gray"
+function toggleButtonState() {
+    const isEmpreendedor = document.getElementById("empreendedor-sim").checked
+    const isNotEmpreendedor = document.getElementById("empreendedor-nao").checked
+
+    const buttonPrincipal = document.getElementById("acao-botao")
+
+    buttonPrincipal.textContent = isEmpreendedor ? "Continuar Cadastro" : "Cadastrar"
+
+    if (!isEmpreendedor && !isNotEmpreendedor) {
+        buttonPrincipal.disabled = true
+    } else {
+        buttonPrincipal.disabled = false
+        buttonPrincipal.style.backgroundColor = isEmpreendedor ? "#2B468B" : "#BF4F1B"
+        buttonPrincipal.style.color = "white"
+    }
+
+    buttonPrincipal.type = isEmpreendedor ? "button" : "submit";
 }
- 
+
 function applyStyles() {
     const styleContent = `
         input.input-error, select.input-error, textarea.input-error {
@@ -79,7 +85,7 @@ function applyStyles() {
     styleSheet.innerText = styleContent
     document.head.appendChild(styleSheet)
 }
- 
+
 function displayImage(event) {
     const file = event.target.files[0]
     if (file) {
@@ -92,9 +98,10 @@ function displayImage(event) {
         reader.readAsDataURL(file)
     }
 }
- 
+
 function init() {
     applyStyles()
+    toggleButtonState()
 
     document.getElementById("dados-pessoais-form").addEventListener("submit", (event) => {
         event.preventDefault()
