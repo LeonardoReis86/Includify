@@ -33,18 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.getElementById('vlibras-button').addEventListener('click', function () {
-    const vlibrasWidget = document.querySelector('[vw-access-button]');
+    const vlibrasWidget = document.querySelector('[vw-access-button]')
     if (vlibrasWidget) {
-        vlibrasWidget.click();
+        vlibrasWidget.click()
     }
-});
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === '1') {
-        document.getElementById('header').focus();
-    } else if (event.key === '2') {
-        document.getElementById('content').focus();
-    } else if (event.key === '3') {
-        document.getElementById('footer').focus();
-    }
-});
+})
