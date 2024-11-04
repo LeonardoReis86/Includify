@@ -63,7 +63,7 @@ Clique nos ícones abaixo para acessar a documentação oficial das ferramentas 
     </td>
     <td align="center">
       <a href="https://docs.github.com/pt" target="_blank">
-        <img src="https://cdn.discordapp.com/attachments/1269807708014510180/1274165839494643742/github.png?ex=66c142e8&is=66bff168&hm=537c8b8308c530817ea445245c1fcd450bfd6edcf9602152006fbb3a2605b780&" alt="GitHub" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" width="50" height="50"/>
       </a>
       <br><b>GitHub</b>
       <hr>
