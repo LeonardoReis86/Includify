@@ -24,7 +24,7 @@
 
 Este projeto foi implantado e está disponível online. Você pode acessar a versão ao vivo do Includify clicando no link abaixo:
 
-👉 [Acesse o Includify Aqui](https://exemplo.com)
+👉 [Acesse o Includify Aqui](https://includify.vercel.app/index.html)
 
 ## ☕ Sobre o projeto
 Este projeto foi desenvolvido pelo grupo 3 da turma 32 do curso de Introdução ao Front-End, como parte do programa integrador da Proz Talent Cloud. Inspirados pelos Objetivos de Desenvolvimento Sustentável (ODS), propusemos uma solução que visa empoderar empreendedores com deficiência, promovendo inclusão e acessibilidade de forma significativa.
