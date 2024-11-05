@@ -137,31 +137,44 @@
 }
 
 .article-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   max-width: 25rem;
-  min-height: 33rem;
   gap: 20px;
 }
+ 
+.card-link {
+  text-decoration: none;
+  color: #333;
+  font-size: var(--font-size-p);
+  display: flex;
+  flex-direction: column;
+  min-height: 31rem; 
+  max-width: 25rem;
+}
 
-.article-card h4 {
+.card-link h4 {
   color: #091865;
   max-width: 20rem;
+  padding-block: 10px;
   font-size: var(--font-size-h6);
 }
 
-.article-card a {
+.card-link button {
+  align-self: flex-start;  
   background-color: var(--color-standard);
   text-decoration: none;
   color: #fff;
   font-size: var(--font-size-p);
-  padding-block: 0.5rem;
-  padding-inline: 5rem;
+  border: none;
+  padding-block: 0.3rem;
+  padding-inline: 3rem;
+  margin-top: 20px;
   border-radius: 8px;
 }
 
+.card-link button:hover {
+  cursor: pointer;
+}
+ 
 .article-card img {
   max-width: 90%;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.26);
