@@ -115,7 +115,7 @@
 }
 
 .introducao p {
-  text-align: justify;
+  text-align: left;
   font-size: 1.1em;
 }
 
@@ -170,7 +170,7 @@
 
 .article-card p {
   max-width: 20rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .articles-section .elipses-container {
