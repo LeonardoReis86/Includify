@@ -26,7 +26,7 @@
   padding-block: 5rem;
 }
 
-.banner-section h2 {
+.banner-section h1 {
   font-size: var(--font-size-h3);
   font-weight: 400;
   padding-bottom: 4rem;
@@ -200,7 +200,7 @@ body.alto-contraste .introducao a {
 }
 
 body.alto-contraste .elipses div {
-  background-color: #ffffff0c; 
+  background-color: #ffffff0c;
 }
 
 @media (min-width: 48rem) {

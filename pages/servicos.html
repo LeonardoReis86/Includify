@@ -16,30 +16,33 @@
 <body>
     <header id="header" tabindex="-1">
         <div>
-            <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <span>Acessibilidade</span>
-                <div>
-                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
-                        <span class="sr-only">Diminuir tamanho da fonte</span>
-                        A-
+            <slot>
+                <a href="#conteudo-principal" class="skip-link" tabindex="1">Ir para o conteúdo principal</a>
+                <div id="acessibilidade-menu" class="acessibilidade-menu">
+                    <span>Acessibilidade</span>
+                    <div>
+                        <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                            <span class="sr-only">Diminuir tamanho da fonte</span>
+                            A-
+                        </button>
+                        <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                            <span class="sr-only">Normalizar tamanho da fonte</span>
+                            aA
+                        </button>
+                        <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                            <span class="sr-only">Aumentar tamanho da fonte</span>
+                            A+
+                        </button>
+                    </div>
+                    <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                        <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
                     </button>
-                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
-                        <span class="sr-only">Normalizar tamanho da fonte</span>
-                        aA
-                    </button>
-                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
-                        <span class="sr-only">Aumentar tamanho da fonte</span>
-                        A+
+                    <button id="vlibras-button" aria-label="Ativar VLibras">
+                        <span class="sr-only">Ativar/desativar VLibras</span>
+                        <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
                     </button>
                 </div>
-                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
-                    <img src="../assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
-                </button>
-                <button id="vlibras-button" aria-label="Ativar VLibras">
-                    <span class="sr-only">Ativar/desativar VLibras</span>
-                    <img src="../assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
-                </button>
-            </div>
+            </slot>
             <div class=" header-container">
                 <div class="logo-container">
                     <a href="../index.html" aria-label="Ir para a página inicial">
@@ -71,8 +74,8 @@
             </div>
         </div>
     </header>
-    
-    <main id="conteudo-principal">
+
+    <main>
         <section class="secao-busca" aria-labelledby="busca-servico">
             <form action="#" class="form-busca">
                 <h1 id="busca-servico">Buscar Serviços</h1>
@@ -238,7 +241,7 @@
                 </aside>
             </div>
 
-            <section aria-labelledby="secao-servicos">
+            <section aria-labelledby="secao-servicos" id="conteudo-principal">
                 <h2 id="secao-servicos">Resultado</h2>
                 <p>Mostrando 4 de 200 serviços</p>
                 <ul>
@@ -481,8 +484,8 @@
             <h5 id="secao-diretos" class="sr-only">Seção com os direitos da Includify</h5>
             <p>
                 <small>
-                    ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados •  
-                     
+                    ® 2024 Includify Recursos Humanos Especiais Ltda. Todos os direitos reservados •
+
                 </small>
             </p>
         </section>

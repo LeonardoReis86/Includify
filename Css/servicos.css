@@ -180,12 +180,12 @@ aside[aria-labelledby="secao-filtros"] form {
     justify-content: space-between;
 }
 
+.header-filtro button {
+    background-color: transparent;
+    border: none;
+}
+
 .close-icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 10px;
-    margin-right: 15px;
     cursor: pointer;
 }
 
@@ -360,7 +360,7 @@ nav[aria-labelledby="navegacao-paginacao"] ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 1rem;
     padding: 0;
 }
@@ -370,7 +370,7 @@ nav[aria-labelledby="navegacao-paginacao"] ul li {
     list-style: none;
 }
 
-/* Acessibilidade */ 
+/* Acessibilidade */
 
 body.alto-contraste #busca-servico {
     color: #fff;

@@ -13,30 +13,33 @@
 <body>
     <header id="header" tabindex="-1">
         <div>
-            <div id="acessibilidade-menu" class="acessibilidade-menu">
-                <span>Acessibilidade</span>
-                <div>
-                    <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
-                        <span class="sr-only">Diminuir tamanho da fonte</span>
-                        A-
+            <slot>
+                <a href="#conteudo-principal" class="skip-link" tabindex="1">Ir para o conteúdo principal</a>
+                <div id="acessibilidade-menu" class="acessibilidade-menu">
+                    <span>Acessibilidade</span>
+                    <div>
+                        <button id="diminuir-fonte" aria-label="Diminuir tamanho da fonte">
+                            <span class="sr-only">Diminuir tamanho da fonte</span>
+                            A-
+                        </button>
+                        <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
+                            <span class="sr-only">Normalizar tamanho da fonte</span>
+                            aA
+                        </button>
+                        <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
+                            <span class="sr-only">Aumentar tamanho da fonte</span>
+                            A+
+                        </button>
+                    </div>
+                    <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
+                        <img src="./assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
                     </button>
-                    <button id="normalizar-fonte" aria-label="Normalizar tamanho da fonte">
-                        <span class="sr-only">Normalizar tamanho da fonte</span>
-                        aA
-                    </button>
-                    <button id="aumentar-fonte" aria-label="Aumentar tamanho da fonte">
-                        <span class="sr-only">Aumentar tamanho da fonte</span>
-                        A+
+                    <button id="vlibras-button" aria-label="Ativar VLibras">
+                        <span class="sr-only">Ativar/desativar VLibras</span>
+                        <img src="./assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
                     </button>
                 </div>
-                <button id="contraste" aria-label="Ativar/desativar modo de alto contraste">
-                    <img src="./assets/icons/Contraste.svg" alt="Ativar e desativar modo de alto contraste">
-                </button>
-                <button id="vlibras-button" aria-label="Ativar VLibras">
-                    <span class="sr-only">Ativar/desativar VLibras</span>
-                    <img src="./assets/icons/VLibras.svg" alt="Ativar e desativar VLibras">
-                </button>
-            </div>
+            </slot>
             <div class=" header-container">
                 <div class="logo-container">
                     <a href="index.html" aria-label="Ir para a página inicial">
@@ -72,7 +75,7 @@
     <main class="main-content">
         <section aria-label="Banner principal" class="banner-section">
             <div>
-                <h2>Somos a <span class="includify-highlight">Includify</span></h2>
+                <h1>Somos a <span class="includify-highlight">Includify</span></h1>
                 <p>Trabalhamos para que você seja visto.</p>
                 <div class="banner-buttons">
                     <a href="./pages/Cadastro.html" class="btn btn-primary"
@@ -110,14 +113,14 @@
                     <div></div>
                 </div>
             </div>
-            <div class="introducao">
+            <div class="introducao" id="conteudo-principal">
                 <h3>Conhecemos as pessoas e valorizamos competências</h3>
                 <p>
                     Ajudamos empreendedores e autônomos com deficiência a divulgar seus negócios, produtos e serviços de
                     forma
                     gratuita. Venha fazer parte da nossa rede de talentos e destaque seu empreendimento no mercado.
                 </p>
-                <a href="#" class="btn register-btn">Cadastre seu negócio agora e alcance mais clientes!</a>
+                <a href="./pages/Cadastro.html" class="btn register-btn">Cadastre seu negócio agora e alcance mais clientes!</a>
             </div>
         </section>
         <section class="articles-section" id="menu">

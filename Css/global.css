@@ -73,6 +73,10 @@ footer {
   min-width: 23.4rem;
 }
 
+html {
+  scroll-padding-top: 150px;
+}
+
 #header {
   top: 0;
   right: 0;
@@ -91,6 +95,22 @@ header>div {
   padding-inline: 10px;
 }
 
+header slot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.skip-link {
+  color: transparent;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  color: #fefefe;
+}
+
 header .header-container {
   display: flex;
   flex-direction: column;
@@ -98,6 +118,7 @@ header .header-container {
   text-align: center;
   padding-top: 10px;
 }
+
 
 .hamburger {
   display: flex;
@@ -253,7 +274,7 @@ footer ul li a {
 }
 
 footer ul li a img {
-  width: 1.55em;
+  width: 2em;
 }
 
 .secao-footer {
@@ -350,7 +371,7 @@ footer ul li a img {
     right: 0;
     left: 0;
     width: fit-content;
-    background-color: transparent; 
+    background-color: transparent;
     box-shadow: none;
     display: flex;
     align-items: center;
