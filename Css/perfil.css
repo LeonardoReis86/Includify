@@ -111,7 +111,7 @@ main>div {
     gap: 10px;
     padding-block: 2rem;
     margin-inline: 2rem;
-    text-align: justify;
+    text-align: left;
     min-width: 17.5rem;
     border-radius: 15px;
     box-shadow: -3px 3px 5px 1px rgba(0, 0, 0, 0.219);

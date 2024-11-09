@@ -9,7 +9,8 @@
 }
 
 .banner-section {
-  background-color: var(--color-standard);
+  transform: scaleX(-1);
+  background-image: url('../assets/img/bannerImageInvertida.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -27,6 +28,7 @@
 }
 
 .banner-section h1 {
+  transform: scaleX(-1);
   font-size: var(--font-size-h3);
   font-weight: 400;
   padding-bottom: 4rem;
@@ -34,12 +36,12 @@
 }
 
 .includify-highlight {
-  background-color: var(--color-background);
   color: #091865;
   font-weight: 600;
 }
 
 .banner-section p {
+  transform: scaleX(-1);
   font-size: var(--font-size-h3);
   font-weight: 600;
   max-width: 400px;
@@ -48,6 +50,7 @@
 }
 
 .banner-buttons {
+  transform: scaleX(-1);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -115,7 +118,7 @@
 }
 
 .introducao p {
-  text-align: justify;
+  text-align: left;
   font-size: 1.1em;
 }
 
@@ -137,29 +140,42 @@
 }
 
 .article-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   max-width: 25rem;
-  min-height: 33rem;
   gap: 20px;
 }
 
-.article-card h4 {
+.card-link {
+  text-decoration: none;
+  color: #333;
+  font-size: var(--font-size-p);
+  display: flex;
+  flex-direction: column;
+  min-height: 31rem;
+  max-width: 25rem;
+}
+
+.card-link h4 {
   color: #091865;
   max-width: 20rem;
+  padding-block: 10px;
   font-size: var(--font-size-h6);
 }
 
-.article-card a {
+.card-link button {
+  align-self: flex-start;
   background-color: var(--color-standard);
   text-decoration: none;
   color: #fff;
   font-size: var(--font-size-p);
-  padding-block: 0.5rem;
-  padding-inline: 5rem;
+  border: none;
+  padding-block: 0.3rem;
+  padding-inline: 3rem;
+  margin-top: 20px;
   border-radius: 8px;
+}
+
+.card-link button:hover {
+  cursor: pointer;
 }
 
 .article-card img {
@@ -170,7 +186,7 @@
 
 .article-card p {
   max-width: 20rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .articles-section .elipses-container {
@@ -210,6 +226,19 @@ body.alto-contraste .elipses div {
 
   .banner-section {
     background-image: url('../assets/img/bannerImage.png');
+    transform: scaleX(1);
+  }
+
+  .banner-section h1 {
+    transform: scaleX(1);
+  }
+
+  .banner-section p {
+    transform: scaleX(1);
+  }
+
+  .banner-buttons {
+    transform: scaleX(1);
   }
 
   .includify-highlight {
