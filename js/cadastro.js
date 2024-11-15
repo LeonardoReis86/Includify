@@ -45,7 +45,9 @@ function validateForm() {
     document.getElementById("sexo-error").innerText = sexo ? "" : "Selecione o sexo."
     if (!sexo) formValid = false
 
-    if (formValid) alert("Formulário válido!")
+    if (formValid) {
+        window.location.href = "/pages/perfil.html"
+    }
 }
 
 function toggleButtonState() {
