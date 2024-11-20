@@ -1,7 +1,5 @@
 <a id="topo"></a>
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=2B468B&style=for-the-badge)
-
 <img width=150% src="https://capsule-render.vercel.app/api?type=waving&width=150%&color=2B468B&fontColor=ffffff&height=170&section=header&text=Includify%20&fontSize=80&animation=fadeIn&fontAlignY=38%" />
 
 <a name="topo"></a>
@@ -123,7 +121,7 @@ Este projeto foi desenvolvido utilizando exclusivamente JavaScript, HTML e CSS, 
 | **Sprint I**  | Definição das regras de negócio e criação do protótipo com, no mínimo, cinco telas | ✅ Concluído  |
 | **Sprint II** | Desenvolvimento do HTML das páginas                                          | ✅ Concluído  |
 | **Sprint III** | Estilização das telas utilizando Flexbox, definição de cores e fontes        | ✅ Concluído |
-| **Sprint IV**  | Manipulação do DOM com JavaScript, validação dos formulários, renderização dinâmica | 🚧 Em andamento |
+| **Sprint IV**  | Manipulação do DOM com JavaScript, validação dos formulários, renderização dinâmica | ✅ Concluído |
 | **Sprint V**  | Modelagem do DER, normalização das tabelas em 3FN, consultas e junções      | ✅ Concluído  |
 
 ## 🎨 Design
@@ -178,15 +176,18 @@ Para rodar o projeto localmente, siga os passos abaixo:
      ```
 4. **Visualizar no Navegador**: O projeto será carregado no seu navegador padrão e você poderá visualizar a interface desenvolvida.
 
-## Mentora 👩‍🏫
+## 👩‍🏫 Mentora
 
 | [<img src="https://avatars.githubusercontent.com/u/87721461?v=4" width=115><br><sub>Jeice Santos</sub>](https://github.com/Jeice01) | 
 | :-----------------------------------------------------------------------------------------------------------------------------: |
 
-## Colaboradores 👨‍💻👨‍💻
+## 👨‍💻👨‍💻 Colaboradores
 
-| [<img src="https://avatars.githubusercontent.com/u/114269871?v=4" width=115><br><sub>Arthur</sub>](https://github.com/0ArS0) | [<img src="https://avatars.githubusercontent.com/u/142060798?v=4" width=115><br><sub>Elizama Fortes</sub>](https://github.com/Lyza-Fortes) | [<img src="https://avatars.githubusercontent.com/u/96137175?v=4" width=115><br><sub>Leonardo Reis</sub>](https://github.com/LeonardoReis86) | [<img src="https://avatars.githubusercontent.com/u/174472006?v=4" width=115><br><sub>Roberto</sub>](https://github.com/RssRoberto) | [<img src="https://avatars.githubusercontent.com/u/150069643?v=4" width=115><br><sub>Vani Junqueira</sub>](https://github.com/VaniJunqueira2023) | [<img src="https://avatars.githubusercontent.com/u/54276482?v=4" width=115><br><sub>Vitor</sub>](https://github.com/VHEB) |
-| :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+## 👨‍💻 Colaboradores
+
+| [<img src="https://avatars.githubusercontent.com/u/114269871?v=4" width=115><br><sub>Arthur</sub>](https://github.com/0ArS0) | [<img src="https://avatars.githubusercontent.com/u/142060798?v=4" width=115><br><sub>Elizama Fortes</sub>](https://github.com/Lyza-Fortes) | [<img src="https://avatars.githubusercontent.com/u/96137175?v=4" width=115><br><sub>Leonardo Reis</sub>](https://github.com/LeonardoReis86) | [<img src="https://avatars.githubusercontent.com/u/54276482?v=4" width=115><br><sub>Vitor</sub>](https://github.com/VHEB) | [<img src="https://avatars.githubusercontent.com/u/150069643?v=4" width=115><br><sub>Vani Junqueira</sub>](https://github.com/VaniJunqueira2023) |
+| :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+
 
 ## 📝 Licença
 
